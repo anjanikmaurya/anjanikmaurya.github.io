@@ -1,20 +1,22 @@
-/* Add smooth scrolling to internal links */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
+// Get all the tab links
+const tabLinks = document.querySelectorAll('nav ul li a');
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+// Get all the tab content
+const tabContents = document.querySelectorAll('main section');
+
+// Loop through each tab link and add a click event listener
+tabLinks.forEach((tabLink, index) => {
+  tabLink.addEventListener('click', (event) => {
+    // Prevent the default link behavior
+    event.preventDefault();
+
+    // Hide all the tab content
+    tabContents.forEach((tabContent) => {
+      tabContent.style.display = 'none';
     });
+
+    // Show the selected tab content
+    const selectedTabContent = tabContents[index];
+    selectedTabContent.style.display = 'block';
   });
 });
-
-/* Toggle the "responsive" class to the header when the user clicks on the menu button */
-function toggleMenu() {
-  var x = document.querySelector("nav");
-  if (x.className === "") {
-    x.className = "responsive";
-  } else {
-    x.className = "";
-  }
-}
