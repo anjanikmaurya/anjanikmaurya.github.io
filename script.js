@@ -1,22 +1,26 @@
-// Get all the tab links
+// Get all the tab links and tab content sections
 const tabLinks = document.querySelectorAll('nav ul li a');
+const tabContentSections = document.querySelectorAll('main section');
 
-// Get all the tab content
-const tabContents = document.querySelectorAll('main section');
+// Loop through all the tab links and add click event listeners
+tabLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // Remove the "active" class from all the tab links
+    tabLinks.forEach(tabLink => {
+      tabLink.classList.remove('active');
+    });
 
-// Loop through each tab link and add a click event listener
-tabLinks.forEach((tabLink, index) => {
-  tabLink.addEventListener('click', (event) => {
-    // Prevent the default link behavior
-    event.preventDefault();
+    // Add the "active" class to the clicked tab link
+    link.classList.add('active');
 
-    // Hide all the tab content
-    tabContents.forEach((tabContent) => {
+    // Hide all the tab content sections
+    tabContentSections.forEach(tabContent => {
       tabContent.style.display = 'none';
     });
 
-    // Show the selected tab content
-    const selectedTabContent = tabContents[index];
+    // Show the content of the selected tab section
+    const selectedTabContentId = link.getAttribute('href');
+    const selectedTabContent = document.querySelector(selectedTabContentId);
     selectedTabContent.style.display = 'block';
   });
 });
