@@ -23,17 +23,17 @@ padding: 10px;
 
 /* Style the header with appropriate colors and font sizes */
 header {
-background-color: #333;
+background-color: #000;
 color: #fff;
 display: flex;
 justify-content: space-between;
 align-items: center;
-font-size: 20px;
+font-size: 30px;
 }
 
 header h1 {
 margin: 0;
-font-size: 24px;
+font-size: 34px;
 }
 
 /* Style the navigation menu for better usability and aesthetics */
