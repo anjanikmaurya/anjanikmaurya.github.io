@@ -1,135 +1,138 @@
-/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Apply a natural box layout model to all elements */
-* {
-  box-sizing: border-box;
-}
 
+{
+box-sizing: border-box;
+}
+/* Set a consistent font size and line height */
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+font-size: 16px;
+line-height: 1.5;
 }
 
+/* Remove default margins and adjust text size for better readability */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Remove the margin in all browsers */
-body {
-  margin: 0;
+margin: 0;
+font-family: Arial, sans-serif;
+-webkit-text-size-adjust: 100%;
 }
 
 /* Add padding to the header and footer */
 header, footer {
-  padding: 10px;
+padding: 10px;
 }
 
-/* Style the header */
+/* Style the header with appropriate colors and font sizes */
 header {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 20px;
 }
 
 header h1 {
-  margin: 0;
+margin: 0;
+font-size: 24px;
 }
 
-/* Style the navigation menu */
+/* Style the navigation menu for better usability and aesthetics */
 nav {
-  display: flex;
+display: flex;
+align-items: center;
 }
 
 nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
 }
 
 nav li {
-  margin-right: 20px;
+margin-right: 20px;
 }
 
 nav li:last-child {
-  margin-right: 0;
+margin-right: 0;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
+color: #fff;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 16px;
 }
 
 /* Style the main content area */
 main {
-  padding: 20px;
+padding: 20px;
 }
 
 section {
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 section h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+font-size: 24px;
+margin-bottom: 10px;
 }
 
 ul {
-  list-style: disc;
-  margin-left: 20px;
+list-style: disc;
+margin-left: 20px;
 }
 
-/* Style the contact form */
+/* Style the contact form for better usability and aesthetics */
 form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+display: flex;
+flex-direction: column;
+width: 50%;
 }
 
 label {
-  margin-bottom: 5px;
+margin-bottom: 5px;
+font-size: 16px;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 16px;
 }
 
 button[type="submit"] {
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+padding: 10px;
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
 }
 
 button[type="submit"]:hover {
-  background-color: #555;
+background-color: #555;
 }
 
+/* Make the navigation menu vertical and full-width on small screens for better mobile experience */
 @media screen and (max-width: 600px) {
-  /* Make the navigation menu vertical on small screens */
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+nav {
+flex-direction: column;
+align-items: flex-start;
+width: 100%;
+}
 
-  nav li {
-    margin-bottom: 10px;
-    margin-right: 0;
-  }
+nav li {
+margin-bottom: 10px;
+margin-right: 0;
+}
 
-  /* Make the contact form full-width on small screens */
-  form {
-    width: 100%;
-  }
+form {
+width: 100%;
+}
 }
