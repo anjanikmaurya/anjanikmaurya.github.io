@@ -1,14 +1,19 @@
 // Define the tab links and tab content sections
 const tabLinks = document.querySelectorAll('.nav__item-link');
-const tabContentSections = document.querySelectorAll('.tab__content');
+let tabContentSections;
 
-// Show only the first tab content section
-tabContentSections.forEach((section, index) => {
-  if (index === 0) {
-    section.classList.remove('hidden');
-  } else {
-    section.classList.add('hidden');
-  }
+// Wait for the page to load before showing the first tab content section
+window.addEventListener('load', () => {
+  tabContentSections = document.querySelectorAll('.tab__content');
+
+  // Show only the first tab content section
+  tabContentSections.forEach((section, index) => {
+    if (index === 0) {
+      section.classList.remove('hidden');
+    } else {
+      section.classList.add('hidden');
+    }
+  });
 });
 
 // Add click event listeners to the tab links
