@@ -154,6 +154,10 @@ footer {
   color: #333;
   transition: color 0.3s ease;
 }
+.panel img {
+    width: 40px;
+    height: 40px;
+  }
 
 .panel a:hover {
   color: #666;
