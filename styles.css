@@ -105,13 +105,6 @@ button[type="submit"]:hover {
   color: #333;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .tooltip {
   position: absolute;
   bottom: 0;
