@@ -33,11 +33,5 @@ tabLinks.forEach((link, index) => {
     selectedTabContent.style.display = 'block';
   });
 
-  // If this is not the first tab link, add a tooltip to prompt the user to click it
-  if (index !== 0) {
-    const tooltip = document.createElement('div');
-    tooltip.classList.add('tooltip');
- //   tooltip.textContent = 'Click to learn more';
-    link.appendChild(tooltip);
-  }
+ 
 });
