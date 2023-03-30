@@ -37,7 +37,7 @@ tabLinks.forEach((link, index) => {
   if (index !== 0) {
     const tooltip = document.createElement('div');
     tooltip.classList.add('tooltip');
-    tooltip.textContent = 'Click to learn more';
+ //   tooltip.textContent = 'Click to learn more';
     link.appendChild(tooltip);
   }
 });
