@@ -1,15 +1,15 @@
-// Get the tab links and tab content sections
-const tabLinks = document.querySelectorAll('nav ul li a');
-const tabContentSections = document.querySelectorAll('main section');
+// Define the tab links and tab content sections
+const tabLinks = document.querySelectorAll('.nav__item-link');
+const tabContentSections = document.querySelectorAll('.tab__content');
 
 // Hide all the tab content sections except the first one
 tabContentSections.forEach((section, index) => {
   if (index !== 0) {
-    section.style.display = 'none';
+    section.classList.add('hidden');
   }
 });
 
-// Loop through all the tab links and add click event listeners
+// Add click event listeners to the tab links
 tabLinks.forEach((link, index) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
@@ -24,14 +24,22 @@ tabLinks.forEach((link, index) => {
 
     // Hide all the tab content sections
     tabContentSections.forEach((tabContent) => {
-      tabContent.style.display = 'none';
+      tabContent.classList.add('hidden');
     });
 
     // Show the content of the selected tab section
     const selectedTabContentId = link.getAttribute('href');
     const selectedTabContent = document.querySelector(selectedTabContentId);
-    selectedTabContent.style.display = 'block';
+    selectedTabContent.classList.remove('hidden');
   });
 
- 
+  // If this is not the first tab link, add a tooltip to prompt the user to click it
+  /*
+  if (index !== 0) {
+    const tooltip = document.createElement('div');
+    tooltip.classList.add('tooltip');
+    tooltip.textContent = 'Click to learn more';
+    link.appendChild(tooltip);
+  }
+  */
 });
