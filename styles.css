@@ -157,25 +157,3 @@ button[type="submit"]:hover {
 .panel a:hover {
   color: #666;
 }
-
-
-footer .panel img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  
-  .social-media {
-display: flex;
-justify-content: center;
-align-items: center;
-list-style: none;
-}
-
-.social-media li {
-margin-right: 20px;
-}
-
-.social-media li:last-child {
-margin-right: 0;
-}
-}
