@@ -159,11 +159,49 @@ footer {
   color: #333;
   transition: color 0.3s ease;
 }
-.panel img {
-    width: 40px;
-    height: 40px;
-  }
+
 
 .panel a:hover {
   color: #666;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+  font-size: 14px;
+}
+
+footer .copy {
+  margin: 0;
+  padding: 0;
+}
+
+footer .panel {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer .panel ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .panel ul li {
+  margin-right: 10px;
+}
+
+footer .panel ul li:last-child {
+  margin-right: 0;
+}
+
+footer .panel ul li a img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
