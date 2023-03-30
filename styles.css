@@ -142,12 +142,17 @@ footer {
 }
 
 .panel ul {
-  list-style: none;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-.panel li {
-  margin-bottom: 0.5rem;
-}
+  .panel li {
+    margin: 0 10px;
+  }
 
 .panel a {
   text-decoration: none;
