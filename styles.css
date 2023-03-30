@@ -165,43 +165,24 @@ footer {
   color: #666;
 }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #f2f2f2;
-  font-size: 14px;
-}
 
-footer .copy {
-  margin: 0;
-  padding: 0;
-}
-
-footer .panel {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-footer .panel ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer .panel ul li {
-  margin-right: 10px;
-}
-
-footer .panel ul li:last-child {
-  margin-right: 0;
-}
-
-footer .panel ul li a img {
+footer .panel img {
   width: 30px;
   height: 30px;
   object-fit: contain;
+  
+  .social-media {
+display: flex;
+justify-content: center;
+align-items: center;
+list-style: none;
+}
+
+.social-media li {
+margin-right: 20px;
+}
+
+.social-media li:last-child {
+margin-right: 0;
+}
 }
