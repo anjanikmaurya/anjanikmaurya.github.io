@@ -3,7 +3,13 @@ const tabLinks = document.querySelectorAll('.nav__item-link');
 const tabContentSections = document.querySelectorAll('.tab__content');
 
 // Show only the first tab content section
-tabContentSections[0].classList.remove('hidden');
+tabContentSections.forEach((section, index) => {
+  if (index === 0) {
+    section.classList.remove('hidden');
+  } else {
+    section.classList.add('hidden');
+  }
+});
 
 // Add click event listeners to the tab links
 tabLinks.forEach((link, index) => {
