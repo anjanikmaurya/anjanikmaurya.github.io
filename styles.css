@@ -112,6 +112,18 @@ footer {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.tooltip {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+}
+
 .panel {
   position: fixed;
   top: 50%;
