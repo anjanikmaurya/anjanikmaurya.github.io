@@ -160,8 +160,8 @@ footer {
   transition: color 0.3s ease;
 }
 .panel img {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
   }
 
 .panel a:hover {
