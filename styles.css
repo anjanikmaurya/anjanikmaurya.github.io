@@ -216,6 +216,8 @@ button[type="submit"]:hover {
 
 <style>
   #contact {
+    margin: 0 auto; /* add margin and set left and right to auto */
+    max-width: 600px; /* set a maximum width for the section */
     text-align: center; /* center align content */
     background-color: #f2f2f2; /* add background color */
     padding: 20px; /* add padding */
