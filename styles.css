@@ -216,35 +216,3 @@ button[type="submit"]:hover {
 
 
 
-
-
-.main-container {
-  min-height: calc(100vh - 100px); /* Set a min-height equal to the viewport height minus the height of the footer */
-  padding-bottom: 100px; /* Add padding to the bottom of the main container equal to the height of the footer */
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: lightgrey;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-.right h3 {
-  margin-right: 20px;
-}
-
-.right ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.right li {
-  margin-right: 10px;
-}
