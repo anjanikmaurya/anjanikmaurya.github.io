@@ -13,9 +13,10 @@ body {
   color: #333;
   background-color: #f7f7f7;
 }
+
 body {
   margin: 0;
-  padding-top: 50px; /* Add some padding to push the content down below the fixed header */
+  padding-top: 50px;
 }
 
 .fixed-header {
@@ -25,7 +26,7 @@ body {
   width: 100%;
   background-color: black;
   color: white;
-  padding: 10px;
+  padding: 5px; /* Reduced padding to make the fixed header thinner */
 }
 
 .fixed-header h1 {
@@ -56,6 +57,7 @@ body {
 .content {
   padding: 20px;
 }
+
 
 
 
