@@ -1,37 +1,63 @@
+const express = require('express');
 const WebSocket = require('ws');
+const { v4: uuidv4 } = require('uuid');
 const openai = require('openai');
+const app = express();
 
-const wss = new WebSocket.Server({ port: 8080 });
+// Set up environment variables
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-const openaiApiKey = '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';
+// Configure OpenAI API client
+const client = new openai.ApiClient({
+  apiKey: OPENAI_API_KEY
+});
 
-openai.apiKey = openaiApiKey;
+// Create a new WebSocket server
+const server = new WebSocket.Server({ port: 8080 });
 
-wss.on('connection', (ws) => {
-  console.log('Client connected');
+// Handle new WebSocket connections
+server.on('connection', (socket) => {
+  console.log(`New WebSocket connection: ${socket}`);
 
-  ws.on('message', async (message) => {
-    console.log(`Received message: ${message}`);
+  // Generate a unique session ID for each client
+  const sessionId = uuidv4();
 
-    try {
-      const response = await openai.complete({
-        engine: 'davinci',
-        prompt: message,
-        maxTokens: 150,
-        n: 1,
-        stop: '\n',
-        temperature: 0.5,
-      });
+  // Send a welcome message to the client
+  const message = {
+    type: 'text',
+    text: 'Welcome to the chatbot!'
+  };
+  socket.send(JSON.stringify(message));
 
-      const answer = response.choices[0].text.trim();
-      console.log(`Sending answer: ${answer}`);
-      ws.send(answer);
-    } catch (error) {
-      console.error(error);
-    }
+  // Handle incoming messages from the client
+  socket.on('message', async (data) => {
+    console.log(`Received message: ${data}`);
+
+    // Parse the incoming message as JSON
+    const message = JSON.parse(data);
+
+    // Send the message to OpenAI for processing
+    const response = await client.completions.create({
+      engine: 'davinci',
+      prompt: message.text,
+      maxTokens: 50
+    });
+
+    // Send the response back to the client
+    const responseMessage = {
+      type: 'text',
+      text: response.choices[0].text
+    };
+    socket.send(JSON.stringify(responseMessage));
   });
 
-  ws.on('close', () => {
-    console.log('Client disconnected');
+  // Handle WebSocket connection errors
+  socket.on('error', (error) => {
+    console.error(`WebSocket error: ${error}`);
   });
+});
+
+// Start the server
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Server listening on port ${process.env.PORT || 3000}...`);
 });
