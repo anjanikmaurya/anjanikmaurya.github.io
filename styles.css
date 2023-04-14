@@ -211,3 +211,38 @@ button[type="submit"]:hover {
 .panel a:hover {
   color: #666;
 }
+
+
+
+
+.main-container {
+  min-height: calc(100vh - 100px); /* adjust 100px to match the height of your footer */
+  padding-bottom: 100px; /* adjust the value to create enough space for the footer */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.right h3 {
+  margin-right: 20px;
+}
+
+.right ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.right li {
+  margin-right: 10px;
+}
+
