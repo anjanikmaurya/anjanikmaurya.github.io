@@ -1,7 +1,7 @@
 /* Reset styles */
 * {
   margin: 0;
-  padding: 50x;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -15,6 +15,7 @@ body {
 }
 body {
   margin: 0;
+  padding-top: 50px; /* Add some padding to push the content down below the fixed header */
 }
 
 .fixed-header {
@@ -50,6 +51,10 @@ body {
 .fixed-header nav a {
   color: white;
   text-decoration: none;
+}
+
+.content {
+  padding: 20px;
 }
 
 
