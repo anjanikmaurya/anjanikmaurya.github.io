@@ -27,6 +27,7 @@ body {
   background-color: black;
   color: white;
   padding: 5px;
+  text-align: center; /* Center the content of the fixed header */
 }
 
 .fixed-header h1 {
@@ -41,9 +42,8 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  float: right;
-  text-align: right;
-  padding-right: 20px; /* Add right padding to the tabs */
+  display: inline-block; /* Change the display property to inline-block */
+  text-align: center; /* Center the navigation tabs */
 }
 
 .fixed-header nav li {
@@ -63,6 +63,7 @@ body {
 .content {
   padding: 20px;
 }
+
 
 
 
