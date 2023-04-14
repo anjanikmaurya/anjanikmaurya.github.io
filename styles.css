@@ -33,6 +33,7 @@ body {
   margin: 0;
   font-size: 24px;
   float: left; /* Float the title to the left */
+  text-align: left; /* Align the title to the extreme left */
 }
 
 .fixed-header nav ul {
@@ -40,6 +41,7 @@ body {
   padding: 0;
   list-style: none;
   float: right; /* Float the tabs to the right */
+  text-align: right; /* Align the tabs to the extreme right */
 }
 
 .fixed-header nav li {
@@ -59,7 +61,6 @@ body {
 .content {
   padding: 20px;
 }
-
 
 
 
