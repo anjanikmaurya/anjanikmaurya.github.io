@@ -157,3 +157,22 @@ button[type="submit"]:hover {
 .panel a:hover {
   color: #666;
 }
+
+
+
+
+.bio {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.bio p {
+  margin-bottom: 10px;
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
+}
+
