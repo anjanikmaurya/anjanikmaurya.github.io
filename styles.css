@@ -24,44 +24,51 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  height: 80px;
   background-color: black;
   color: white;
-  padding: 5px;
-  text-align: center; /* Center the content of the fixed header */
 }
 
-.fixed-header h1 {
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
   margin: 0;
-  font-size: 24px;
-  float: left;
-  text-align: left;
-  padding-left: 20px; /* Add left padding to the title */
+  font-size: 1.5rem;
+  padding-left: 20px;
 }
 
-.fixed-header nav ul {
+.navigation {
+  margin: 0;
+  padding-right: 20px;
+}
+
+.navigation ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  display: inline-block; /* Change the display property to inline-block */
-  text-align: center; /* Center the navigation tabs */
 }
 
-.fixed-header nav li {
+.navigation li {
   display: inline-block;
   margin-left: 20px;
 }
 
-.fixed-header nav li:first-child {
-  margin-left: 0;
-}
-
-.fixed-header nav a {
+.navigation a {
   color: white;
   text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.2s ease-in-out;
 }
 
-.content {
-  padding: 20px;
+.navigation a:hover {
+  color: gray;
 }
 
 
