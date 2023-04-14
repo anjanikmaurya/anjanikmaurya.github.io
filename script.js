@@ -55,7 +55,7 @@ tabLinks.forEach((link, index) => {
 
 
 // Get the height of the footer
-const footerHeight = document.querySelector('footer').offsetHeight;
+//const footerHeight = document.querySelector('footer').offsetHeight;
 
 // Set the padding-bottom value of the main container to match the height of the footer
-document.querySelector('.main-container').style.paddingBottom = footerHeight + 'px';
+//document.querySelector('.main-container').style.paddingBottom = footerHeight + 'px';
