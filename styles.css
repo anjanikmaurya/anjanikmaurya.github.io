@@ -215,9 +215,9 @@ button[type="submit"]:hover {
 
 
 
+
 .main-container {
-  min-height: calc(100vh - 100px); /* adjust 100px to match the height of your footer */
-  padding-bottom: 100px; /* adjust the value to create enough space for the footer */
+  min-height: 100vh;
 }
 
 footer {
@@ -245,4 +245,3 @@ footer {
 .right li {
   margin-right: 10px;
 }
-
