@@ -157,3 +157,8 @@ button[type="submit"]:hover {
 .panel a:hover {
   color: #666;
 }
+
+
+img {
+  transform: scaleX(-1);
+}
