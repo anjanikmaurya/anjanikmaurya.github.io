@@ -13,6 +13,9 @@ body {
   color: #333;
   background-color: #f7f7f7;
 }
+body {
+  margin: 0;
+}
 
 .fixed-header {
   position: fixed;
@@ -48,6 +51,7 @@ body {
   color: white;
   text-decoration: none;
 }
+
 
 
 nav {
