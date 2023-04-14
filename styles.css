@@ -213,31 +213,3 @@ button[type="submit"]:hover {
 }
 
 
-
-
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: lightgrey;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-.right h3 {
-  margin-right: 20px;
-}
-
-.right ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.right li {
-  margin-right: 10px;
-}
