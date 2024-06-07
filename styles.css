@@ -233,7 +233,7 @@ button[type="submit"]:hover {
 }
 
 .gallery img {
-  width: 100%;
+  max-width: 100%; /* Set maximum width to maintain aspect ratio */
   height: auto;
   max-height: 200px; /* Reduce the maximum height of the images */
   border-radius: 5px;
