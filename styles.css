@@ -213,6 +213,51 @@ button[type="submit"]:hover {
 }
 
 
+
+
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery figure {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gallery figcaption {
+  font-style: italic;
+  color: #666;
+  text-align: center;
+}
+
+.gallery h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
 #contact {
   width: 80%;
   margin: 0 auto;
