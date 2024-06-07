@@ -216,21 +216,26 @@ button[type="submit"]:hover {
 
 
 
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
 
+.gallery .beamtime {
+  text-align: center;
+}
+
 .gallery figure {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .gallery img {
   width: 100%;
   height: auto;
+  max-height: 200px; /* Reduce the maximum height of the images */
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -238,14 +243,14 @@ button[type="submit"]:hover {
 .gallery figcaption {
   font-style: italic;
   color: #666;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.gallery h3 {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7); /* Add background color with opacity */
+  padding: 5px 10px; /* Add padding to the caption */
+  border-radius: 5px;
 }
 
 
