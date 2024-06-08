@@ -232,12 +232,7 @@ button[type="submit"]:hover {
   position: relative;
 }
 
-.gallery img {
-  max-height: 200px; /* Set maximum height to maintain aspect ratio */
-  width: auto; /* Let the width adjust to maintain aspect ratio */
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+
 
 .gallery figcaption {
   font-style: italic;
