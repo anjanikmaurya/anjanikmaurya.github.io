@@ -233,9 +233,8 @@ button[type="submit"]:hover {
 }
 
 .gallery img {
-  max-width: 100%; /* Set maximum width to maintain aspect ratio */
-  height: auto;
-  max-height: 200px; /* Reduce the maximum height of the images */
+  max-height: 200px; /* Set maximum height to maintain aspect ratio */
+  width: auto; /* Let the width adjust to maintain aspect ratio */
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -252,6 +251,7 @@ button[type="submit"]:hover {
   padding: 5px 10px; /* Add padding to the caption */
   border-radius: 5px;
 }
+
 
 
 
