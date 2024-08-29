@@ -232,6 +232,19 @@ button[type="submit"]:hover {
   position: relative;
 }
 
+.gallery img {
+  width: 100%; /* Make images fill their grid cell */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any default inline spacing */
+}
+
+.gallery figure {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+
 
 
 .gallery figcaption {
