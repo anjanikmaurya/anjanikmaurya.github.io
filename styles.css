@@ -215,6 +215,10 @@ button[type="submit"]:hover {
 
 
 
+
+
+
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -232,25 +236,28 @@ button[type="submit"]:hover {
 }
 
 .gallery img {
-  width: 70%; /* Adjust as needed */
+  width: 100%; /* Ensure images fill their container */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove any default inline spacing */
 }
 
 .gallery figcaption {
   font-style: normal; /* Use normal font style */
-  color: #000; /* Set text color to black */
-  position: absolute;
-  top: 0; /* Position at the top */
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
+  color: #333; /* Dark gray text color for better readability */
+  position: relative; /* Position relative to its container */
+  margin-top: 10px; /* Space between image and caption */
   text-align: center;
-  background-color: yellow; /* Set background color to yellow */
-  padding: 5px 10px; /* Add padding to the caption */
-  border-radius: 5px;
+  background-color: #d0e4f0; /* Light blue background color */
+  padding: 10px; /* Add padding to the caption */
+  border-radius: 5px; /* Optional: rounded corners */
   font-size: 0.9em; /* Adjust font size as needed */
-  width: 100%; /* Ensure the caption spans the width of the figure */
+  display: inline-block; /* Ensure background color fits the text width */
 }
+
+
+
+
+
 
 
 
