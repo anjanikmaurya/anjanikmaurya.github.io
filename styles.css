@@ -233,7 +233,7 @@ button[type="submit"]:hover {
 }
 
 .gallery img {
-  width: 100%; /* Make images fill their grid cell */
+  width: 70%; /* Make images fill their grid cell */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove any default inline spacing */
 }
@@ -248,7 +248,7 @@ button[type="submit"]:hover {
 
 
 .gallery figcaption {
-  font-style: italic;
+  font-style: Normal;
   color: #666;
   position: absolute;
   top: 50%;
