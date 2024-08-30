@@ -240,14 +240,14 @@ button[type="submit"]:hover {
 
 
 
-/* Gallery grid styles */
+ /* Gallery grid styles */
 .gallery {
   display: grid; /* Use CSS Grid for layout */
-  grid-template-columns: repeat(2, 1fr); /* Two columns for beamline items */
+  grid-template-columns: repeat(2, 1fr); /* Two columns for gallery items */
   gap: 20px; /* Space between grid items */
 }
 
-/* Styles for each beamtime element in the gallery */
+/* Styles for each gallery item */
 .gallery .beamtime {
   text-align: center; /* Center text horizontally */
   position: relative; /* Position relative for caption positioning */
@@ -264,7 +264,8 @@ button[type="submit"]:hover {
 /* Image styles within the gallery */
 .gallery img {
   width: 100%; /* Ensure images fill their container */
-  height: auto; /* Maintain aspect ratio */
+  height: block; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
   display: block; /* Remove any default inline spacing */
 }
 
@@ -300,6 +301,7 @@ button[type="submit"]:hover {
   width: 100%; /* Full width for sliding images */
   flex-shrink: 0; /* Prevent images from shrinking */
 }
+
 
 
 
