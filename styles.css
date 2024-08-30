@@ -264,7 +264,7 @@ button[type="submit"]:hover {
 /* Image styles within the gallery */
 .gallery img {
   width: 100%; /* Ensure images fill their container */
-  height: auto; /* Maintain aspect ratio */
+  height: block; /* Maintain aspect ratio */
   display: block; /* Remove any default inline spacing */
   max-width: 100%; /* Limit the maximum width to the container width */
   max-height: 300px; /* Limit the height to ensure images fit well */
