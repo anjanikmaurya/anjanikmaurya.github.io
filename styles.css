@@ -263,11 +263,10 @@ button[type="submit"]:hover {
 
 /* Image styles within the gallery */
 .gallery img {
-  max-width: 100%; /* Ensure images fit within their container */
+  width: 50%; /* Ensure images fill their container */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
   display: block; /* Remove any default inline spacing */
-  max-height: 100px; /* Optional: restrict maximum height to reduce size */
 }
 
 /* Caption styles within the gallery */
@@ -281,7 +280,7 @@ button[type="submit"]:hover {
   background-color: rgba(208, 228, 240, 0.8); /* Light blue background with opacity */
   padding: 5px; /* Add padding to the caption */
   border-radius: 5px; /* Optional: rounded corners */
-  font-size: 0.9em; /* Smaller font size for the caption */
+  font-size: 0.7em; /* Smaller font size for the caption */
   width: 90%; /* Fit the caption width within the image container */
   text-align: center; /* Center text horizontally */
 }
@@ -299,10 +298,9 @@ button[type="submit"]:hover {
 }
 
 .slide-wrapper img {
-  max-width: 100%; /* Full width for sliding images */
+  width: 100%; /* Full width for sliding images */
   flex-shrink: 0; /* Prevent images from shrinking */
 }
-
 
 
 
