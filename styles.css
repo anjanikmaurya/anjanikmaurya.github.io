@@ -240,14 +240,20 @@ button[type="submit"]:hover {
 
 
 
+
+
+
+
+
+modify this code to reduce the size of the images and fit 2 in horizontal lines: 
 /* Gallery grid styles */
 .gallery {
   display: grid; /* Use CSS Grid for layout */
-  grid-template-columns: repeat(2, 1fr); /* Two columns for gallery items */
+  grid-template-columns: repeat(2, 1fr); /* Two columns for beamline items */
   gap: 20px; /* Space between grid items */
 }
 
-/* Styles for each gallery item */
+/* Styles for each beamtime element in the gallery */
 .gallery .beamtime {
   text-align: center; /* Center text horizontally */
   position: relative; /* Position relative for caption positioning */
@@ -265,8 +271,6 @@ button[type="submit"]:hover {
 .gallery img {
   width: 100%; /* Ensure images fill their container */
   height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Cover the container while maintaining aspect ratio */
-  max-height: 200px; /* Limit the height to reduce the image size */
   display: block; /* Remove any default inline spacing */
 }
 
@@ -275,16 +279,34 @@ button[type="submit"]:hover {
   font-style: normal; /* Use normal font style */
   color: #333; /* Dark gray text color for better readability */
   position: absolute; /* Absolute positioning to place caption on top */
-  bottom: 10px; /* Space from the bottom of the image */
+  top: 10px; /* Space from the top of the image */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center horizontally */
   background-color: rgba(208, 228, 240, 0.8); /* Light blue background with opacity */
-  padding: 5px 10px; /* Add padding to the caption */
+  padding: 5px; /* Add padding to the caption */
   border-radius: 5px; /* Optional: rounded corners */
-  font-size: 0.8em; /* Slightly larger font size for readability */
-  width: calc(100% - 20px); /* Fit the caption width within the image container with padding */
+  font-size: 0.7em; /* Smaller font size for the caption */
+  width: 90%; /* Fit the caption width within the image container */
   text-align: center; /* Center text horizontally */
 }
+
+/* Styles for sliding container */
+.slide-container {
+  position: relative; /* Position relative for sliding effect */
+  width: 100%; /* Full width of the container */
+  overflow: hidden; /* Hide overflow for sliding effect */
+}
+
+.slide-wrapper {
+  display: flex; /* Flexbox for horizontal sliding */
+  transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+}
+
+.slide-wrapper img {
+  width: 100%; /* Full width for sliding images */
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
 
 
 
