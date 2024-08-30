@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       slideWrapper.style.transform = `translateX(${offset}%)`;
     }
     
-    setInterval(showNextImage, 5000); // Change image every 3 seconds
+    setInterval(showNextImage, 10000); // Change image every 3 seconds
   });
 });
 
