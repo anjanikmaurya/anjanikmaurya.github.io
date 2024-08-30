@@ -263,10 +263,11 @@ button[type="submit"]:hover {
 
 /* Image styles within the gallery */
 .gallery img {
-  width: 100%; /* Ensure images fill their container */
-  height: block; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure images fit within their container */
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
   display: block; /* Remove any default inline spacing */
+  max-height: 100px; /* Optional: restrict maximum height to reduce size */
 }
 
 /* Caption styles within the gallery */
@@ -298,7 +299,7 @@ button[type="submit"]:hover {
 }
 
 .slide-wrapper img {
-  width: 100%; /* Full width for sliding images */
+  max-width: 100%; /* Full width for sliding images */
   flex-shrink: 0; /* Prevent images from shrinking */
 }
 
