@@ -596,31 +596,97 @@
 
 
 
-<section id="gallery" class="gallery">
-  <h2>Beamtimes</h2>
-  <div class="beamtime">
-    <h3>1-5 beamtime SSRL</h3>
-    <figure>
-      <img src="https://raw.githubusercontent.com/anjanikmaurya/anjanikmaurya.github.io/main/BL/HT_HP.jpeg" alt="High Temperature and High Pressure setup at beamline 1-5 of SSRL">
-      <figcaption>High Temperature and High Pressure setup at beamline 1-5 of SSRL</figcaption>
-    </figure>
-  </div>
-  
-  <div class="beamtime">
-    <h3>17-2 beamtime SSRL</h3>
-    <figure>
-      <img src="https://github.com/anjanikmaurya/anjanikmaurya.github.io/blob/main/BL/BL17-2_01.jpg?raw=true" alt="Beamline 17-2 at SSRL">
-      <figcaption>Beamline 17-2 at SSRL</figcaption>
-    </figure>
-  </div>
-  
-  <p>4-1 beamtime SSRL</p>
-  <p>9-3 beamtime SSRL</p>
-  <p>4-2 beamtime SSRL</p>
-  <p>11-3 beamtime SSRL</p>
-  <p>P12 beamtime DESY</p>
-  <p>X04SA Materials Science beamtime PSI</p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sliding Gallery</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
+</head>
+<body>
+  <section id="gallery" class="gallery">
+    <h2>Beamtimes</h2>
+    
+    <!-- Beamtime 1 -->
+    <div class="beamtime">
+      <h3>1-5 beamtime SSRL</h3>
+      <figure>
+        <div class="slide-container">
+          <div class="slide-wrapper">
+            <img src="https://raw.githubusercontent.com/anjanikmaurya/anjanikmaurya.github.io/main/BL/HT_HP.jpeg" alt="High Temperature and High Pressure setup at beamline 1-5 of SSRL">
+            <!-- Add more images as needed -->
+          </div>
+        </div>
+        <figcaption>High Temperature and High Pressure setup at beamline 1-5 of SSRL</figcaption>
+      </figure>
+    </div>
+    
+    <!-- Beamtime 2 -->
+    <div class="beamtime">
+      <h3>17-2 beamtime SSRL</h3>
+      <figure>
+        <div class="slide-container">
+          <div class="slide-wrapper">
+            <img src="https://github.com/anjanikmaurya/anjanikmaurya.github.io/blob/main/BL/BL17-2_01.jpg?raw=true" alt="Beamline 17-2 at SSRL">
+            <!-- Add more images as needed -->
+          </div>
+        </div>
+        <figcaption>Beamline 17-2 at SSRL</figcaption>
+      </figure>
+    </div>
+    
+    <!-- Additional beamtime entries -->
+    <div class="beamtime">
+      <h3>4-1 beamtime SSRL</h3>
+      <p>Details about 4-1 beamtime SSRL</p>
+    </div>
+    <div class="beamtime">
+      <h3>9-3 beamtime SSRL</h3>
+      <p>Details about 9-3 beamtime SSRL</p>
+    </div>
+    <div class="beamtime">
+      <h3>4-2 beamtime SSRL</h3>
+      <p>Details about 4-2 beamtime SSRL</p>
+    </div>
+    <div class="beamtime">
+      <h3>11-3 beamtime SSRL</h3>
+      <p>Details about 11-3 beamtime SSRL</p>
+    </div>
+    <div class="beamtime">
+      <h3>P12 beamtime DESY</h3>
+      <p>Details about P12 beamtime DESY</p>
+    </div>
+    <div class="beamtime">
+      <h3>X04SA Materials Science beamtime PSI</h3>
+      <p>Details about X04SA Materials Science beamtime PSI</p>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slideContainers = document.querySelectorAll('.slide-container');
+      
+      slideContainers.forEach(container => {
+        const slideWrapper = container.querySelector('.slide-wrapper');
+        const images = slideWrapper.querySelectorAll('img');
+        const totalImages = images.length;
+
+        let index = 0;
+        
+        function showNextImage() {
+          index = (index + 1) % totalImages;
+          const offset = -index * 100; // Adjust this value based on image width
+          slideWrapper.style.transform = `translateX(${offset}%)`;
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+      });
+    });
+  </script>
+</body>
+</html>
+
 
 
 
