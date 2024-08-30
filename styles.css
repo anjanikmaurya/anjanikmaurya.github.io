@@ -1,252 +1,274 @@
 /* Reset styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove default margin for all elements */
+  padding: 0; /* Remove default padding for all elements */
+  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
 }
 
-/* General styles */
+/* General styles for the body */
 body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-  background-color: #f7f7f7;
+  font-family: Arial, sans-serif; /* Set font family to Arial, with a fallback to sans-serif */
+  font-size: 16px; /* Base font size */
+  line-height: 1.5; /* Line height for better readability */
+  color: #333; /* Default text color: dark gray */
+  background-color: #f7f7f7; /* Background color: light gray */
 }
 
+/* Additional body styles for margin and padding */
 body {
-  margin: 0;
-  padding-top: 70px;
+  margin: 0; /* Remove default margin */
+  padding-top: 70px; /* Add padding to the top to account for a fixed header */
 }
 
+/* Styles for the fixed header */
 .fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background-color: black;
-  color: white;
+  position: fixed; /* Fixes the header at the top of the page */
+  top: 0; /* Aligns the header to the top */
+  left: 0; /* Aligns the header to the left */
+  width: 100%; /* Full width to span across the screen */
+  height: 60px; /* Set height for the header */
+  background-color: black; /* Background color: black */
+  color: white; /* Text color: white */
 }
 
+/* Container for header content */
 .header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out items evenly */
+  align-items: center; /* Center items vertically */
+  height: 100%; /* Full height of the header */
+  max-width: 1200px; /* Maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
 }
 
+/* Styles for the logo in the header */
 .logo {
-  margin: 0;
-  font-size: 1.5rem;
-  padding-left: 20px;
+  margin: 0; /* Remove default margin */
+  font-size: 1.5rem; /* Font size for the logo text */
+  padding-left: 20px; /* Add padding to the left of the logo */
 }
 
+/* Styles for the navigation section */
 .navigation {
-  margin: 0;
-  padding-right: 20px;
+  margin: 0; /* Remove default margin */
+  padding-right: 20px; /* Add padding to the right of the navigation */
 }
 
+/* Remove list styles from navigation */
 .navigation ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style: none; /* Remove bullet points */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
+/* Inline style for navigation list items */
 .navigation li {
-  display: inline-block;
-  margin-left: 20px;
+  display: inline-block; /* Display list items in a horizontal line */
+  margin-left: 20px; /* Space between each navigation item */
 }
 
+/* Styles for navigation links */
 .navigation a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.2s ease-in-out;
+  color: white; /* Link color: white */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.2rem; /* Increase font size */
+  transition: color 0.2s ease-in-out; /* Smooth transition for color change */
 }
 
+/* Hover effect for navigation links */
 .navigation a:hover {
-  color: gray;
+  color: gray; /* Change color to gray on hover */
 }
 
-
-
-
-
-
-
+/* General navigation styles */
 nav {
-  display: flex;
+  display: flex; /* Use flexbox for layout */
 }
 
+/* Remove default list styles for navigation */
 nav ul {
-  display: flex;
-  list-style: none;
+  display: flex; /* Display list items in a horizontal line */
+  list-style: none; /* Remove bullet points */
 }
 
+/* Spacing for navigation list items */
 nav li {
-  margin-left: 1rem;
+  margin-left: 1rem; /* Space between navigation items */
 }
 
+/* Styles for links within the navigation */
 nav a {
-  text-decoration: none;
-  color: #333;
-  padding: 0.5rem;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Link color: dark gray */
+  padding: 0.5rem; /* Padding around the links */
+  border-radius: 3px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
+/* Hover effect for navigation links */
 nav a:hover {
-  background-color: #333;
-  color: #fff;
+  background-color: #333; /* Background color on hover */
+  color: #fff; /* Text color on hover */
 }
 
+/* Main content padding */
 main {
-  padding: 1rem;
+  padding: 1rem; /* Padding around main content */
 }
 
+/* Section styles for spacing */
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; /* Space below each section */
 }
 
+/* Heading styles */
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2rem; /* Font size for headings */
+  margin-bottom: 1rem; /* Space below each heading */
 }
 
+/* Unordered list styles */
 ul {
-  list-style: disc;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
+  list-style: disc; /* Bullet points style */
+  margin-left: 2rem; /* Indent list items */
+  margin-bottom: 1rem; /* Space below each list */
 }
 
+/* List item styles */
 li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; /* Space below each list item */
 }
 
+/* Form styles */
 form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack form elements vertically */
+  max-width: 500px; /* Limit width of the form */
 }
 
+/* Label spacing */
 label {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; /* Space below each label */
 }
 
+/* Input and textarea styles */
 input,
 textarea {
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  padding: 0.5rem; /* Padding inside the input and textarea */
+  margin-bottom: 1rem; /* Space below each input and textarea */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 3px; /* Rounded corners */
 }
 
+/* Styles for submit button */
 button[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  background-color: #333; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 0.5rem; /* Padding inside the button */
+  border: none; /* Remove default border */
+  border-radius: 3px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
+/* Hover effect for submit button */
 button[type="submit"]:hover {
-  background-color: #fff;
-  color: #333;
+  background-color: #fff; /* Change background color on hover */
+  color: #333; /* Change text color on hover */
 }
 
+/* Tooltip styles */
 .tooltip {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 0.5rem;
-  font-size: 0.8rem;
-  border-radius: 0.2rem;
+  position: absolute; /* Position relative to its nearest positioned ancestor */
+  bottom: 0; /* Align to the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center the tooltip */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  color: #fff; /* Text color: white */
+  padding: 0.5rem; /* Padding inside the tooltip */
+  font-size: 0.8rem; /* Smaller font size */
+  border-radius: 0.2rem; /* Slightly rounded corners */
 }
 
+/* Styles for fixed panels */
 .panel {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 500px;
+  position: fixed; /* Fixed position on the screen */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the panel */
+  background-color: #fff; /* Panel background color: white */
+  padding: 1rem; /* Padding inside the panel */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow around the panel */
+  width: 90%; /* Width relative to viewport */
+  max-width: 500px; /* Maximum width for the panel */
 }
 
+/* Styles for headings within the panel */
 .panel h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Font size for panel headings */
+  margin-bottom: 1rem; /* Space below the heading */
 }
 
+/* Centered list styles within the panel */
 .panel ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center list items horizontally */
+  align-items: center; /* Center list items vertically */
+  list-style: none; /* Remove bullet points */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
 
-  .panel li {
-    margin: 0 10px;
-  }
+/* Spacing for list items within the panel */
+.panel li {
+  margin: 0 10px; /* Horizontal space between list items */
+}
 
+/* Styles for links within the panel */
 .panel a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease;
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Link color: dark gray */
+  transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
-
+/* Hover effect for links within the panel */
 .panel a:hover {
-  color: #666;
+  color: #666; /* Change color on hover */
 }
 
-
-
-
-
-
-
-
+/* Gallery grid styles */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive column layout */
+  gap: 20px; /* Space between grid items */
 }
 
+/* Styles for each beamtime element in the gallery */
 .gallery .beamtime {
-  text-align: center;
+  text-align: center; /* Center text horizontally */
 }
 
+/* Styles for figures in the gallery */
 .gallery figure {
-  margin: 0;
-  padding: 0;
-  position: relative;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  position: relative; /* Position relative for child elements */
 }
 
+/* Image styles within the gallery */
 .gallery img {
   width: 100%; /* Ensure images fill their container */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove any default inline spacing */
 }
 
+/* Caption styles within the gallery */
 .gallery figcaption {
   font-style: normal; /* Use normal font style */
   color: #333; /* Dark gray text color for better readability */
   position: relative; /* Position relative to its container */
   margin-top: 10px; /* Space between image and caption */
-  text-align: center;
+  text-align: center; /* Center text horizontally */
   background-color: #d0e4f0; /* Light blue background color */
   padding: 10px; /* Add padding to the caption */
   border-radius: 5px; /* Optional: rounded corners */
@@ -254,71 +276,64 @@ button[type="submit"]:hover {
   display: inline-block; /* Ensure background color fits the text width */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Contact section styles */
 #contact {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  background-color: #f2f2f2;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  width: 80%; /* Set width relative to parent container */
+  margin: 0 auto; /* Center horizontally */
+  text-align: center; /* Center text */
+  background-color: #f2f2f2; /* Light gray background color */
+  padding: 20px; /* Padding around the contact section */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); /* Box shadow for subtle 3D effect */
 }
 
+/* Contact section heading styles */
 #contact h2 {
-  font-size: 32px;
+  font-size: 32px; /* Font size for contact heading */
 }
 
+/* Contact section paragraph styles */
 #contact p {
-  font-size: 20px;
-  margin: 10px 0;
+  font-size: 20px; /* Font size for contact paragraph */
+  margin: 10px 0; /* Vertical margin for spacing */
 }
 
+/* Link styles in the contact section */
 #contact a {
-  color: #007bff;
-  text-decoration: none;
+  color: #007bff; /* Link color: blue */
+  text-decoration: none; /* Remove underline from links */
 }
 
-
-
-<style>
+/* CV section styles */
 #cv {
-  text-align: center;
-  margin: auto;
-  width: 50%;
-  background-color: #f8f8f8;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+  text-align: center; /* Center text */
+  margin: auto; /* Center horizontally */
+  width: 50%; /* Width relative to parent container */
+  background-color: #f8f8f8; /* Light gray background color */
+  padding: 20px; /* Padding around the CV section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75); /* Box shadow for subtle 3D effect */
 }
+
+/* Heading styles in the CV section */
 #cv h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 36px; /* Font size for CV heading */
+  margin-bottom: 20px; /* Space below heading */
 }
+
+/* Paragraph styles in the CV section */
 #cv p {
-  font-size: 24px;
-  margin-bottom: 0;
+  font-size: 24px; /* Font size for CV paragraph */
+  margin-bottom: 0; /* Remove default margin */
 }
+
+/* Link styles in the CV section */
 #cv a {
-  color: #333;
-  text-decoration: none;
+  color: #333; /* Link color: dark gray */
+  text-decoration: none; /* Remove underline from links */
 }
+
+/* Hover effect for links in the CV section */
 #cv a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline links on hover */
 }
-</style>
