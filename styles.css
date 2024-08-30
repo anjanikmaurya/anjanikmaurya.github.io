@@ -240,12 +240,6 @@ button[type="submit"]:hover {
 
 
 
-
-
-
-
-
-modify this code to reduce the size of the images and fit 2 in horizontal lines: 
 /* Gallery grid styles */
 .gallery {
   display: grid; /* Use CSS Grid for layout */
