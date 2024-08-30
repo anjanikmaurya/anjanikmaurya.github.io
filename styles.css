@@ -276,6 +276,9 @@ button[type="submit"]:hover {
   display: inline-block; /* Ensure background color fits the text width */
 }
 
+
+
+
 /* Contact section styles */
 #contact {
   width: 80%; /* Set width relative to parent container */
@@ -286,6 +289,10 @@ button[type="submit"]:hover {
   border-radius: 5px; /* Rounded corners */
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); /* Box shadow for subtle 3D effect */
 }
+
+
+
+
 
 /* Contact section heading styles */
 #contact h2 {
