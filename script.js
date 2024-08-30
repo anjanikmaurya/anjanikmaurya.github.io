@@ -52,3 +52,26 @@ tabLinks.forEach((link, index) => {
     link.appendChild(tooltip);
   }
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const slideContainers = document.querySelectorAll('.slide-container');
+  
+  slideContainers.forEach(container => {
+    const slideWrapper = container.querySelector('.slide-wrapper');
+    const images = slideWrapper.querySelectorAll('img');
+    const totalImages = images.length;
+
+    let index = 0;
+    
+    function showNextImage() {
+      index = (index + 1) % totalImages;
+      const offset = -index * 100; // Adjust this value based on image width
+      slideWrapper.style.transform = `translateX(${offset}%)`;
+    }
+    
+    setInterval(showNextImage, 3000); // Change image every 3 seconds
+  });
+});
+
