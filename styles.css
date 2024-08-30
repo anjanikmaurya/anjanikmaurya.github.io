@@ -243,22 +243,22 @@ button[type="submit"]:hover {
 /* Gallery grid styles */
 .gallery {
   display: grid; /* Use CSS Grid for layout */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive column layout */
+  grid-template-columns: repeat(2, 1fr); /* Two columns for beamline items */
   gap: 20px; /* Space between grid items */
 }
 
 /* Styles for each beamtime element in the gallery */
 .gallery .beamtime {
   text-align: center; /* Center text horizontally */
-  position: relative; /* Position relative for sliding effect */
+  position: relative; /* Position relative for caption positioning */
 }
 
 /* Styles for figures in the gallery */
 .gallery figure {
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
-  position: relative; /* Position relative for child elements */
-  overflow: hidden; /* Hide overflow for sliding effect */
+  position: relative; /* Position relative for caption positioning */
+  overflow: hidden; /* Hide overflow for image display */
 }
 
 /* Image styles within the gallery */
@@ -272,14 +272,16 @@ button[type="submit"]:hover {
 .gallery figcaption {
   font-style: normal; /* Use normal font style */
   color: #333; /* Dark gray text color for better readability */
-  position: relative; /* Position relative to its container */
-  margin-top: 10px; /* Space between image and caption */
-  text-align: center; /* Center text horizontally */
-  background-color: #d0e4f0; /* Light blue background color */
-  padding: 10px; /* Add padding to the caption */
+  position: absolute; /* Absolute positioning to place caption on top */
+  top: 10px; /* Space from the top of the image */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: rgba(208, 228, 240, 0.8); /* Light blue background with opacity */
+  padding: 5px; /* Add padding to the caption */
   border-radius: 5px; /* Optional: rounded corners */
-  font-size: 0.9em; /* Adjust font size as needed */
-  display: inline-block; /* Ensure background color fits the text width */
+  font-size: 0.7em; /* Smaller font size for the caption */
+  width: 90%; /* Fit the caption width within the image container */
+  text-align: center; /* Center text horizontally */
 }
 
 /* Styles for sliding container */
