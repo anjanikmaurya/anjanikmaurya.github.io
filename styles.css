@@ -264,10 +264,10 @@ button[type="submit"]:hover {
 /* Image styles within the gallery */
 .gallery img {
   width: 100%; /* Ensure images fill their container */
-  height: block; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  max-height: 200px; /* Limit the height to reduce the image size */
   display: block; /* Remove any default inline spacing */
-  max-width: 100%; /* Limit the maximum width to the container width */
-  max-height: 300px; /* Limit the height to ensure images fit well */
 }
 
 /* Caption styles within the gallery */
@@ -275,32 +275,15 @@ button[type="submit"]:hover {
   font-style: normal; /* Use normal font style */
   color: #333; /* Dark gray text color for better readability */
   position: absolute; /* Absolute positioning to place caption on top */
-  top: 10px; /* Space from the top of the image */
+  bottom: 10px; /* Space from the bottom of the image */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center horizontally */
   background-color: rgba(208, 228, 240, 0.8); /* Light blue background with opacity */
-  padding: 5px; /* Add padding to the caption */
+  padding: 5px 10px; /* Add padding to the caption */
   border-radius: 5px; /* Optional: rounded corners */
-  font-size: 0.7em; /* Smaller font size for the caption */
-  width: 90%; /* Fit the caption width within the image container */
+  font-size: 0.8em; /* Slightly larger font size for readability */
+  width: calc(100% - 20px); /* Fit the caption width within the image container with padding */
   text-align: center; /* Center text horizontally */
-}
-
-/* Styles for sliding container */
-.slide-container {
-  position: relative; /* Position relative for sliding effect */
-  width: 100%; /* Full width of the container */
-  overflow: hidden; /* Hide overflow for sliding effect */
-}
-
-.slide-wrapper {
-  display: flex; /* Flexbox for horizontal sliding */
-  transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
-}
-
-.slide-wrapper img {
-  width: 100%; /* Full width for sliding images */
-  flex-shrink: 0; /* Prevent images from shrinking */
 }
 
 
