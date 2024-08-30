@@ -236,6 +236,10 @@ button[type="submit"]:hover {
   color: #666; /* Change color on hover */
 }
 
+
+
+
+
 /* Gallery grid styles */
 .gallery {
   display: grid; /* Use CSS Grid for layout */
@@ -246,6 +250,7 @@ button[type="submit"]:hover {
 /* Styles for each beamtime element in the gallery */
 .gallery .beamtime {
   text-align: center; /* Center text horizontally */
+  position: relative; /* Position relative for sliding effect */
 }
 
 /* Styles for figures in the gallery */
@@ -253,11 +258,12 @@ button[type="submit"]:hover {
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
   position: relative; /* Position relative for child elements */
+  overflow: hidden; /* Hide overflow for sliding effect */
 }
 
 /* Image styles within the gallery */
 .gallery img {
-  width: 50%; /* Ensure images fill their container */
+  width: 100%; /* Ensure images fill their container */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove any default inline spacing */
 }
@@ -275,6 +281,28 @@ button[type="submit"]:hover {
   font-size: 0.9em; /* Adjust font size as needed */
   display: inline-block; /* Ensure background color fits the text width */
 }
+
+/* Styles for sliding container */
+.slide-container {
+  position: relative; /* Position relative for sliding effect */
+  width: 100%; /* Full width of the container */
+  overflow: hidden; /* Hide overflow for sliding effect */
+}
+
+.slide-wrapper {
+  display: flex; /* Flexbox for horizontal sliding */
+  transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+}
+
+.slide-wrapper img {
+  width: 100%; /* Full width for sliding images */
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+
+
+
+
 
 
 
