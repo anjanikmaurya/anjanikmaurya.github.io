@@ -244,7 +244,7 @@ button[type="submit"]:hover {
 .gallery {
   display: grid; /* Use CSS Grid for layout */
   grid-template-columns: repeat(2, 1fr); /* Two columns for gallery items */
-  gap: 50px; /* Space between grid items */
+  gap: 20px; /* Space between grid items */
 }
 
 /* Styles for each gallery item */
@@ -263,7 +263,7 @@ button[type="submit"]:hover {
 
 /* Image styles within the gallery */
 .gallery img {
-  width: 50%; /* Ensure images fill their container */
+  width: 80%; /* Ensure images fill their container */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
   display: block; /* Remove any default inline spacing */
