@@ -244,7 +244,7 @@ button[type="submit"]:hover {
 .gallery {
   display: grid; /* Use CSS Grid for layout */
   grid-template-columns: repeat(2, 1fr); /* Two columns for gallery items */
-  gap: 20px; /* Space between grid items */
+  gap: 50px; /* Space between grid items */
 }
 
 /* Styles for each gallery item */
@@ -281,7 +281,7 @@ button[type="submit"]:hover {
   background-color: rgba(208, 228, 240, 0.8); /* Light blue background with opacity */
   padding: 5px; /* Add padding to the caption */
   border-radius: 5px; /* Optional: rounded corners */
-  font-size: 0.7em; /* Smaller font size for the caption */
+  font-size: 0.9em; /* Smaller font size for the caption */
   width: 90%; /* Fit the caption width within the image container */
   text-align: center; /* Center text horizontally */
 }
