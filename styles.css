@@ -376,3 +376,10 @@ button[type="submit"]:hover {
 #cv a:hover {
   text-decoration: underline; /* Underline links on hover */
 }
+
+
+  <style>
+  .about-section p {
+    margin-bottom: 2.5em; /* adjust: 2em–3em usually feels right */
+  }
+</style>
