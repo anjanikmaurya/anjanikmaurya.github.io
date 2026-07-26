@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Anjani K. Maurya — Associate Staff Scientist at SLAC National Accelerator Laboratory and Stanford University. Research in plastic deconstruction, recycling, and autonomous X-ray scattering.">
+  <meta name="description" content="Anjani K. Maurya, Associate Staff Scientist at SLAC National Accelerator Laboratory and Stanford University. Research in plastic deconstruction, recycling, and autonomous X-ray scattering.">
   <title>Anjani K. Maurya</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -27,24 +27,45 @@
           <li><a href="#resources">Resources</a></li>
           <li><a href="#gallery">Beamtimes</a></li>
           <li><a href="#cv">CV</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Get in touch</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
   <main>
     <!-- ============ ABOUT ============ -->
     <section id="about">
+      <div class="hero">
+        <div class="hero-inner">
+          <img class="hero-photo" src="https://raw.githubusercontent.com/anjanikmaurya/anjanikmaurya.github.io/main/anjani_photo.png" alt="Anjani K. Maurya">
+          <div class="hero-content">
+            <p class="hero-eyebrow">SLAC National Accelerator Laboratory · Stanford University</p>
+            <h1 class="hero-name">Anjani K. Maurya</h1>
+            <p class="hero-role">Associate Staff Scientist</p>
+            <p class="hero-tagline">Plastic deconstruction &amp; recycling · autonomous, AI-driven X-ray scattering for polymers and soft materials.</p>
+            <div class="hero-links">
+              <a href="https://scholar.google.co.uk/citations?user=yzQ25SwAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Scholar</a>
+              <a href="https://orcid.org/0000-0002-9134-6693" target="_blank" rel="noopener"><i class="fab fa-orcid"></i> ORCID</a>
+              <a href="https://www.linkedin.com/in/anjanikmaurya/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="mailto:akmaurya@slac.stanford.edu"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h2>About</h2>
       <div class="about-section">
-        <img id="anjani-photo" src="https://raw.githubusercontent.com/anjanikmaurya/anjanikmaurya.github.io/main/anjani_photo.png" alt="Anjani K. Maurya">
         <p>
-          I am an Associate Staff Scientist at SLAC National Accelerator Laboratory and Stanford University.
-          My research focuses on understanding plastic deconstruction and recycling through chemical and biological pathways,
-          as well as developing autonomous and data-driven X-ray scattering methodologies for studying polymers and soft materials.
-          By combining in situ and operando X-ray scattering with automated analysis and adaptive measurement strategies,
-          my work aims to accelerate the discovery of structure–reactivity and structure–property relationships.
+          I am an Associate Staff Scientist at SLAC National Accelerator Laboratory and Stanford University,
+          where I am building a soft matter research group that uses large-scale facilities such as synchrotrons
+          and free-electron lasers. My research focuses on understanding plastic deconstruction and recycling
+          through chemical and biological pathways, and on developing autonomous, data-driven X-ray scattering
+          methods for polymers and soft materials. By combining in situ and operando scattering with real-time
+          analysis, AI/ML and adaptive measurement strategies, my work aims to accelerate the discovery of
+          structure&ndash;reactivity and structure&ndash;property relationships.
         </p>
         <p>
           I earned my Ph.D. in Biomedical Engineering from the Swiss Federal Laboratories for Materials Science and Technology (Empa)
@@ -79,12 +100,236 @@
     <!-- ============ RESEARCH ============ -->
     <section id="research">
       <h2>Research</h2>
-      <p class="placeholder">Will be updated soon&hellip;</p>
+      <p class="section-intro">
+        My work uses X-ray scattering to understand how the structure of soft materials governs their
+        reactivity and properties, and to build the automated, data-driven experiments that make
+        those questions tractable at scale.
+      </p>
+
+      <figure class="schematic schematic-wide">
+        <svg class="beam-anim" viewBox="0 0 960 300" role="img" aria-labelledby="geo-t geo-d">
+          <title id="geo-t">Animated SAXS and WAXS measurement geometry</title>
+          <desc id="geo-d">An X-ray pulse travels from the synchrotron source through collimating slits to the sample. On striking the sample it scatters: wide-angle radiation fills a detector close to the sample, while small-angle radiation travels to a downstream detector. The direct beam continues to a beamstop. The sequence repeats.</desc>
+
+          <defs>
+            <marker id="sc-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="var(--cardinal-700)"/>
+            </marker>
+            <marker id="db-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="var(--slate-500)"/>
+            </marker>
+            <radialGradient id="flash-g">
+              <stop offset="0%" stop-color="#fff" stop-opacity="0.95"/>
+              <stop offset="45%" stop-color="var(--cardinal-400)" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="var(--cardinal-400)" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- static apparatus -->
+          <rect x="16" y="140" width="58" height="40" rx="7" fill="var(--cardinal-800)"/>
+          <g fill="var(--slate-400)">
+            <rect x="150" y="126" width="7" height="26" rx="2"/><rect x="150" y="168" width="7" height="26" rx="2"/>
+            <rect x="224" y="132" width="7" height="21" rx="2"/><rect x="224" y="168" width="7" height="21" rx="2"/>
+          </g>
+          <path d="M401.6 54.5 L446.2 125.7" stroke="var(--slate-700)" stroke-width="8" stroke-linecap="round"/>
+          <rect x="822" y="70" width="13" height="180" rx="4" fill="var(--slate-700)"/>
+
+          <!-- incident beam + travelling pulse -->
+          <path d="M74 160 H296" stroke="var(--cardinal-400)" stroke-width="10" opacity="0.16"/>
+          <path d="M74 160 H296" stroke="var(--cardinal-500)" stroke-width="3" fill="none"/>
+          <g class="b-photon">
+            <circle cx="74" cy="160" r="13" fill="var(--cardinal-400)" opacity="0.35"/>
+            <circle cx="74" cy="160" r="6" fill="#fff"/>
+          </g>
+
+          <!-- sample + flash on impact -->
+          <circle class="b-flash" cx="304" cy="160" r="58" fill="url(#flash-g)"/>
+          <rect x="296" y="118" width="16" height="84" rx="4" fill="var(--amber)"/>
+
+          <!-- wide-angle scattered beam, filling the WAXS detector -->
+          <g class="b-waxs">
+            <path d="M312 160 L401.6 54.5 A138.45 138.45 0 0 1 446.2 125.7 Z" fill="var(--cardinal-400)" opacity="0.24"/>
+            <g stroke="var(--cardinal-700)" stroke-width="2" marker-end="url(#sc-arrow)">
+              <path d="M312 160 L401.6 54.5"/>
+              <path d="M312 160 L446.2 125.7"/>
+            </g>
+          </g>
+
+          <!-- small-angle scattered beam, filling the SAXS detector -->
+          <g class="b-saxs">
+            <path d="M312 160 L822 70 L822 250 Z" fill="var(--cardinal-400)" opacity="0.24"/>
+            <g stroke="var(--cardinal-700)" stroke-width="2" marker-end="url(#sc-arrow)">
+              <path d="M312 160 L822 70"/>
+              <path d="M312 160 L822 250"/>
+            </g>
+          </g>
+
+          <!-- transmitted direct beam and beamstop -->
+          <g class="b-direct">
+            <path d="M312 160 H800" stroke="var(--slate-500)" stroke-width="1.8" stroke-dasharray="8 6" marker-end="url(#db-arrow)"/>
+          </g>
+          <circle cx="812" cy="160" r="7" fill="var(--slate-900)"/>
+
+          <!-- 2-theta annotations -->
+          <g class="b-angles" fill="none" stroke="var(--slate-700)" stroke-width="1.6">
+            <path d="M384 160 A72 72 0 0 0 358.6 105.1"/>
+            <path d="M512 160 A200 200 0 0 0 509 125.3"/>
+          </g>
+
+          <g font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="var(--slate-600)">
+            <text x="16" y="206" fill="var(--cardinal-800)">Synchrotron</text>
+            <text x="16" y="224">X-ray source</text>
+            <text x="140" y="114">Collimation</text>
+            <text x="258" y="234" fill="var(--amber-700)">Sample</text>
+            <text x="240" y="252">in situ cell</text>
+            <text class="b-angles" x="386" y="120" font-size="13" font-weight="600" fill="var(--slate-800)">2&#952;</text>
+            <text class="b-angles" x="520" y="146" font-size="13" font-weight="600" fill="var(--slate-800)">2&#952;</text>
+            <text x="470" y="44" fill="var(--cardinal-800)">WAXS detector</text>
+            <text x="470" y="62" font-size="12.5">wide 2&#952; &#183; &#197;-scale packing</text>
+            <text x="540" y="182" font-size="12.5" fill="var(--slate-500)">transmitted direct beam</text>
+            <text x="694" y="36" fill="var(--cardinal-800)">SAXS detector</text>
+            <text x="694" y="54" font-size="12.5">small 2&#952; &#183; 1&#8211;100 nm</text>
+            <text x="720" y="286" font-size="12.5">beamstop absorbs direct beam</text>
+          </g>
+        </svg>
+        <figcaption>
+          The X-ray pulse reaches the sample and scatters: wide 2&#952; carries atomic packing to the
+          near detector, small 2&#952; carries nanoscale morphology downstream, and the direct beam is
+          absorbed by the beamstop. Angles are exaggerated for clarity.
+          <em>q</em> = 4&#960;&#8201;sin&#8201;&#952;&#8201;/&#8201;&#955;.
+        </figcaption>
+      </figure>
+
+      <div class="research-grid">
+        <article class="research-card">
+          <span class="research-icon"><i class="fas fa-recycle"></i></span>
+          <h3>Plastic deconstruction &amp; recycling</h3>
+          <p>
+            Resolving how polymer morphology controls solvent and catalyst accessibility during
+            catalytic autoxidation of polyethylene and polystyrene, and how mixed polyesters can be
+            returned to monomer in closed-loop chemical recycling. In situ SAXS/WAXS during reaction
+            links nanoscale structure to deconstruction mechanism.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <span class="research-icon"><i class="fas fa-robot"></i></span>
+          <h3>Autonomous X-ray experimentation</h3>
+          <p>
+            Building autonomous platforms at SSRL that integrate X-ray capabilities with AI/ML.
+            Python pipelines perform real-time data reduction, correction, and analysis, enabling
+            closed-loop and active-learning workflows that let a measurement decide what to
+            measure next.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <span class="research-icon"><i class="fas fa-bolt"></i></span>
+          <h3>Ultrafast X-ray dynamics</h3>
+          <p>
+            Pump&ndash;probe X-ray scattering at LCLS (XPP) probing transient melting and structural
+            dynamics in metal films, and time-resolved studies using split-and-delay optics.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <span class="research-icon"><i class="fas fa-layer-group"></i></span>
+          <h3>Hierarchical soft matter &amp; fibers</h3>
+          <p>
+            Quantitative structure&ndash;property relationships in electrospun and thermally drawn
+            fibers, nanocellulose aerogels, and mineralized tissues, connecting molecular
+            orientation and semicrystalline order to mechanical and functional behavior across
+            length scales.
+          </p>
+        </article>
+      </div>
+
+      <h3 class="subhead">Length scales we probe</h3>
+      <figure class="schematic schematic-wide">
+        <svg viewBox="0 0 920 198" role="img" aria-labelledby="len-t len-d">
+          <title id="len-t">Length scales accessible by X-ray scattering</title>
+          <desc id="len-d">Wide-angle scattering probes ångström-scale atomic packing, small-angle scattering probes one to one hundred nanometre morphology, and ultra-small-angle scattering and imaging reach micrometres.</desc>
+          <line x1="60" y1="132" x2="880" y2="132" stroke="var(--slate-200)" stroke-width="2"/>
+          <g font-family="Inter, sans-serif" font-size="12.5" fill="var(--slate-500)" text-anchor="middle">
+            <g stroke="var(--slate-200)" stroke-width="2">
+              <line x1="90" y1="126" x2="90" y2="140"/><line x1="255" y1="126" x2="255" y2="140"/>
+              <line x1="420" y1="126" x2="420" y2="140"/><line x1="585" y1="126" x2="585" y2="140"/>
+              <line x1="750" y1="126" x2="750" y2="140"/><line x1="870" y1="126" x2="870" y2="140"/>
+            </g>
+            <text x="90" y="160">0.1 nm</text><text x="255" y="160">1 nm</text>
+            <text x="420" y="160">10 nm</text><text x="585" y="160">100 nm</text>
+            <text x="750" y="160">1 &#181;m</text><text x="870" y="160">10 &#181;m</text>
+          </g>
+          <g font-family="Inter, sans-serif" font-size="13" font-weight="600">
+            <rect class="lad-bar lad-1" x="70" y="34" width="230" height="34" rx="10" fill="var(--cardinal-800)"/>
+            <text class="lad-txt lad-1" x="185" y="56" text-anchor="middle" fill="#fff">WAXS: atomic packing</text>
+            <rect class="lad-bar lad-2" x="240" y="76" width="400" height="34" rx="10" fill="var(--cardinal-600)"/>
+            <text class="lad-txt lad-2" x="440" y="98" text-anchor="middle" fill="#fff">SAXS: nanostructure</text>
+            <rect class="lad-bar lad-3" x="600" y="34" width="280" height="34" rx="10" fill="var(--slate-700)"/>
+            <text class="lad-txt lad-3" x="740" y="56" text-anchor="middle" fill="#fff">USAXS &amp; imaging</text>
+          </g>
+          <g font-family="Inter, sans-serif" font-size="12" fill="var(--slate-500)" text-anchor="middle">
+            <text x="185" y="184">crystal lattice</text>
+            <text x="440" y="184">lamellae, fibrils, pores</text>
+            <text x="740" y="184">domains, morphology</text>
+          </g>
+        </svg>
+        <figcaption>One beamline, many length scales. Combining methods spans atomic packing to bulk morphology.</figcaption>
+      </figure>
+
+      <h3 class="subhead">Techniques &amp; tools</h3>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h4>X-ray methods</h4>
+          <p>SAXS, WAXS, XAS, ultrafast pump&ndash;probe diffraction, in situ and operando measurement</p>
+        </div>
+        <div class="skill-group">
+          <h4>Materials synthesis</h4>
+          <p>Electrospinning, melt-spinning, microfluidics, spin coating, 3D printing, CVD and evaporation thin films</p>
+        </div>
+        <div class="skill-group">
+          <h4>Programming &amp; analysis</h4>
+          <p>Python, MATLAB, real-time SAXS/WAXS pipelines, beamline automation, FEM and DFT modeling</p>
+        </div>
+        <div class="skill-group">
+          <h4>Software</h4>
+          <p>TOPAS, ATSAS, NIKA, FIT2D, GIXGUI, DPDAK, SasView, SASfit, BioXTAS RAW, PyMOL, Fusion 360</p>
+        </div>
+      </div>
+
+      <h3 class="subhead">Facilities</h3>
+      <div class="facility-tags">
+        <span>SSRL: 1-5, 17-2, 11-3, 4-2, 9-3, 4-1</span>
+        <span>LCLS: XPP</span>
+        <span>DESY: P12</span>
+        <span>PSI: MS</span>
+        <span>Diamond: I15-1</span>
+      </div>
     </section>
 
     <!-- ============ PUBLICATIONS ============ -->
     <section id="publications">
       <h2>Publications</h2>
+      <div class="metrics" id="metrics" data-orcid="0000-0002-9134-6693" aria-live="polite">
+        <div class="metric">
+          <span class="metric-value" data-metric="citations">&hellip;</span>
+          <span class="metric-label">Citations</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value" data-metric="hindex">&hellip;</span>
+          <span class="metric-label">h-index</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value" data-metric="i10">&hellip;</span>
+          <span class="metric-label">i10-index</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value" data-metric="works">&hellip;</span>
+          <span class="metric-label">Indexed works</span>
+        </div>
+      </div>
+      <p class="metrics-note" id="metrics-note">Live metrics via <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>. Full profiles below.</p>
+
       <div class="profile-links">
         <a href="https://scholar.google.co.uk/citations?user=yzQ25SwAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
           <img src="https://raw.githubusercontent.com/anjanikmaurya/anjanikmaurya.github.io/main/Images/GoogleScholar_logo.png" alt="Google Scholar">
@@ -94,242 +339,433 @@
         </a>
       </div>
 
-      <ol class="pub-list">
-        <li>
-          <p>
-            Arun S. Asundi, <b>Anjani K. Maurya</b>, Gregg T. Beckham, Ritimukta Sarangi, Christopher J. Tassone;
-            "Understanding the Effect of Water in Plastic Autoxidation Deconstruction Reaction Using X-Ray Scattering and Spectroscopy Techniques"
-            <i>(in preparation)</i>.
-          </p>
+      <ol class="pub-list" reversed>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb no-figure" data-journal="In preparation">
+              <div class="pub-cover cover-v1">
+                <span class="cover-journal">In preparation</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-badge-prep">In preparation</span>
+              <p class="pub-cite"><b>Anjani K. Maurya</b>, Ravikumar Ramegowda, Arun S. Asundi, Ozge D. Bozkurt, Katrina Knauer, Christopher J. Tassone; &ldquo;Decoding the structural deformation behavior of redesigned bioplastics&rdquo;.</p>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            <b>Anjani K. Maurya</b>, Arun S. Asundi, Amani M. Ebrahim, Sarah Hesse, Christopher J. Takacs, Kevin P. Sullivan, Joel Miscall, Gregg T. Beckham, Christopher J. Tassone;
-            "Understanding solvent and catalyst interactions with polymer in Co/Mn-catalyzed oxidation of polyethylene and polystyrene using simultaneous SAXS and WAXS"
-            <i>(in preparation)</i>.
-          </p>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb no-figure" data-journal="Submitted">
+              <div class="pub-cover cover-v1">
+                <span class="cover-journal">Submitted</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-badge-prep">Submitted</span>
+              <p class="pub-cite">Arun S. Asundi, <b>Anjani K. Maurya</b>, Ozge D. Bozkurt, Simon R. Bare, Ritimukta Sarangi, Christopher J. Tassone; &ldquo;Understanding effect of water in Co/Mn-catalyzed oxidation of polyethylene using X-ray scattering and spectroscopy techniques&rdquo;.</p>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Julia B. Curley, Yuanzhe Liang, Jason S. DesVeaux, Taylor Uekert, Hoon Choi, Ryan W. Clarke, William E. Michener, <b>Anjani K. Maurya</b>, Lisa Stanley, Yue Wue, Andrea Baer, Christopher Tassone, Alan Jacobsen, Ofei Mante, Gregg T. Beckham, Katrina M. Knauer*;
-            "Closed-loop recycling of mixed polyesters via catalytic methanolysis and monomer reclamation"
-            <i>Nature Chemical Engineering</i>, volume 2, pages 568–580 (2025).
-            DOI: <a href="https://doi.org/10.1038/s44286-025-00275-x" target="_blank" rel="noopener">10.1038/s44286-025-00275-x</a>
-          </p>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb no-figure" data-journal="Submitted">
+              <div class="pub-cover cover-v1">
+                <span class="cover-journal">Submitted</span>
+                <span class="cover-year">2026</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-badge-prep">Submitted</span>
+              <span class="pub-badge pub-year">2026</span>
+              <p class="pub-cite">Taekeun Yoon, Haoyuan Li, Yanwen Sun, Arijit Majumdar, Priyanka Muhunthan, Guillaume Vignat, Sanghoon Song, Jingcun Fan, Selene She, Takahiro Sato, Aliaksei Halavanau, Alberto Lutman, Yuxuan Li, <b>Anjani K. Maurya</b>, Diling Zhu, Matthias Ihme; &ldquo;Revealing Ultrafast Multiscale Dynamics of Liquid CO<sub>2</sub> Radiolysis with Time-Resolved X-ray Pump/X-ray Probe Scattering using Split-and-Delay Optics&rdquo; (2026).</p>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Jessica L. Beech, <b>Anjani K. Maurya</b>, Ronivaldo R. da Silva, Emmanuel Akpoto, Arun Asundi, Julia A. Fecko, Neela H. Yennawar, Ritimukta Sarangi, Christopher Tassone, Thomas M. Weiss, Jennifer L. DuBois;
-            "Understanding the stability of a plastic-degrading Rieske iron oxidoreductase system"
-            <i>Protein Science</i>, 33(6): e4997 (2024).
-            DOI: <a href="https://doi.org/10.1002/pro.4997" target="_blank" rel="noopener">10.1002/pro.4997</a>
-          </p>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb no-figure" data-journal="JACS Au">
+              <div class="pub-cover cover-v2">
+                <span class="cover-journal">JACS Au</span>
+                <span class="cover-year">2026</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">JACS Au</span>
+              <span class="pub-badge pub-year">2026</span>
+              <p class="pub-cite"><b>Anjani K. Maurya</b>, Arun S. Asundi, Sarah A. Hesse, Amani M. Ebrahim, Kevin P. Sullivan, Joel Miscall, Jocelyn A. Richardson, Simon R. Bare, Ritimukta Sarangi, Gregg T. Beckham, Christopher J. Tassone; &ldquo;Effects of Polymer Morphology on Solvent and Catalyst Accessibility during Polyethylene and Polystyrene Autoxidation&rdquo; <i>JACS Au</i>, 6, 2891&ndash;2901 (2026).</p>
+              <a class="pub-doi" href="https://doi.org/10.1021/jacsau.6c00230" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Amy A. Cuthbertson, Clarissa Lincoln, Joel Miscall, Lisa M. Stanley, <b>Anjani K. Maurya</b>, Arun S. Asundi, Christopher J. Tassone, Nicholas A. Rorrer, Gregg T. Beckham;
-            "Characterization of polymer properties and identification of additives in commercially available research plastics"
-            <i>Green Chem.</i>, Advance Article (2024).
-            DOI: <a href="https://doi.org/10.1039/D4GC00659C" target="_blank" rel="noopener">10.1039/D4GC00659C</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=D4GC00659C&imageInfo.ImageIdentifier.Year=2024" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb no-figure" data-journal="Advanced Materials Technologies">
+              <div class="pub-cover cover-v2">
+                <span class="cover-journal">Advanced Materials Technologies</span>
+                <span class="cover-year">2026</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Advanced Materials Technologies</span>
+              <span class="pub-badge pub-year">2026</span>
+              <p class="pub-cite"><b>Anjani K. Maurya</b>, Arun S. Asundi, Ozge D. Bozkurt, Katrina M. Knauer, Simon R. Bare, Christopher J. Tassone; &ldquo;Polymer Deconstruction and Redesign Strategies for Plastics Recycling&rdquo; <i>Advanced Materials Technologies</i>, 11, 2502008 (2026).</p>
+              <a class="pub-doi" href="https://doi.org/10.1002/admt.202502008" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Arun S. Asundi, Amani M. Ebrahim, <b>Anjani K. Maurya</b>, Chad T. Palumbo, Kevin P. Sullivan, Gregg T. Beckham, Ritimukta Sarangi;
-            "Effect of Ligand Chemistry on Electronic Properties and Reactivity of Cobalt Acetate Autoxidation Catalysts"
-            <i>The Journal of Physical Chemistry C</i>, 127 (32), 15797–15808 (2023).
-            DOI: <a href="https://doi.org/10.1021/acs.jpcc.3c03216" target="_blank" rel="noopener">10.1021/acs.jpcc.3c03216</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://pubs.acs.org/cms/10.1021/acs.jpcc.3c03216/asset/images/medium/jp3c03216_0010.gif" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Nature Chemical Engineering" data-covers="https://media.springernature.com/w316/springer-static/cover-hires/journal/44286|https://media.springernature.com/full/springer-static/cover-hires/journal/44286">
+              <div class="pub-cover cover-v1">
+                <span class="cover-journal">Nature Chemical Engineering</span>
+                <span class="cover-year">2025</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Nature Chemical Engineering</span>
+              <span class="pub-badge pub-year">2025</span>
+              <p class="pub-cite">Julia B. Curley, Yuanzhe Liang, Jason S. DesVeaux, Taylor Uekert, Hoon Choi, Ryan W. Clarke, William E. Michener, <b>Anjani K. Maurya</b>, Lisa M. Stanley, Yue Wu, Sarah A. Hesse, Andrea L. Baer, Hudson A. Neyer, Christopher J. Tassone, Alan J. Jacobsen, Ofei D. Mante, Gregg T. Beckham, Katrina M. Knauer; &ldquo;Closed-loop recycling of mixed polyesters via catalytic methanolysis and monomer separations&rdquo; <i>Nature Chemical Engineering</i>, 2, 568&ndash;580 (2025).</p>
+              <a class="pub-doi" href="https://doi.org/10.1038/s44286-025-00275-x" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Makenna L. Pennel, <b>Anjani K. Maurya</b>, Amani M. Ebrahim, Christopher J. Tassone, Matteo Cargnello;
-            "Intrinsic activity of silica-alumina for the conversion of polyethylene into tunable aromatics below pyrolytic temperatures"
-            <i>ACS Sustainable Chemistry &amp; Engineering</i>, 11 (34), 12623–12630 (2023).
-            DOI: <a href="https://doi.org/10.1021/acssuschemeng.3c02295" target="_blank" rel="noopener">10.1021/acssuschemeng.3c02295</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://pubs.acs.org/cms/10.1021/acssuschemeng.3c02295/asset/images/medium/sc3c02295_0006.gif" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb no-figure" data-journal="Protein Science">
+              <div class="pub-cover cover-v4">
+                <span class="cover-journal">Protein Science</span>
+                <span class="cover-year">2024</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Protein Science</span>
+              <span class="pub-badge pub-year">2024</span>
+              <p class="pub-cite">Jessica Lusty Beech, <b>Anjani K. Maurya</b>, Ronivaldo da Silva, Emmanuel Akpoto, Arun Asundi, Julia Ann Fecko, Neela Yennawar, Ritimukta Sarangi, Thomas Weiss, Christopher J. Tassone, Jennifer L. DuBois; &ldquo;Understanding the stability constraints on a plastic-deconstructing Rieske iron oxidoreductase system&rdquo; <i>Protein Science</i>, 33(6), e4997 (2024).</p>
+              <a class="pub-doi" href="https://doi.org/10.1002/pro.4997" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Fernando Vazquez Luna, <b>Anjani K. Maurya</b>, Juliana Martins de Souza e Silva, Guido Dittrich, Theresa Paul, Dirk Enke, Patrick Huber, Ralf Wehrspohn, Martin Steinhart;
-            "Straight versus Spongy: Effect of Tortuosity on Polymer Imbibition into Nanoporous Matrices Assessed by Segmentation-Free Analysis of 3D Sample Reconstructions"
-            <i>The Journal of Physical Chemistry C</i>, 126 (30), 12765–12779 (2022).
-            DOI: <a href="https://doi.org/10.1021/acs.jpcc.2c01991" target="_blank" rel="noopener">10.1021/acs.jpcc.2c01991</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://pubs.acs.org/cms/10.1021/acs.jpcc.2c01991/asset/images/medium/jp2c01991_0010.gif" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Green Chemistry">
+              <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&amp;imageInfo.ImageIdentifier.ManuscriptID=D4GC00659C&amp;imageInfo.ImageIdentifier.Year=2024" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v1">
+                <span class="cover-journal">Green Chemistry</span>
+                <span class="cover-year">2024</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Green Chemistry</span>
+              <span class="pub-badge pub-year">2024</span>
+              <p class="pub-cite">Amy A. Cuthbertson, Clarissa L. Lincoln, Joel Miscall, Lisa M. Stanley, David Moore, <b>Anjani K. Maurya</b>, Arun S. Asundi, Christopher J. Tassone, Nicholas A. Rorrer, Gregg T. Beckham; &ldquo;Characterization of polymer properties and identification of additives in commercially available research plastics&rdquo; <i>Green Chemistry</i> (2024).</p>
+              <a class="pub-doi" href="https://doi.org/10.1039/D4GC00659C" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Deeptanshu Sivaraman, Gilberto Siqueira, <b>Anjani K. Maurya</b>, Shanyu Zhao, Matthias M. Koebel, Gustav Nyström, Marco Lattuada, Wim J. Malfait;
-            "Superinsulating nanocellulose aerogels: Effect of density and nanofiber alignment"
-            <i>Carbohydrate Polymers</i>, Volume 292, 119675, ISSN 0144-8617 (2022).
-            DOI: <a href="https://doi.org/10.1016/j.carbpol.2022.119675" target="_blank" rel="noopener">10.1016/j.carbpol.2022.119675</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://ars.els-cdn.com/content/image/1-s2.0-S014486172200580X-gr1.jpg" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="The Journal of Physical Chemistry C">
+              <img src="https://pubs.acs.org/cms/10.1021/acs.jpcc.3c03216/asset/images/medium/jp3c03216_0010.gif" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v2">
+                <span class="cover-journal">The Journal of Physical Chemistry C</span>
+                <span class="cover-year">2023</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">The Journal of Physical Chemistry C</span>
+              <span class="pub-badge pub-year">2023</span>
+              <p class="pub-cite">Arun S. Asundi, Amani M. Ebrahim, <b>Anjani K. Maurya</b>, Chad T. Palumbo, Kevin P. Sullivan, Gregg T. Beckham, Ritimukta Sarangi; &ldquo;Effect of Ligand Chemistry on Electronic Properties and Reactivity of Cobalt Acetate Autoxidation Catalysts&rdquo; <i>The Journal of Physical Chemistry C</i>, 127(32), 15797&ndash;15808 (2023).</p>
+              <a class="pub-doi" href="https://doi.org/10.1021/acs.jpcc.3c03216" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            J. Schoeller, J. T. Avaro, <b>Anjani K. Maurya</b>, R. M. Rossi, A. Neels;
-            "Tailoring Fibre Structure Enabled by X-ray Analytics for Targeted Biomedical Applications"
-            <i>Chimia</i>, 76, 229 (2022).
-            DOI: <a href="https://doi.org/10.2533/chimia.2022.229" target="_blank" rel="noopener">10.2533/chimia.2022.229</a>
-          </p>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="ACS Sustainable Chemistry &amp; Engineering">
+              <img src="https://pubs.acs.org/cms/10.1021/acssuschemeng.3c02295/asset/images/medium/sc3c02295_0006.gif" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v1">
+                <span class="cover-journal">ACS Sustainable Chemistry &amp; Engineering</span>
+                <span class="cover-year">2023</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">ACS Sustainable Chemistry &amp; Engineering</span>
+              <span class="pub-badge pub-year">2023</span>
+              <p class="pub-cite">Makenna L. Pennel, <b>Anjani K. Maurya</b>, Amani M. Ebrahim, Christopher J. Tassone, Matteo Cargnello; &ldquo;Intrinsic activity of silica-alumina for the conversion of polyethylene into tunable aromatics below pyrolytic temperatures&rdquo; <i>ACS Sustainable Chemistry &amp; Engineering</i>, 11(34), 12623&ndash;12630 (2023).</p>
+              <a class="pub-doi" href="https://doi.org/10.1021/acssuschemeng.3c02295" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Robin M. Cywar, Nicholas A. Rorrer, Heather B. Mayes, <b>Anjani K. Maurya</b>, Christopher J. Tassone, Gregg T. Beckham, Eugene Y.-X. Chen;
-            "Redesigned Hybrid Nylons with Optical Clarity and Chemical Recyclability"
-            <i>Journal of the American Chemical Society</i>, 144, 12, 5366–5376 (2022).
-            DOI: <a href="https://doi.org/10.1021/jacs.1c12611" target="_blank" rel="noopener">10.1021/jacs.1c12611</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://pubs.acs.org/cms/10.1021/jacs.1c12611/asset/images/medium/ja1c12611_0014.gif" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="The Journal of Physical Chemistry C">
+              <img src="https://pubs.acs.org/cms/10.1021/acs.jpcc.2c01991/asset/images/medium/jp2c01991_0010.gif" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v2">
+                <span class="cover-journal">The Journal of Physical Chemistry C</span>
+                <span class="cover-year">2022</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">The Journal of Physical Chemistry C</span>
+              <span class="pub-badge pub-year">2022</span>
+              <p class="pub-cite">Fernando Vazquez Luna, <b>Anjani K. Maurya</b>, Juliana Martins de Souza e Silva, Guido Dittrich, Theresa Paul, Dirk Enke, Patrick Huber, Ralf Wehrspohn, Martin Steinhart; &ldquo;Straight versus Spongy: Effect of Tortuosity on Polymer Imbibition into Nanoporous Matrices Assessed by Segmentation-Free Analysis of 3D Sample Reconstructions&rdquo; <i>The Journal of Physical Chemistry C</i>, 126(30), 12765&ndash;12779 (2022).</p>
+              <a class="pub-doi" href="https://doi.org/10.1021/acs.jpcc.2c01991" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            N. Iranpour, M. Liebi, Q. Ong, C. Blanchet, <b>Anjani K. Maurya</b>, F. Stellacci, S. Salentinig, P. Wick, A. Neels;
-            "In-situ Investigations on Gold Nanoparticles Stabilization Mechanisms in Biological Environments Containing HSA"
-            <i>Advanced Functional Materials</i>, 32, 2110253 (2022).
-            DOI: <a href="https://doi.org/10.1002/adfm.202110253" target="_blank" rel="noopener">10.1002/adfm.202110253</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://onlinelibrary.wiley.com/cms/asset/1a2835e8-5d34-4475-be0a-b67bf2ef7e31/adfm202110253-fig-0008-m.jpg" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Carbohydrate Polymers" data-covers="https://ars.els-cdn.com/content/image/X01448617.jpg">
+              <img src="https://ars.els-cdn.com/content/image/1-s2.0-S014486172200580X-gr1.jpg" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v1">
+                <span class="cover-journal">Carbohydrate Polymers</span>
+                <span class="cover-year">2022</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Carbohydrate Polymers</span>
+              <span class="pub-badge pub-year">2022</span>
+              <p class="pub-cite">Deeptanshu Sivaraman, Gilberto Siqueira, <b>Anjani K. Maurya</b>, Shanyu Zhao, Matthias M. Koebel, Gustav Nystr&ouml;m, Marco Lattuada, Wim J. Malfait; &ldquo;Superinsulating nanocellulose aerogels: Effect of density and nanofiber alignment&rdquo; <i>Carbohydrate Polymers</i>, 292, 119675 (2022).</p>
+              <a class="pub-doi" href="https://doi.org/10.1016/j.carbpol.2022.119675" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            <b>Anjani K. Maurya</b>, Eloise Miase, Jean Scholler, Giuseppino Fortunato, René M. Rossi, Alex Dommann, Antonia Neels*;
-            "Multiscale structural decoding of electrospun fibers: from fabrication to possibilities for steering properties"
-            <i>Nanoscale Advances</i>, 4, 491–501 (2022).
-            DOI: <a href="https://doi.org/10.1039/D1NA00503K" target="_blank" rel="noopener">10.1039/D1NA00503K</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=D1NA00503K&imageInfo.ImageIdentifier.Year=2022" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb no-figure" data-journal="Chimia">
+              <div class="pub-cover cover-v2">
+                <span class="cover-journal">Chimia</span>
+                <span class="cover-year">2022</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Chimia</span>
+              <span class="pub-badge pub-year">2022</span>
+              <p class="pub-cite">J. Schoeller, J. T. Avaro, <b>Anjani K. Maurya</b>, R. M. Rossi, A. Neels; &ldquo;Tailoring Fibre Structure Enabled by X-ray Analytics for Targeted Biomedical Applications&rdquo; <i>Chimia</i>, 76, 229 (2022).</p>
+              <a class="pub-doi" href="https://doi.org/10.2533/chimia.2022.229" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Ines Richard, <b>Anjani K. Maurya</b>, Shahrzad Shadman, Eloïse Masquelier, Lison Sylou Marthey, Antonia Neels, Fabien Sorin;
-            "Unraveling the influence of polymer chain orientation on the thermo-mechanical properties of thermally drawn fibers"
-            <i>Small</i>, 18, 2101392 (2022).
-            DOI: <a href="https://doi.org/10.1002/smll.202101392" target="_blank" rel="noopener">10.1002/smll.202101392</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://onlinelibrary.wiley.com/cms/asset/1fdf82f1-7079-48cd-bf2b-f6ae780b67c7/smll202101392-fig-0002-m.png" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Journal of the American Chemical Society">
+              <img src="https://pubs.acs.org/cms/10.1021/jacs.1c12611/asset/images/medium/ja1c12611_0014.gif" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v4">
+                <span class="cover-journal">Journal of the American Chemical Society</span>
+                <span class="cover-year">2022</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Journal of the American Chemical Society</span>
+              <span class="pub-badge pub-year">2022</span>
+              <p class="pub-cite">Robin M. Cywar, Nicholas A. Rorrer, Heather B. Mayes, <b>Anjani K. Maurya</b>, Christopher J. Tassone, Gregg T. Beckham, Eugene Y.-X. Chen; &ldquo;Redesigned Hybrid Nylons with Optical Clarity and Chemical Recyclability&rdquo; <i>Journal of the American Chemical Society</i>, 144(12), 5366&ndash;5376 (2022).</p>
+              <a class="pub-doi" href="https://doi.org/10.1021/jacs.1c12611" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            <b>Anjani K. Maurya</b>, Annapaola Parrilli, Tatiana Kochetkova, Jakob Schwiedrzik, Alex Dommann, Antonia Neels*;
-            "Multiscale and multimodal X-ray analysis: Quantifying phase orientation and morphology of mineralized turkey leg tendons"
-            <i>Acta Biomaterialia</i>, Volume 129, Pages 169–177, ISSN 1742-7061 (2021).
-            DOI: <a href="https://doi.org/10.1016/j.actbio.2021.05.022" target="_blank" rel="noopener">10.1016/j.actbio.2021.05.022</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://ars.els-cdn.com/content/image/1-s2.0-S1742706121003329-fx1_lrg.jpg" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Advanced Functional Materials">
+              <img src="https://onlinelibrary.wiley.com/cms/asset/1a2835e8-5d34-4475-be0a-b67bf2ef7e31/adfm202110253-fig-0008-m.jpg" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v1">
+                <span class="cover-journal">Advanced Functional Materials</span>
+                <span class="cover-year">2022</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Advanced Functional Materials</span>
+              <span class="pub-badge pub-year">2022</span>
+              <p class="pub-cite">N. Iranpour, M. Liebi, Q. Ong, C. Blanchet, <b>Anjani K. Maurya</b>, F. Stellacci, S. Salentinig, P. Wick, A. Neels; &ldquo;In-situ Investigations on Gold Nanoparticles Stabilization Mechanisms in Biological Environments Containing HSA&rdquo; <i>Advanced Functional Materials</i>, 32, 2110253 (2022).</p>
+              <a class="pub-doi" href="https://doi.org/10.1002/adfm.202110253" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            <b>Anjani K. Maurya</b>, Sumit Mondal, Dean E. Wheeldon, Jean Scholler, Michel Schmid, Simon Annaheim, Martin Camenzind, Giuseppino Fortunato, Alex Dommann, Antonia Neels, Amin Sadeghpour, René M. Rossi;
-            "Effect of radiant heat exposure on structure and mechanical properties of thermal protective fabrics"
-            <i>Polymer</i>, Volume 222, 123634, ISSN 0032-3861 (2021).
-            DOI: <a href="https://doi.org/10.1016/j.polymer.2021.123634" target="_blank" rel="noopener">10.1016/j.polymer.2021.123634</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0032386121002573-ga1_lrg.jpg" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Nanoscale Advances">
+              <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&amp;imageInfo.ImageIdentifier.ManuscriptID=D1NA00503K&amp;imageInfo.ImageIdentifier.Year=2022" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v3">
+                <span class="cover-journal">Nanoscale Advances</span>
+                <span class="cover-year">2022</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Nanoscale Advances</span>
+              <span class="pub-badge pub-year">2022</span>
+              <p class="pub-cite"><b>Anjani K. Maurya</b>, Eloise Miase, Jean Scholler, Giuseppino Fortunato, Ren&eacute; M. Rossi, Alex Dommann, Antonia Neels*; &ldquo;Multiscale structural decoding of electrospun fibers: from fabrication to possibilities for steering properties&rdquo; <i>Nanoscale Advances</i>, 4, 491&ndash;501 (2022).</p>
+              <a class="pub-doi" href="https://doi.org/10.1039/D1NA00503K" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Dambarudhar Parida, Khalifah Salmeia, Amin Sadeghpour, Shanyu Zhao, <b>Anjani K. Maurya</b>, Eva Moreau, Robin Pauer, Sandro Lehner, Milijana Jovic, Sabyasachi Gaan;
-            "Template free synthesis of hybrid mesoporous silica nanoparticle with phosphonic acid functionality for efficient methylene blue removal"
-            <i>Materials and Design</i>, Volume 201, 109494, ISSN 0264-1275 (2021).
-            DOI: <a href="https://doi.org/10.1016/j.matdes.2021.109494" target="_blank" rel="noopener">10.1016/j.matdes.2021.109494</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0264127521000472-ga1.jpg" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Small">
+              <img src="https://onlinelibrary.wiley.com/cms/asset/1fdf82f1-7079-48cd-bf2b-f6ae780b67c7/smll202101392-fig-0002-m.png" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v3">
+                <span class="cover-journal">Small</span>
+                <span class="cover-year">2022</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Small</span>
+              <span class="pub-badge pub-year">2022</span>
+              <p class="pub-cite">In&egrave;s Richard, <b>Anjani K. Maurya</b>, Shahrzad Shadman, Elo&iuml;se Masquelier, Lison Sylou Marthey, Antonia Neels, Fabien Sorin; &ldquo;Unraveling the influence of polymer chain orientation on the thermo-mechanical properties of thermally drawn fibers&rdquo; <i>Small</i>, 18, 2101392 (2022).</p>
+              <a class="pub-doi" href="https://doi.org/10.1002/smll.202101392" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Ivana Malagurski, Ruggero Frison, <b>Anjani K. Maurya</b>, Antonia Neels, Boban Andjelkovic, Ramsankar Senthamaraikannan, Ramesh Babu Padamati, Kevin O'Connor, Tomasz Witko, Daria Solarz, Jasmina Nikodinovic-Runic*;
-            "Polyhydroxyoctanoate Films Reinforced with Titanium Dioxide Microfibers for Biomedical Application"
-            <i>Materials Letters</i>, Volume 285, 129100 (2021).
-            DOI: <a href="https://doi.org/10.1016/j.matlet.2020.129100" target="_blank" rel="noopener">10.1016/j.matlet.2020.129100</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0167577X20318073-ga1_lrg.jpg" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Acta Biomaterialia" data-covers="https://ars.els-cdn.com/content/image/X17427061.jpg">
+              <img src="https://ars.els-cdn.com/content/image/1-s2.0-S1742706121003329-fx1_lrg.jpg" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v2">
+                <span class="cover-journal">Acta Biomaterialia</span>
+                <span class="cover-year">2021</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Acta Biomaterialia</span>
+              <span class="pub-badge pub-year">2021</span>
+              <p class="pub-cite"><b>Anjani K. Maurya</b>, Annapaola Parrilli, Tatiana Kochetkova, Jakob Schwiedrzik, Alex Dommann, Antonia Neels*; &ldquo;Multiscale and multimodal X-ray analysis: Quantifying phase orientation and morphology of mineralized turkey leg tendons&rdquo; <i>Acta Biomaterialia</i>, 129, 169&ndash;177 (2021).</p>
+              <a class="pub-doi" href="https://doi.org/10.1016/j.actbio.2021.05.022" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Tatiana Kochetkova, Cinzia Peruzzi, Oliver Braun, Jan Overbeck, <b>Anjani K. Maurya</b>, Antonia Neels, Michel Calame, Johann Michler, Philippe Zysset, Jakob Schwiedrzik*;
-            "Combining polarized Raman spectroscopy and micropillar compression to study microscale structure-property relationships in mineralized tissues"
-            <i>Acta Biomaterialia</i>, ISSN 1742-7061 (2020).
-            DOI: <a href="https://doi.org/10.1016/j.actbio.2020.10.034" target="_blank" rel="noopener">10.1016/j.actbio.2020.10.034</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://ars.els-cdn.com/content/image/1-s2.0-S1742706120306231-fx1_lrg.jpg" alt="Figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Polymer" data-covers="https://ars.els-cdn.com/content/image/X00323861.jpg">
+              <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0032386121002573-ga1_lrg.jpg" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v3">
+                <span class="cover-journal">Polymer</span>
+                <span class="cover-year">2021</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Polymer</span>
+              <span class="pub-badge pub-year">2021</span>
+              <p class="pub-cite"><b>Anjani K. Maurya</b>, Sumit Mondal, Dean E. Wheeldon, Jean Scholler, Michel Schmid, Simon Annaheim, Martin Camenzind, Giuseppino Fortunato, Alex Dommann, Antonia Neels, Amin Sadeghpour, Ren&eacute; M. Rossi; &ldquo;Effect of radiant heat exposure on structure and mechanical properties of thermal protective fabrics&rdquo; <i>Polymer</i>, 222, 123634 (2021).</p>
+              <a class="pub-doi" href="https://doi.org/10.1016/j.polymer.2021.123634" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            N. D. Tien, <b>Anjani K. Maurya</b>, G. Fortunato, M. Rottmar, R. Zboray, R. Erni, A. Dommann, R. M. Rossi, A. Neels, A. Sadeghpour;
-            "Responsive Nanofibers with Embedded Hierarchical Lipid Self-Assemblies"
-            <i>Langmuir</i>, 36(40), 11787–11797 (2020).
-            DOI: <a href="https://doi.org/10.1021/acs.langmuir.0c01487" target="_blank" rel="noopener">10.1021/acs.langmuir.0c01487</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://pubs.acs.org/cms/10.1021/acs.langmuir.0c01487/asset/images/medium/la0c01487_0008.gif" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Materials &amp; Design" data-covers="https://ars.els-cdn.com/content/image/X02641275.jpg">
+              <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0264127521000472-ga1.jpg" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v3">
+                <span class="cover-journal">Materials &amp; Design</span>
+                <span class="cover-year">2021</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Materials &amp; Design</span>
+              <span class="pub-badge pub-year">2021</span>
+              <p class="pub-cite">Dambarudhar Parida, Khalifah Salmeia, Amin Sadeghpour, Shanyu Zhao, <b>Anjani K. Maurya</b>, Eva Moreau, Robin Pauer, Sandro Lehner, Milijana Jovic, Sabyasachi Gaan; &ldquo;Template free synthesis of hybrid mesoporous silica nanoparticle with phosphonic acid functionality for efficient methylene blue removal&rdquo; <i>Materials &amp; Design</i>, 201, 109494 (2021).</p>
+              <a class="pub-doi" href="https://doi.org/10.1016/j.matdes.2021.109494" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Arushi Jain, <b>Anjani K. Maurya</b>, Leonie Ulrich, Michael Jaeger, René M. Rossi, Antonia Neels, Philippe Schucht, Alex Dommann, Martin Frenz, H. Günhan Akarcay;
-            "Polarimetric imaging in backscattering for the structural characterization of strongly scattering birefringent fibrous media"
-            <i>Opt. Express</i>, 28, 16673–16695 (2020).
-            DOI: <a href="https://doi.org/10.1364/OE.390303" target="_blank" rel="noopener">10.1364/OE.390303</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://opg.optica.org/getimagev2.cfm?img=i2wkzWft8HXYaTNd%2Fl4hQsaSSuUWZpJK8Jl93LrNpnI%3D&size=full&uri=oe-28-11-16673-g002" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Materials Letters" data-covers="https://ars.els-cdn.com/content/image/X0167577X.jpg">
+              <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0167577X20318073-ga1_lrg.jpg" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v2">
+                <span class="cover-journal">Materials Letters</span>
+                <span class="cover-year">2020</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Materials Letters</span>
+              <span class="pub-badge pub-year">2020</span>
+              <p class="pub-cite">Ivana Malagurski, Ruggero Frison, <b>Anjani K. Maurya</b>, Antonia Neels, Boban Andjelkovic, Ramsankar Senthamaraikannan, Ramesh Babu Padamati, Kevin O&rsquo;Connor, Tomasz Witko, Daria Solarz, Jasmina Nikodinovic-Runic*; &ldquo;Polyhydroxyoctanoate Films Reinforced with Titanium Dioxide Microfibers for Biomedical Application&rdquo; <i>Materials Letters</i>, 285, 129100 (2020).</p>
+              <a class="pub-doi" href="https://doi.org/10.1016/j.matlet.2020.129100" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            <b>Anjani K. Maurya</b>, Lukas Weidenbacher, Fabrizio Spano, Giuseppino Fortunato, René M. Rossi, Martin Frenz, Alex Dommann, Antonia Neels, Amin Sadeghpour;
-            "Structural insights into semicrystalline states of electrospun nanofibers: a multiscale analytical approach"
-            <i>Nanoscale</i>, 11, 7176–7187 (2019).
-            DOI: <a href="https://doi.org/10.1039/C9NR00446G" target="_blank" rel="noopener">10.1039/C9NR00446G</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=C9NR00446G&imageInfo.ImageIdentifier.Year=2019" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Acta Biomaterialia" data-covers="https://ars.els-cdn.com/content/image/X17427061.jpg">
+              <img src="https://ars.els-cdn.com/content/image/1-s2.0-S1742706120306231-fx1_lrg.jpg" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v2">
+                <span class="cover-journal">Acta Biomaterialia</span>
+                <span class="cover-year">2020</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Acta Biomaterialia</span>
+              <span class="pub-badge pub-year">2020</span>
+              <p class="pub-cite">Tatiana Kochetkova*, Cinzia Peruzzi, Oliver Braun, Jan Overbeck, <b>Anjani K. Maurya</b>, Antonia Neels, Michel Calame, Johann Michler, Philippe Zysset, Jakob Schwiedrzik*; &ldquo;Combining polarized Raman spectroscopy and micropillar compression to study microscale structure-property relationships in mineralized tissues&rdquo; <i>Acta Biomaterialia</i> (2020).</p>
+              <a class="pub-doi" href="https://doi.org/10.1016/j.actbio.2020.10.034" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <p>
-            Nitin Saxena, Josef Keilhofer, <b>Anjani K. Maurya</b>, Giuseppino Fortunato, Jan Overbeck, Peter Müller-Buschbaum;
-            "Facile Optimization of Thermoelectric Properties in PEDOT:PSS Thin Films through Acido-Base and Redox Dedoping Using Readily Available Salts"
-            <i>ACS Appl. Energy Mater.</i>, 1(2), 336–342 (2018).
-            DOI: <a href="https://doi.org/10.1021/acsaem.7b00334" target="_blank" rel="noopener">10.1021/acsaem.7b00334</a>
-          </p>
-          <figure class="pub-figure">
-            <img src="https://pubs.acs.org/cms/10.1021/acsaem.7b00334/asset/images/medium/ae-2017-003347_0005.gif" alt="Table of contents figure">
-          </figure>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Langmuir">
+              <img src="https://pubs.acs.org/cms/10.1021/acs.langmuir.0c01487/asset/images/medium/la0c01487_0008.gif" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v2">
+                <span class="cover-journal">Langmuir</span>
+                <span class="cover-year">2020</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Langmuir</span>
+              <span class="pub-badge pub-year">2020</span>
+              <p class="pub-cite">N. D. Tien, <b>Anjani K. Maurya</b>, G. Fortunato, M. Rottmar, R. Zboray, R. Erni, A. Dommann, R. M. Rossi, A. Neels, A. Sadeghpour*; &ldquo;Responsive Nanofibers with Embedded Hierarchical Lipid Self-Assemblies&rdquo; <i>Langmuir</i>, 36(40), 11787&ndash;11797 (2020).</p>
+              <a class="pub-doi" href="https://doi.org/10.1021/acs.langmuir.0c01487" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Optics Express">
+              <img src="https://opg.optica.org/getimagev2.cfm?img=i2wkzWft8HXYaTNd%2Fl4hQsaSSuUWZpJK8Jl93LrNpnI%3D&amp;size=full&amp;uri=oe-28-11-16673-g002" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v2">
+                <span class="cover-journal">Optics Express</span>
+                <span class="cover-year">2020</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Optics Express</span>
+              <span class="pub-badge pub-year">2020</span>
+              <p class="pub-cite">Arushi Jain, <b>Anjani K. Maurya</b>, Leonie Ulrich, Michael Jaeger, Ren&eacute; M. Rossi, Antonia Neels, Philippe Schucht, Alex Dommann, Martin Frenz, H. G&uuml;nhan Akar&ccedil;ay; &ldquo;Polarimetric imaging in backscattering for the structural characterization of strongly scattering birefringent fibrous media&rdquo; <i>Optics Express</i>, 28, 16673&ndash;16695 (2020).</p>
+              <a class="pub-doi" href="https://doi.org/10.1364/OE.390303" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="Nanoscale">
+              <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&amp;imageInfo.ImageIdentifier.ManuscriptID=C9NR00446G&amp;imageInfo.ImageIdentifier.Year=2019" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v4">
+                <span class="cover-journal">Nanoscale</span>
+                <span class="cover-year">2019</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">Nanoscale</span>
+              <span class="pub-badge pub-year">2019</span>
+              <p class="pub-cite"><b>Anjani K. Maurya</b>, Lukas Weidenbacher, Fabrizio Spano, Giuseppino Fortunato, Ren&eacute; M. Rossi, Martin Frenz, Alex Dommann, Antonia Neels*, Amin Sadeghpour*; &ldquo;Structural insights into semicrystalline states of electrospun nanofibers: a multiscale analytical approach&rdquo; <i>Nanoscale</i>, 11, 7176&ndash;7187 (2019).</p>
+              <a class="pub-doi" href="https://doi.org/10.1039/C9NR00446G" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub-card">
+          <div class="pub-layout">
+            <div class="pub-thumb" data-journal="ACS Applied Energy Materials">
+              <img src="https://pubs.acs.org/cms/10.1021/acsaem.7b00334/asset/images/medium/ae-2017-003347_0005.gif" alt="Graphical abstract" loading="lazy">
+              <div class="pub-cover cover-v3">
+                <span class="cover-journal">ACS Applied Energy Materials</span>
+                <span class="cover-year">2018</span>
+              </div>
+            </div>
+            <div class="pub-body">
+              <span class="pub-badge pub-journal">ACS Applied Energy Materials</span>
+              <span class="pub-badge pub-year">2018</span>
+              <p class="pub-cite">Nitin Saxena, Josef Keilhofer, <b>Anjani K. Maurya</b>, Giuseppino Fortunato, Jan Overbeck, Peter M&uuml;ller-Buschbaum*; &ldquo;Facile Optimization of Thermoelectric Properties in PEDOT:PSS Thin Films through Acid&ndash;Base and Redox Dedoping Using Readily Available Salts&rdquo; <i>ACS Applied Energy Materials</i>, 1(2), 336&ndash;342 (2018).</p>
+              <a class="pub-doi" href="https://doi.org/10.1021/acsaem.7b00334" target="_blank" rel="noopener"><i class="fas fa-link"></i> View article</a>
+            </div>
+          </div>
         </li>
       </ol>
     </section>
@@ -337,31 +773,85 @@
     <!-- ============ CONFERENCES ============ -->
     <section id="conferences">
       <h2>Conferences</h2>
-      <ol class="conf-list">
-        <li><p><b>Anjani K. Maurya</b>, Arun S. Asundi, Ozge D. Bozkurt, Sarah A. Hesse, Christopher J. Takacs, Ravikumar Ramegowda, Jeremy Luterbacher, Eugene Chen, Gregg Beckham, Christopher J. Tassone; "In-Situ Synchrotron-Based Characterization of Soft Materials Properties and Behavior"; <em>Bay-area Soft Matter Symposium</em>; September 2023; Stanford, USA.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, Arun S. Asundi, Sarah A. Hesse, Amani M. Ebrahim, Kevin P. Sullivan, Chad T. Palumbo, Allison Z. Werner, Christopher J. Takacs, Gregg T. Beckham, Ritimukta Sarangi, Christopher J. Tassone; "Decoding the mechanism of autoxidation deconstruction reaction of plastics by in-situ simultaneous SAXS and WAXS"; <em>SAS2022 International Conference</em>; September 2022; Campinas, Brazil.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, René M. Rossi, Alex Dommann, Antonia Neels*; "Unraveling the multiscale structure of fibrous materials by X-ray scattering techniques"; <em>European Powder Diffraction Conference (EPDIC17)</em>; May–June 2022; Šibenik, Croatia.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, Eloïse Mias, Jean Schoeller, René M. Rossi, Martin Frenz, Alex Dommann, Antonia Neels; "Multiscale structural decoding of electrospun fibers: from processing to possibilities for steering properties"; <em>Empa PhD Symposium 2020</em>; November 2020; Empa, St. Gallen, Switzerland.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, Amin Sadeghpour, Ruggero Frison, Riccardo Innocenti Malini, Claudio Toncelli, Marc G. Willinger, René M. Rossi, Martin Frenz, Alex Dommann, Antonia Neels; "Nucleation and growth study of Iron oxide nanoparticles from Solution for biomedical application"; <em>GCB Symposium</em>; January 2020; University of Bern, Switzerland.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, Amin Sadeghpour, Ruggero Frison, Riccardo Innocenti Malini, Claudio Toncelli, Marc G. Willinger, René M. Rossi, Martin Frenz, Alex Dommann, Antonia Neels; "Nucleation and growth study of Iron oxide nanoparticles from Solution"; <em>Empa PhD Symposium</em>; November 2019; Switzerland.</p></li>
-        <li><p>A. Sadeghpour, N. D. Tien, <b>Anjani K. Maurya</b>, G. Fortunato, A. Dommann, R. M. Rossi, A. Neels; "Structure and Dynamics in the Newly Designed Polymer Nanofibers with Embedded Lipid Mesophases"; <em>SAXS Excites 2019</em>; 2019; University of Graz, Austria.</p></li>
-        <li><p>N. D. Tien, <b>Anjani K. Maurya</b>, R. Zboray, Giuseppino Fortunato, M. Rottmar, René M. Rossi, Martin Frenz, Alex Dommann, Antonia Neels, Amin Sadeghpour; "Electrospun nanofibers with embedded bioinspired membranes"; <em>Bioinspired Materials</em>; October 2019; Monte Verità, Switzerland.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, Lukas Weidenbacher, Fabrizio Spano, Giuseppino Fortunato, René M. Rossi, Martin Frenz, Alex Dommann, Amin Sadeghpour, Antonia Neels; "Understanding fiber fabrication process by structural feedbacks by SAXS and WAXD"; poster presentation, <em>European Crystallography Meeting</em>; University of Vienna, Austria; August 2019.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, Lukas Weidenbacher, Fabrizio Spano, Giuseppino Fortunato, René M. Rossi, Martin Frenz, Alex Dommann, Amin Sadeghpour, Antonia Neels; "Decoding structural insights of nanofibers by SAXS and WAXD"; oral presentation, <em>Swiss Crystallography Meeting</em>; EPFL Sion, Switzerland; August 2019.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, A. Sadeghpour, L. Weidenbacher, F. Spano, G. Fortunato, R. M. Rossi, M. Frenz, A. Dommann, A. Neels; "Decoding structural insights into semicrystalline states of polymeric nanofibers at nanoscale"; poster presentation, <em>Empa PhD Symposium</em>; November 2018.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, A. Sadeghpour, L. Weidenbacher, F. Spano, G. Fortunato, R. M. Rossi, M. Frenz, A. Dommann, A. Neels; "Structural-morphological correlation studies in polymeric nanofibers by SAXS and WAXD"; poster presentation, <em>Polycoll 2018</em>; EPFL, Switzerland; October 2018.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, A. Sadeghpour, L. Weidenbacher, F. Spano, G. Fortunato, R. M. Rossi, M. Frenz, A. Dommann, A. Neels; "Study the effect of nanofiber fabrication processes into the modification of internal structure at nanoscale"; poster presentation, <em>Swiss Crystallography Meeting 2018</em>; PSI, Switzerland; September 2018.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, A. Sadeghpour, L. Weidenbacher, F. Spano, G. Fortunato, R. M. Rossi, M. Frenz, A. Dommann, A. Neels; "Structural Insights into Semicrystalline States of Electrospun Nanofibers"; poster presentation, <em>EXCITE Biomedical Imaging Summer School 2018</em>; ETH Zurich, Switzerland; September 2018. <b>(Best Poster Award)</b></p></li>
-        <li><p><b>Anjani K. Maurya</b>, A. Sadeghpour, L. Weidenbacher, F. Spano, G. Fortunato, R. M. Rossi, M. Frenz, A. Dommann, A. Neels; "Structure-morphology correlation studies of electrospun nanofibers by SAXS and WAXS"; poster presentation, <em>Bio-X</em>; Empa St. Gallen, Switzerland; March 2018.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, A. Sadeghpour, L. Weidenbacher, F. Spano, G. Fortunato, R. M. Rossi, M. Frenz, A. Dommann, A. Neels; "Structural in-situ studies for particle system synthesis and their early event dynamics in bio environments"; oral presentation, <em>Empa PhD Seminar</em>; Empa St. Gallen, Switzerland; January 2018.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, A. Sadeghpour, R. Rossi, A. Dommann, A. Neels; "Structure-morphology correlation studies in electrospun nanofibers by SAXS and WAXS"; oral presentation, <em>Empa PhD Symposium 2017</em>; Dübendorf, Switzerland; November 2017.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, A. Sadeghpour, R. Rossi, A. Dommann, A. Neels; "Structural analysis of electrospun fiber membrane by SAXS and WAXS"; oral presentation, <em>Swiss Crystallography Meeting 2017</em>; Geneva, Switzerland; September 2017.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, N. Saxena, P. Müller-Buschbaum; "In-plane and cross-plane Seebeck coefficients in organic thermoelectric thin films"; <em>6th Energy Colloquium of the Munich School of Engineering</em>; TUM, Germany; July 2016.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, N. Saxena, P. Müller-Buschbaum; "Enhancement of Seebeck coefficient by dedoping of conducting polymer"; <em>Summer School</em>; Austria; June 2016.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, N. Saxena, P. Müller-Buschbaum; "Hybrid Based Thermoelectrics"; oral presentation, <em>MaMaSELF Status Meeting</em>; Rigi Kulm, Switzerland; May 2016.</p></li>
-        <li><p><b>Anjani K. Maurya</b>, N. Saxena, P. Müller-Buschbaum; "Hybrid Based Thermoelectrics"; poster presentation, <em>German Physical Society (DPG) Meeting 2016</em>; Regensburg, Germany; March 2016.</p></li>
-        <li><p><b>Anjani K. Maurya</b>; "Band gap variation in bilayer graphene and silicene under transverse electric field"; poster presentation, <em>International Conference on Advanced Nanomaterials and Nanotechnology (ICANN-2013)</em>; IIT Guwahati, India; December 2013.</p></li>
-        <li><p>Lalhriatzuala, <b>Anjani K. Maurya</b>, Pratima Agarwal; "Structural and transport studies of ZnS thin film prepared by Doctor Blade's technique"; poster presentation, <em>Condensed Matter Days Conference 2011</em>; Guwahati University, India; August 2011.</p></li>
+      <ol class="conf-list" reversed>
+        <li>
+          <p><b>Anjani K. Maurya</b>, Arun S. Asundi, Ozge D. Bozkurt, Julia Curley, Katrina M. Knauer, Gregg T. Beckham, Christopher J. Tassone; &ldquo;Decoding Structure&ndash;Property Relationships in Redesigned Polymers Using In Situ WAXS and Tensile Measurements&rdquo;; <em>APS Global Physics Summit</em>; March 2026; Denver, USA.</p>
+        </li>
+        <li>
+          <p><b>Anjani K. Maurya</b>, Arun S. Asundi, Ozge D. Bozkurt, Julia Curley, Katrina M. Knauer, Gregg T. Beckham, Christopher J. Tassone; &ldquo;Chemical Deconstruction of Plastics: Insights from in situ simultaneous SAXS and WAXS&rdquo;; <em>APS Spring Meeting</em>; March 2025; Anaheim, USA.</p>
+        </li>
+        <li>
+          <p><b>Anjani K. Maurya</b>, Arun S. Asundi, Sarah A. Hesse, Amani M. Ebrahim, Kevin P. Sullivan, Joel Miscall, Simon R. Bare, Ritimukta Sarangi, Gregg T. Beckham, Christopher J. Tassone; &ldquo;Unraveling the impact of solvents and catalysts on plastics in catalytic autoxidation: Insights from X-ray scattering&rdquo;; <em>ACS Spring Meeting</em>; March 2025; San Diego, USA.</p>
+        </li>
+        <li>
+          <p><b>Anjani K. Maurya</b>, Arun S. Asundi, Ozge D. Bozkurt, Sarah A. Hesse, Christopher J. Takacs, Ravikumar Ramegowda, Jeremy Luterbacher, Eugene Chen, Gregg Beckham, Christopher J. Tassone; &ldquo;In-Situ Synchrotron-Based Characterization of Soft Materials Properties and Behavior&rdquo;; <em>Bay-area Soft Matter Symposium</em>; September 2023; Stanford, USA.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Talk</span><p><b>Anjani K. Maurya</b>, Arun S. Asundi, Sarah A. Hesse, Amani M. Ebrahim, Kevin P. Sullivan, Chad T. Palumbo, Allison Z. Werner, Christopher J. Takacs, Gregg T. Beckham, Ritimukta Sarangi, Christopher J. Tassone; &ldquo;Decoding the mechanism of autoxidation deconstruction reaction of plastics by in-situ simultaneous SAXS and WAXS&rdquo;; <em>SAS2022 International Conference</em>; September 2022; Campinas, Brazil.</p>
+        </li>
+        <li>
+          <p><b>Anjani K. Maurya</b>, Ren&eacute; M. Rossi, Alex Dommann, Antonia Neels*; &ldquo;Unraveling the multiscale structure of fibrous materials by X-ray scattering techniques&rdquo;; <em>European Powder Diffraction Conference (EPDIC17)</em>; May&ndash;June 2022; &Scaron;ibenik, Croatia.</p>
+        </li>
+        <li>
+          <p><b>Anjani K. Maurya</b>, Elo&iuml;se Mias, Jean Schoeller, Ren&eacute; M. Rossi, Martin Frenz, Alex Dommann, Antonia Neels; &ldquo;Multiscale structural decoding of electrospun fibers: from processing to possibilities for steering properties&rdquo;; <em>Empa PhD Symposium 2020</em>; November 2020; Empa, St. Gallen, Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Poster</span><p><b>Anjani K. Maurya</b>, Amin Sadeghpour, Ruggero Frison, Riccardo Malini Innocenti, Claudio Toncelli, Marc G. Willinger, Ren&eacute; M. Rossi, Martin Frenz, Alex Dommann, Antonia Neels*; &ldquo;Nucleation and growth study of iron oxide nanoparticles from solution for biomedical application&rdquo;; <em>GCB Symposium</em>; January 2020; University of Bern, Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Poster</span><p><b>Anjani K. Maurya</b>, Amin Sadeghpour, Ruggero Frison, Riccardo Innocenti Malini, Claudio Toncelli, Marc G. Willinger, Ren&eacute; M. Rossi, Martin Frenz, Alex Dommann, Antonia Neels; &ldquo;Nucleation and growth study of iron oxide nanoparticles from solution&rdquo;; <em>Empa PhD Symposium</em>; November 2019; Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Poster</span><p>N. D. Tien, <b>Anjani K. Maurya</b>, Z. Robert, Giuseppino Fortunato, M. Rottmar, Ren&eacute; M. Rossi, Martin Frenz, Alex Dommann, Antonia Neels, Amin Sadeghpour; &ldquo;Electrospun nanofibers with embedded bioinspired membranes&rdquo;; <em>Bioinspired Materials</em>; October 2019; Monte Verit&agrave;, Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Poster</span><p><b>Anjani K. Maurya</b>, Lukas Weidenbacher, Fabrizio Spano, Giuseppino Fortunato, Ren&eacute; M. Rossi, Martin Frenz, Alex Dommann, Amin Sadeghpour, Antonia Neels; &ldquo;Understanding fiber fabrication process by structural feedbacks by SAXS and WAXD&rdquo;; <em>European Crystallography Meeting</em>; 21&ndash;22 August 2019; University of Vienna, Austria.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Oral</span><p><b>Anjani K. Maurya</b>, Lukas Weidenbacher, Fabrizio Spano, Giuseppino Fortunato, Ren&eacute; M. Rossi, Martin Frenz, Alex Dommann, Amin Sadeghpour, Antonia Neels; &ldquo;Decoding structural insights of nanofibers by SAXS and WAXD&rdquo;; <em>Swiss Crystallography Meeting</em>; August 2019; EPFL Sion, Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Poster</span><p><b>Anjani K. Maurya</b>, A. Sadeghpour, L. Weidenbacher, F. Spano, G. Fortunato, R. M. Rossi, M. Frenz, A. Dommann, A. Neels; &ldquo;Decoding structural insights into semicrystalline states of polymeric nanofibers at nanoscale&rdquo;; <em>Empa PhD Symposium</em>; November 2018; Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Poster</span><p><b>Anjani K. Maurya</b>, A. Sadeghpour, L. Weidenbacher, F. Spano, G. Fortunato, R. M. Rossi, M. Frenz, A. Dommann, A. Neels; &ldquo;Structural-morphological correlation studies in polymeric nanofibers by SAXS and WAXD&rdquo;; <em>Polycoll 2018</em>; October 2018; EPFL, Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Poster</span><p><b>Anjani K. Maurya</b>, A. Sadeghpour, L. Weidenbacher, F. Spano, G. Fortunato, R. M. Rossi, M. Frenz, A. Dommann, A. Neels; &ldquo;Study the effect of nanofiber fabrication processes on modification of internal structure at nanoscale&rdquo;; <em>Swiss Crystallography Meeting 2018</em>; September 2018; PSI, Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Best Poster Award</span><p><b>Anjani K. Maurya</b>, A. Sadeghpour, L. Weidenbacher, F. Spano, G. Fortunato, R. M. Rossi, M. Frenz, A. Dommann, A. Neels; &ldquo;Structural insights into semicrystalline states of electrospun nanofibers&rdquo;; <em>EXCITE Biomedical Imaging Summer School 2018</em>; 2018; ETH Zurich, Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Poster</span><p><b>Anjani K. Maurya</b>, A. Sadeghpour, L. Weidenbacher, F. Spano, G. Fortunato, R. M. Rossi, M. Frenz, A. Dommann, A. Neels; &ldquo;Structure&ndash;morphology correlation studies of electrospun nanofibers by SAXS and WAXS&rdquo;; <em>Bio-X</em>; March 2018; Empa St. Gallen, Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Oral</span><p><b>Anjani K. Maurya</b>, A. Sadeghpour, R. Rossi, A. Dommann, A. Neels; &ldquo;Structural in-situ studies for particle system synthesis and early event dynamics in bio-environments&rdquo;; <em>Empa PhD Seminar</em>; January 2018; Empa St. Gallen, Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Oral</span><p><b>Anjani K. Maurya</b>, A. Sadeghpour, R. Rossi, A. Dommann, A. Neels; &ldquo;Structure&ndash;morphology correlation studies in electrospun nanofibers by SAXS and WAXS&rdquo;; <em>Empa PhD Symposium 2017</em>; November 2017; D&uuml;bendorf, Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Oral</span><p><b>Anjani K. Maurya</b>, A. Sadeghpour, R. Rossi, A. Dommann, A. Neels; &ldquo;Structural analysis of electrospun fiber membrane by SAXS and WAXS&rdquo;; <em>Swiss Crystallography Meeting 2017</em>; September 2017; Geneva, Switzerland.</p>
+        </li>
+        <li>
+          <p><b>Anjani K. Maurya</b>, N. Saxena, P. M&uuml;ller-Buschbaum; &ldquo;In-plane and cross-plane Seebeck coefficients in organic thermoelectric thin films&rdquo;; <em>6th Energy Colloquium, Munich School of Engineering</em>; July 2016; TUM, Germany.</p>
+        </li>
+        <li>
+          <p><b>Anjani K. Maurya</b>, N. Saxena, P. M&uuml;ller-Buschbaum; &ldquo;Enhancement of Seebeck coefficient by dedoping of conducting polymer&rdquo;; <em>Summer School</em>; June 2016; Austria.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Oral</span><p><b>Anjani K. Maurya</b>, N. Saxena, P. M&uuml;ller-Buschbaum; &ldquo;Hybrid Based Thermoelectrica&rdquo;; <em>MaMaSELF Status Meeting</em>; May 2016; Rigi Kulm, Switzerland.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Poster</span><p><b>Anjani K. Maurya</b>, N. Saxena, P. M&uuml;ller-Buschbaum; &ldquo;Hybrid Based Thermoelectrica&rdquo;; <em>DPG Meeting 2016</em>; March 2016; Regensburg, Germany.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Poster</span><p><b>Anjani K. Maurya</b>; &ldquo;Band gap variation in bilayer graphene and silicene under transverse electric field&rdquo;; <em>ICANN-2013</em>; December 2013; IIT Guwahati, India.</p>
+        </li>
+        <li>
+          <span class="conf-tag">Poster</span><p>Lalhriatzuala, <b>Anjani K. Maurya</b>, Pratima Agarwal; &ldquo;Structural and transport studies of ZnS thin film prepared by Doctor Blade&rsquo;s technique&rdquo;; <em>Condensed Matter Days Conference 2011</em>; August 2011; Guwahati University, India.</p>
+        </li>
       </ol>
     </section>
 
@@ -369,7 +859,7 @@
     <section id="resources">
       <h2>X-ray Scattering Resources</h2>
       <p>
-        This section shares practical resources based on my experience with <strong>SAXS</strong> and <strong>WAXS</strong>. I aim to highlight useful tools, common challenges, and open questions in the field. Feel free to reach out if you would like to discuss data, methods, or analysis—I am always happy to connect when time allows.
+        This section shares practical resources based on my experience with <strong>SAXS</strong> and <strong>WAXS</strong>. I aim to highlight useful tools, common challenges, and open questions in the field. Feel free to reach out if you would like to discuss data, methods, or analysis. I am always happy to connect when time allows.
       </p>
 
       <h3>Recommended Readings</h3>
@@ -402,7 +892,7 @@
         <li><a href="https://tdgrant.com/" target="_blank" rel="noopener">DENSS</a> – A tool for calculating 3D particle electron densities from 1D SAXS data.</li>
       </ul>
 
-      <p><em>This list of software and tools for SAXS is far from complete—a flaw that keeps things exciting and chaotic, particularly for beginners.</em></p>
+      <p><em>This list of software and tools for SAXS is far from complete, a flaw that keeps things exciting and chaotic, particularly for beginners.</em></p>
     </section>
 
     <!-- ============ BEAMTIMES / GALLERY ============ -->
@@ -460,36 +950,249 @@
       </div>
     </section>
 
-    <!-- ============ CV ============ -->
+        <!-- ============ CV ============ -->
     <section id="cv">
-      <div class="cv-card">
-        <h2>CV</h2>
-        <p>Find my CV <a href="https://github.com/anjanikmaurya/anjanikmaurya.github.io/blob/main/AnjaniMaurya_CV_2023.pdf" target="_blank" rel="noopener">here</a>.</p>
+      <h2>Curriculum Vitae</h2>
+
+      <h3 class="subhead">Research &amp; work experience</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-date">Dec 2025 &ndash; Present</span>
+          <h4>Associate Staff Scientist</h4>
+          <p class="tl-place">SLAC National Accelerator Laboratory, Stanford University, USA</p>
+          <p>Developing a soft matter research group using synchrotrons and free-electron lasers, and building autonomous experimental platforms integrating X-ray capabilities at SSRL with AI/ML.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">May 2021 &ndash; Nov 2025</span>
+          <h4>Postdoctoral Research Fellow</h4>
+          <p class="tl-place">SLAC National Accelerator Laboratory, Stanford University, USA</p>
+          <p>Multiscale structural characterization of bioplastics and recyclable polymers; built SSRL platforms combining SAXS/WAXS with in situ tensile, heating, microfluidic and reaction environments; developed real-time Python analysis pipelines; conducted ultrafast pump&ndash;probe scattering at LCLS.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">Mar 2017 &ndash; Mar 2021</span>
+          <h4>PhD Thesis Research</h4>
+          <p class="tl-place">Empa, Swiss Federal Laboratories for Materials Science and Technology (ETH Domain), Switzerland</p>
+          <p>Designed in situ SAXS/WAXS experiments with microfluidic, tensile, thermal, electrical and humidity stimuli; studied nanoparticle nucleation and growth; built structure&ndash;property relationships in nanofibrous polymers.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">Nov 2015 &ndash; Feb 2017</span>
+          <h4>Materials Simulation Engineer (part-time)</h4>
+          <p class="tl-place">Infineon Technologies AG, Neubiberg, Germany</p>
+          <p>Developed MATLAB/Python tools to analyze experimental data and benchmark simulations; built material models in COMSOL and Ansys.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">May 2015 &ndash; Aug 2015</span>
+          <h4>Summer Intern</h4>
+          <p class="tl-place">Laboratoire Kastler Brossel, UPMC/ENS, Paris, France</p>
+          <p>Fabricated optical microfiber knot/loop resonators for quantum-dot coupling to study light&ndash;matter interactions.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">2011 &ndash; 2014</span>
+          <h4>Research Projects: Semiconductor &amp; Magnetism Groups</h4>
+          <p class="tl-place">Indian Institute of Technology Guwahati, India</p>
+          <p>Ultra-thin silicon by HWCVD/PECVD; DFT study of band-gap tunability in bilayer graphene and silicene; KNN ferroelectric thin-film capacitors by RF sputtering; ZnS thin films for photovoltaics.</p>
+        </div>
       </div>
+
+      <h3 class="subhead">Education</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-date">Jun &ndash; Jul 2023</span>
+          <h4>Stanford Ignite</h4>
+          <p class="tl-place">Stanford University Graduate School of Business, USA</p>
+          <p>Marketing, operations, strategy, accounting, finance and economics; design thinking, leadership and pitching; developed a commercialization plan for a new venture.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">Mar 2017 &ndash; Mar 2021</span>
+          <h4>PhD, Biomedical Engineering, <em>summa cum laude</em></h4>
+          <p class="tl-place">Empa (ETH Domain) &amp; University of Bern, Switzerland</p>
+          <p>Thesis: Multiscale structural decoding of fibers and designing responsive nanofibrous materials.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">Oct 2015 &ndash; Nov 2016</span>
+          <h4>MSc (M2), Applied and Engineering Physics</h4>
+          <p class="tl-place">Technical University of Munich, Germany (Erasmus Mundus, MaMaSELF)</p>
+          <p>Thesis: Optimization of thermoelectric properties of conducting polymer thin films by dedoping and hybrid approaches.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">Sep 2014 &ndash; Aug 2015</span>
+          <h4>MSc (M1), Physics</h4>
+          <p class="tl-place">University of Rennes 1, France (Erasmus Mundus, MaMaSELF)</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">Jul 2010 &ndash; Jun 2014</span>
+          <h4>B.Tech, Engineering Physics</h4>
+          <p class="tl-place">Indian Institute of Technology Guwahati, India</p>
+          <p>Thesis: Fabrication and characterization of silicon ultra-thin films prepared by HWCVD.</p>
+        </div>
+      </div>
+
+<h3 class="subhead">Awards &amp; honors</h3>
+      <div class="award-grid">
+        <div class="award">
+          <span class="award-year">2022</span>
+          <p>Young Scientist Award to attend the SAS2022 International Conference</p>
+        </div>
+        <div class="award">
+          <span class="award-year">2020</span>
+          <p>IUCr Young Scientist Award</p>
+        </div>
+        <div class="award">
+          <span class="award-year">2018</span>
+          <p>Best Poster, EXCITE Biomedical Imaging Summer School, ETH Zurich</p>
+        </div>
+        <div class="award">
+          <span class="award-year">2015&ndash;16</span>
+          <p>Erasmus+ Scholarship, European Union</p>
+        </div>
+        <div class="award">
+          <span class="award-year">2014&ndash;15</span>
+          <p>World Quantitative and Science Scholarship, WorldQuant Foundation</p>
+        </div>
+        <div class="award">
+          <span class="award-year">2012&ndash;14</span>
+          <p>Institute Merit-cum-Means Scholarship, IIT Guwahati</p>
+        </div>
+        <div class="award">
+          <span class="award-year">2010</span>
+          <p>Top 0.1% in IIT-JEE, among roughly one million candidates</p>
+        </div>
+      </div>
+
+      <h3 class="subhead">Professional service</h3>
+      <ul class="service-list">
+        <li><strong>Peer reviewer</strong> (2024&ndash;present): Journal of Molecular Structure, Micro and Nanostructures, Journal of Cluster Science, Cellulose, Scientific Reports, and Soft Matter</li>
+        <li><strong>Session chair</strong>: Colloids and Polymers 3, SAS 2022, Campinas, Brazil</li>
+      </ul>
+
+      <h3 class="subhead">Teaching &amp; supervision</h3>
+      <ul class="service-list">
+        <li>Taught <em>Applied Biomaterials</em> to Master's students at the University of Bern, with Prof. Alex Dommann</li>
+        <li>Supervised the Master's thesis of Eloise Mias (University of Rennes 1, MaMaSELF)</li>
+        <li>Assisted with exams and coursework at the University of Bern</li>
+      </ul>
+
+      <h3 class="subhead">Memberships</h3>
+      <div class="facility-tags">
+        <span>American Physical Society</span>
+        <span>American Chemical Society</span>
+        <span>Swiss Crystallography Society</span>
+        <span>Swiss Chemical Society</span>
+        <span>German Physical Society</span>
+      </div>
+
+      <h3 class="subhead">Languages</h3>
+      <p>Hindi (native) &middot; English (native) &middot; German (A2) &middot; French (A2)</p>
     </section>
 
     <!-- ============ CONTACT ============ -->
     <section id="contact">
-      <div class="contact-card">
-        <h2>Contact</h2>
-        <p>Anjani K. Maurya</p>
-        <p>Associate Staff Scientist</p>
-        <p>Stanford University · SLAC National Accelerator Laboratory</p>
-        <p>2575 Sand Hill Road, Menlo Park, California 94025, USA</p>
-        <p>Phone: +1 (650) 926-4468</p>
-        <p>Email: <a href="mailto:akmaurya@stanford.edu">akmaurya@stanford.edu</a></p>
-        <div class="contact-icons">
-          <a href="https://www.linkedin.com/in/anjanikmaurya/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://twitter.com/anjanikmourya" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://scholar.google.co.uk/citations?user=yzQ25SwAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-          <a href="https://orcid.org/0000-0002-9134-6693" target="_blank" rel="noopener" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+      <h2>Get in touch</h2>
+      <p class="section-intro">
+        I am always glad to hear from people working on related problems. Whether you have a question
+        about scattering data, an idea for a collaboration, or you are a student looking for a way into
+        this field, please do reach out.
+      </p>
+
+      <div class="contact-layout">
+        <div class="contact-reasons">
+          <h3 class="subhead">Good reasons to write</h3>
+          <ul class="reason-list">
+            <li>
+              <span class="reason-icon"><i class="fas fa-flask"></i></span>
+              <div>
+                <h4>Collaborations</h4>
+                <p>Plastics deconstruction and recycling, polymers and soft materials, or anything suited to in situ X-ray scattering.</p>
+              </div>
+            </li>
+            <li>
+              <span class="reason-icon"><i class="fas fa-chart-line"></i></span>
+              <div>
+                <h4>SAXS / WAXS questions</h4>
+                <p>Experiment design, data reduction, or analysis. Happy to talk through a problem or point you to the right tool.</p>
+              </div>
+            </li>
+            <li>
+              <span class="reason-icon"><i class="fas fa-atom"></i></span>
+              <div>
+                <h4>Beamtime &amp; facilities</h4>
+                <p>Planning a measurement at SSRL or another synchrotron, or curious about autonomous experimental platforms.</p>
+              </div>
+            </li>
+            <li>
+              <span class="reason-icon"><i class="fas fa-graduation-cap"></i></span>
+              <div>
+                <h4>Students &amp; early researchers</h4>
+                <p>Advice on getting started in scattering, or interest in joining the group I am building at SLAC.</p>
+              </div>
+            </li>
+          </ul>
         </div>
+
+        <aside class="contact-card">
+          <h3>Anjani K. Maurya</h3>
+          <p class="contact-role">Associate Staff Scientist</p>
+          <p class="contact-org">SLAC National Accelerator Laboratory<br>Stanford University</p>
+
+          <a class="contact-primary" href="mailto:akmaurya@slac.stanford.edu?subject=Hello%20from%20your%20website">
+            <i class="fas fa-paper-plane"></i> Email me
+          </a>
+
+          <div class="contact-rows">
+            <div class="contact-row">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:akmaurya@slac.stanford.edu">akmaurya@slac.stanford.edu</a>
+              <button class="copy-btn" data-copy="akmaurya@slac.stanford.edu" aria-label="Copy email address">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+            <div class="contact-row">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+              <a href="tel:+16502833099">+1 (650) 283 3099</a>
+            </div>
+            <div class="contact-row">
+              <i class="fas fa-location-dot" aria-hidden="true"></i>
+              <span>1850 Sand Hill Road, Palo Alto, California 94304, USA</span>
+            </div>
+          </div>
+
+          <div class="contact-icons">
+            <a href="https://www.linkedin.com/in/anjanikmaurya/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/anjanikmourya" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://scholar.google.co.uk/citations?user=yzQ25SwAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://orcid.org/0000-0002-9134-6693" target="_blank" rel="noopener" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+            <a href="https://www.researchgate.net/profile/Anjani-Maurya" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
 
+  <!-- Site-wide invitation to make contact, shown below every tab -->
+  <section class="cta-band">
+    <div class="cta-inner">
+      <div>
+        <h2 class="cta-title">Working on something related?</h2>
+        <p class="cta-text">I would be glad to hear about it: questions, collaborations, and student enquiries are all welcome.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="cta-primary" href="mailto:akmaurya@slac.stanford.edu?subject=Hello%20from%20your%20website">
+          <i class="fas fa-paper-plane"></i> Email me
+        </a>
+        <a class="cta-secondary" href="https://www.linkedin.com/in/anjanikmaurya/" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i> Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <p>&copy; <span id="year"></span> Anjani K. Maurya. All rights reserved.</p>
+    <p class="footer-disclaimer">
+      This is a personal website. Views expressed here are my own and do not represent
+      Stanford University or SLAC National Accelerator Laboratory. It is not an official
+      publication of, nor endorsed by, either institution.
+    </p>
   </footer>
 
   <script src="script.js"></script>
