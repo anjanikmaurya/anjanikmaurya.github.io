@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="Anjani K. Maurya">
+  <title>Anjani K. Maurya</title>
+  <desc>A small-angle scattering pattern: an incident beam entering from the left, concentric scattered rings, oriented arcs, and a central beamstop.</desc>
+
+  <!-- incident beam -->
+  <path d="M1 20 H8" stroke="#A31C1C" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- scattered rings -->
+  <circle cx="22" cy="20" r="16.5" fill="none" stroke="#8C1515" stroke-width="1" opacity="0.28"/>
+  <circle cx="22" cy="20" r="11.5" fill="none" stroke="#8C1515" stroke-width="1.3" opacity="0.5"/>
+  <circle cx="22" cy="20" r="6.5"  fill="none" stroke="#8C1515" stroke-width="1.6" opacity="0.75"/>
+
+  <!-- oriented arcs: anisotropic scattering from aligned structure -->
+  <path d="M22 6.2 A13.8 13.8 0 0 1 32.6 11.2" fill="none" stroke="#C22B2B" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M22 33.8 A13.8 13.8 0 0 1 11.4 28.8" fill="none" stroke="#C22B2B" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- beamstop -->
+  <circle cx="22" cy="20" r="3.1" fill="#2E2D29"/>
+</svg>

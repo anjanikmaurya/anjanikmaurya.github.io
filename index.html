@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Anjani K. Maurya, Associate Staff Scientist at SLAC National Accelerator Laboratory and Stanford University. Research in plastic deconstruction, recycling, and autonomous X-ray scattering.">
   <title>Anjani K. Maurya</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="logo-180.png">
+  <meta name="theme-color" content="#8C1515">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
@@ -14,7 +17,27 @@
 <body>
   <header class="site-header">
     <div class="header-container">
-      <a href="#about" class="logo">Anjani K. Maurya</a>
+      <a href="#about" class="logo">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <!-- incident beam -->
+          <path class="bm-beam" d="M1 20 H8" stroke="var(--cardinal-600)" stroke-width="2.2" stroke-linecap="round"/>
+          <!-- persistent ring so the mark always reads, mid-ripple -->
+          <circle cx="22" cy="20" r="16.5" fill="none" stroke="var(--cardinal-700)" stroke-width="1" opacity="0.26"/>
+          <!-- scattered wavefronts, rippling outward -->
+          <g class="bm-rings" fill="none" stroke="var(--cardinal-700)">
+            <circle class="bm-r1" cx="22" cy="20" r="11.5" stroke-width="1.3"/>
+            <circle class="bm-r2" cx="22" cy="20" r="11.5" stroke-width="1.3"/>
+            <circle class="bm-r3" cx="22" cy="20" r="11.5" stroke-width="1.3"/>
+          </g>
+          <circle cx="22" cy="20" r="6.5" fill="none" stroke="var(--cardinal-700)" stroke-width="1.6" opacity="0.72"/>
+          <!-- oriented arcs: anisotropic scattering from aligned structure -->
+          <path class="bm-arc" d="M22 6.2 A13.8 13.8 0 0 1 32.6 11.2" fill="none" stroke="var(--cardinal-500)" stroke-width="2.6" stroke-linecap="round"/>
+          <path class="bm-arc" d="M22 33.8 A13.8 13.8 0 0 1 11.4 28.8" fill="none" stroke="var(--cardinal-500)" stroke-width="2.6" stroke-linecap="round"/>
+          <!-- beamstop -->
+          <circle cx="22" cy="20" r="3.1" fill="var(--slate-900)"/>
+        </svg>
+        <span class="logo-text">Anjani K. Maurya</span>
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
