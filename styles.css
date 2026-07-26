@@ -179,26 +179,24 @@ button:focus-visible {
   100% { transform: scale(1.42); opacity: 0; }
 }
 
-/* The oriented arcs rock slightly, as an anisotropic pattern would */
-.brand-mark .bm-arc {
-  transform-box: fill-box;
-  transform-origin: 22px 20px;
-  animation: bmRock 3.4s ease-in-out infinite;
-}
-@keyframes bmRock {
-  0%, 100% { transform: rotate(0deg); }
-  50%      { transform: rotate(9deg); }
+/* Meridional reflections brighten and fade, as they do in situ while a
+   sample is stretched or crystallises. */
+.brand-mark .bm-mer { animation: bmMer 2.7s ease-in-out infinite; }
+@keyframes bmMer {
+  0%, 100% { opacity: 0.55; }
+  40%      { opacity: 1; }
 }
 
-/* Incident beam pulses in time with the ripple */
-.brand-mark .bm-beam { animation: bmBeam 2.7s ease-in-out infinite; }
-@keyframes bmBeam {
-  0%, 100% { opacity: 0.45; }
-  14%      { opacity: 1; }
+/* Equatorial streaks pulse in antiphase with the meridional pair */
+.brand-mark .bm-eq { animation: bmEq 2.7s ease-in-out 1.35s infinite; }
+@keyframes bmEq {
+  0%, 100% { opacity: 0.5; }
+  40%      { opacity: 1; }
 }
 
 .logo:hover .brand-mark .bm-rings circle { animation-duration: 1.1s; }
-.logo:hover .brand-mark .bm-arc { animation-duration: 1.2s; }
+.logo:hover .brand-mark .bm-mer,
+.logo:hover .brand-mark .bm-eq { animation-duration: 1.1s; }
 
 .navigation {
   display: flex;
@@ -418,8 +416,8 @@ button:focus-visible {
   .research-icon i, .reason-icon i { animation: none !important; }
   .hero-links a i { animation: none !important; }
   .social-links img, .profile-links img { animation: none !important; }
-  .brand-mark .bm-rings circle, .brand-mark .bm-arc,
-  .brand-mark .bm-beam { animation: none !important; }
+  .brand-mark .bm-rings circle, .brand-mark .bm-mer,
+  .brand-mark .bm-eq { animation: none !important; }
   .brand-mark .bm-r1 { opacity: 0.5; }
   .brand-mark .bm-r2, .brand-mark .bm-r3 { display: none; }
   .hero-links a::after { display: none; }
