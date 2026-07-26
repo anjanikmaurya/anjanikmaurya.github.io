@@ -160,7 +160,7 @@ button:focus-visible {
 .navigation ul {
   display: flex;
   list-style: none;
-  gap: 1px;
+  gap: 1px; /* intentional: reclaims header width for 8 tabs */
 }
 
 .navigation a {
@@ -187,7 +187,7 @@ button:focus-visible {
   display: none;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
+  gap: 5px; /* intentional: hamburger bar spacing */
   width: 42px;
   height: 42px;
   background: none;
@@ -1600,7 +1600,7 @@ main section {
   .navigation.open { transform: translateX(0); }
   .navigation { flex-direction: column; align-items: stretch; }
   .navigation ul { flex-direction: column; gap: 6px; }
-  .navigation a { padding: 13px 14px; font-size: 1.12rem; }
+  .navigation a { padding: 14px; font-size: 1.12rem; }
   .contact-layout { grid-template-columns: 1fr; }
   .contact-card { position: static; }
   .cta-inner { flex-direction: column; align-items: flex-start; }
