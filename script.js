@@ -40,13 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
           const sibs = Array.from(el.parentElement.children).filter((n) =>
             n.classList.contains('reveal')
           );
-          const i = Math.min(sibs.indexOf(el), 6);
-          el.style.transitionDelay = i * 70 + 'ms';
+          const i = Math.min(sibs.indexOf(el), 5);
+          el.style.transitionDelay = i * 40 + 'ms';
           el.classList.add('in');
           revealObserver.unobserve(el);
         });
       },
-      { threshold: 0.06, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.02, rootMargin: '0px 0px -10px 0px' }
     );
 
     document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el.textContent = target.toLocaleString();
         return;
       }
-      const duration = 1100;
+      const duration = 700;
       const start = performance.now();
       const step = (now) => {
         const t = Math.min((now - start) / duration, 1);
