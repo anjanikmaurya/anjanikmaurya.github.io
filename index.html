@@ -108,8 +108,8 @@
 
       <figure class="schematic schematic-wide">
         <svg class="beam-anim" viewBox="0 0 960 300" role="img" aria-labelledby="geo-t geo-d">
-          <title id="geo-t">Animated SAXS and WAXS measurement geometry</title>
-          <desc id="geo-d">An X-ray pulse travels from the synchrotron source through collimating slits to the sample. On striking the sample it scatters: wide-angle radiation fills a detector close to the sample, while small-angle radiation travels to a downstream detector. The direct beam continues to a beamstop. The sequence repeats.</desc>
+          <title id="geo-t">SAXS and WAXS scattering geometry with incident and scattered wavefields</title>
+          <desc id="geo-d">A collimated monochromatic X-ray plane wave of wavelength lambda and wavevector k-i strikes a sample. The sample re-radiates spherical scattered wavefronts with wavevector k-f. Wide-angle scattering is collected on a detector close to the sample; small-angle scattering reaches a downstream detector. The scattering vector q is the difference between the scattered and incident wavevectors, and two-theta is measured from the transmitted beam axis. Scattered intensity falls off with distance and angle.</desc>
 
           <defs>
             <marker id="sc-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
@@ -118,14 +118,26 @@
             <marker id="db-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
               <path d="M0 0 L10 5 L0 10 z" fill="var(--slate-500)"/>
             </marker>
+            <marker id="tick-l" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M9 0 L1 5 L9 10" fill="none" stroke="var(--slate-600)" stroke-width="1.6"/>
+            </marker>
+            <marker id="tick-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M1 0 L9 5 L1 10" fill="none" stroke="var(--slate-600)" stroke-width="1.6"/>
+            </marker>
             <radialGradient id="flash-g">
               <stop offset="0%" stop-color="#fff" stop-opacity="0.95"/>
               <stop offset="45%" stop-color="var(--cardinal-400)" stop-opacity="0.55"/>
               <stop offset="100%" stop-color="var(--cardinal-400)" stop-opacity="0"/>
             </radialGradient>
+            <!-- Scattered intensity falls off with distance from the sample -->
+            <radialGradient id="fan-g" gradientUnits="userSpaceOnUse" cx="312" cy="160" r="520">
+              <stop offset="0%"   stop-color="var(--cardinal-500)" stop-opacity="0.42"/>
+              <stop offset="45%"  stop-color="var(--cardinal-400)" stop-opacity="0.22"/>
+              <stop offset="100%" stop-color="var(--cardinal-400)" stop-opacity="0.07"/>
+            </radialGradient>
           </defs>
 
-          <!-- static apparatus -->
+          <!-- apparatus -->
           <rect x="16" y="140" width="58" height="40" rx="7" fill="var(--cardinal-800)"/>
           <g fill="var(--slate-400)">
             <rect x="150" y="126" width="7" height="26" rx="2"/><rect x="150" y="168" width="7" height="26" rx="2"/>
@@ -134,43 +146,56 @@
           <path d="M401.6 54.5 L446.2 125.7" stroke="var(--slate-700)" stroke-width="8" stroke-linecap="round"/>
           <rect x="822" y="70" width="13" height="180" rx="4" fill="var(--slate-700)"/>
 
-          <!-- incident beam + travelling pulse -->
-          <path d="M74 160 H296" stroke="var(--cardinal-400)" stroke-width="10" opacity="0.16"/>
-          <path d="M74 160 H296" stroke="var(--cardinal-500)" stroke-width="3" fill="none"/>
+          <!-- incident plane wave: monochromatic, wavelength lambda -->
+          <path d="M74 160 Q80.0 150.7 86 160 Q92.0 169.3 98 160 Q104.0 150.7 110 160 Q116.0 169.3 122 160 Q128.0 150.7 134 160 Q140.0 169.3 146 160 Q152.0 150.7 158 160 Q164.0 169.3 170 160 Q176.0 150.7 182 160 Q188.0 169.3 194 160 Q200.0 150.7 206 160 Q212.0 169.3 218 160 Q224.0 150.7 230 160 Q236.0 169.3 242 160 Q248.0 150.7 254 160 Q260.0 169.3 266 160 Q272.0 150.7 278 160 Q284.0 169.3 290 160" fill="none" stroke="var(--cardinal-600)" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M74 160 H296" stroke="var(--cardinal-700)" stroke-width="1" stroke-dasharray="2 5" opacity="0.55"/>
+          <!-- one wavelength, measured crest to crest -->
+          <path d="M86 137 H110" stroke="var(--slate-600)" stroke-width="1.4"
+                marker-start="url(#tick-l)" marker-end="url(#tick-r)"/>
           <g class="b-photon">
             <circle cx="74" cy="160" r="16" fill="var(--cardinal-400)" opacity="0.5"/>
             <circle cx="74" cy="160" r="7" fill="#fff"/>
           </g>
 
-          <!-- sample + flash on impact -->
+          <!-- sample -->
           <circle class="b-flash" cx="304" cy="160" r="58" fill="url(#flash-g)"/>
           <rect x="296" y="118" width="16" height="84" rx="4" fill="var(--amber)"/>
 
-          <!-- wide-angle scattered beam, filling the WAXS detector -->
+          <!-- wide-angle scattered wavefield -->
           <g class="b-waxs">
-            <path d="M312 160 L401.6 54.5 A138.45 138.45 0 0 1 446.2 125.7 Z" fill="var(--cardinal-400)" opacity="0.34"/>
+            <path d="M312 160 L401.6 54.5 A138.45 138.45 0 0 1 446.2 125.7 Z" fill="url(#fan-g)"/>
+            <g fill="none" stroke="var(--cardinal-600)" stroke-width="1.3" opacity="0.55">
+              <path d="M352.1 112.7 A62 62 0 0 1 372.1 144.6"/>
+              <path d="M371.6 89.9 A92 92 0 0 1 401.1 137.2"/>
+              <path d="M391.0 67.0 A122 122 0 0 1 430.2 129.8"/>
+            </g>
             <g stroke="var(--cardinal-700)" stroke-width="2.4" marker-end="url(#sc-arrow)">
               <path d="M312 160 L401.6 54.5"/>
               <path d="M312 160 L446.2 125.7"/>
             </g>
           </g>
 
-          <!-- small-angle scattered beam, filling the SAXS detector -->
+          <!-- small-angle scattered wavefield -->
           <g class="b-saxs">
-            <path d="M312 160 L822 70 L822 250 Z" fill="var(--cardinal-400)" opacity="0.34"/>
+            <path d="M312 160 L822 70 L822 250 Z" fill="url(#fan-g)"/>
+            <g fill="none" stroke="var(--cardinal-600)" stroke-width="1.3" opacity="0.45">
+              <path d="M469.6 132.2 A160 160 0 0 1 469.6 187.8"/>
+              <path d="M607.4 107.9 A300 300 0 0 1 607.4 212.1"/>
+              <path d="M745.3 83.5 A440 440 0 0 1 745.3 236.5"/>
+            </g>
             <g stroke="var(--cardinal-700)" stroke-width="2.4" marker-end="url(#sc-arrow)">
               <path d="M312 160 L822 70"/>
               <path d="M312 160 L822 250"/>
             </g>
           </g>
 
-          <!-- transmitted direct beam and beamstop -->
+          <!-- transmitted beam: the reference axis for two-theta -->
           <g class="b-direct">
             <path d="M312 160 H800" stroke="var(--slate-500)" stroke-width="1.8" stroke-dasharray="8 6" marker-end="url(#db-arrow)"/>
           </g>
           <circle cx="812" cy="160" r="7" fill="var(--slate-900)"/>
 
-          <!-- 2-theta annotations -->
+          <!-- two-theta, from the transmitted axis to the outer scattered ray -->
           <g class="b-angles" fill="none" stroke="var(--slate-700)" stroke-width="1.6">
             <path d="M384 160 A72 72 0 0 0 358.6 105.1"/>
             <path d="M512 160 A200 200 0 0 0 509 125.3"/>
@@ -179,11 +204,16 @@
           <g font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="var(--slate-600)">
             <text x="16" y="206" fill="var(--cardinal-800)">Synchrotron</text>
             <text x="16" y="224">X-ray source</text>
-            <text x="140" y="114">Collimation</text>
+            <text x="128" y="112">Collimation</text>
+            <text x="92" y="130" font-size="13" font-style="italic" fill="var(--slate-700)">&#955;</text>
+            <text x="188" y="186" font-size="13" font-style="italic" fill="var(--cardinal-800)">k</text>
+            <text x="197" y="190" font-size="10" fill="var(--cardinal-800)">i</text>
             <text x="258" y="234" fill="var(--amber-700)">Sample</text>
             <text x="240" y="252">in situ cell</text>
             <text class="b-angles" x="386" y="120" font-size="13" font-weight="600" fill="var(--slate-800)">2&#952;</text>
             <text class="b-angles" x="520" y="146" font-size="13" font-weight="600" fill="var(--slate-800)">2&#952;</text>
+            <text class="b-angles" x="350" y="78" font-size="13" font-style="italic" fill="var(--cardinal-800)">k</text>
+            <text class="b-angles" x="359" y="82" font-size="10" fill="var(--cardinal-800)">f</text>
             <text x="470" y="44" fill="var(--cardinal-800)">WAXS detector</text>
             <text x="470" y="62" font-size="12.5">wide 2&#952; &#183; &#197;-scale packing</text>
             <text x="540" y="182" font-size="12.5" fill="var(--slate-500)">transmitted direct beam</text>
@@ -193,10 +223,14 @@
           </g>
         </svg>
         <figcaption>
-          The X-ray pulse reaches the sample and scatters: wide 2&#952; carries atomic packing to the
-          near detector, small 2&#952; carries nanoscale morphology downstream, and the direct beam is
-          absorbed by the beamstop. Angles are exaggerated for clarity.
-          <em>q</em> = 4&#960;&#8201;sin&#8201;&#952;&#8201;/&#8201;&#955;.
+          A monochromatic plane wave of wavelength <em>&#955;</em> and wavevector
+          <em>k</em><sub>i</sub> reaches the sample, which re-radiates spherical wavefronts
+          <em>k</em><sub>f</sub>. Wide 2&#952; carries atomic packing to the near detector, small
+          2&#952; carries nanoscale morphology downstream, and the transmitted beam is absorbed by
+          the beamstop. Scattering vector
+          <em>q</em> = <em>k</em><sub>f</sub> &#8722; <em>k</em><sub>i</sub>,
+          |<em>q</em>| = 4&#960;&#8201;sin&#8201;&#952;&#8201;/&#8201;&#955;.
+          Angles are exaggerated for clarity.
         </figcaption>
       </figure>
 
