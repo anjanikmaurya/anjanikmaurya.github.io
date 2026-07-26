@@ -1,385 +1,458 @@
-/* Reset styles */
-* {
-  margin: 0; /* Remove default margin for all elements */
-  padding: 0; /* Remove default padding for all elements */
-  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+/* ============================================================
+   Anjani K. Maurya — personal site
+   ============================================================ */
+
+:root {
+  --color-bg: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-text: #1f2933;
+  --color-muted: #52606d;
+  --color-accent: #1d4e89;
+  --color-accent-hover: #143a68;
+  --color-border: #e2e6eb;
+  --color-header: #10141a;
+
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  --max-width: 1000px;
+  --radius: 12px;
+  --shadow-sm: 0 1px 3px rgba(16, 20, 26, 0.08);
+  --shadow-md: 0 6px 20px rgba(16, 20, 26, 0.10);
+  --header-height: 64px;
 }
 
-/* General styles for the body */
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 16px);
+}
+
 body {
-  font-family: Arial, sans-serif; /* Set font family to Arial, with a fallback to sans-serif */
-  font-size: 16px; /* Base font size */
-  line-height: 1.5; /* Line height for better readability */
-  color: #333; /* Default text color: dark gray */
-  background-color: #f7f7f7; /* Background color: light gray */
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  padding-top: var(--header-height);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Additional body styles for margin and padding */
-body {
-  margin: 0; /* Remove default margin */
-  padding-top: 70px; /* Add padding to the top to account for a fixed header */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
 }
 
-/* Styles for the fixed header */
-.fixed-header {
-  position: fixed; /* Fixes the header at the top of the page */
-  top: 0; /* Aligns the header to the top */
-  left: 0; /* Aligns the header to the left */
-  width: 100%; /* Full width to span across the screen */
-  height: 60px; /* Set height for the header */
-  background-color: black; /* Background color: black */
-  color: white; /* Text color: white */
+/* ---------- Header ---------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--color-header);
+  color: #fff;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
 }
 
-/* Container for header content */
 .header-container {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space out items evenly */
-  align-items: center; /* Center items vertically */
-  height: 100%; /* Full height of the header */
-  max-width: 1200px; /* Maximum width for the container */
-  margin: 0 auto; /* Center the container horizontally */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-/* Styles for the logo in the header */
 .logo {
-  margin: 0; /* Remove default margin */
-  font-size: 1.5rem; /* Font size for the logo text */
-  padding-left: 20px; /* Add padding to the left of the logo */
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
+.logo:hover {
+  color: #cfd8e3;
+  text-decoration: none;
 }
 
-/* Styles for the navigation section */
-.navigation {
-  margin: 0; /* Remove default margin */
-  padding-right: 20px; /* Add padding to the right of the navigation */
-}
-
-/* Remove list styles from navigation */
 .navigation ul {
-  list-style: none; /* Remove bullet points */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  display: flex;
+  list-style: none;
+  gap: 4px;
 }
 
-/* Inline style for navigation list items */
-.navigation li {
-  display: inline-block; /* Display list items in a horizontal line */
-  margin-left: 20px; /* Space between each navigation item */
-}
-
-/* Styles for navigation links */
 .navigation a {
-  color: white; /* Link color: white */
-  text-decoration: none; /* Remove underline from links */
-  font-size: 1.2rem; /* Increase font size */
-  transition: color 0.2s ease-in-out; /* Smooth transition for color change */
+  display: block;
+  color: #cfd8e3;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
-
-/* Hover effect for navigation links */
 .navigation a:hover {
-  color: gray; /* Change color to gray on hover */
+  background-color: rgba(255, 255, 255, 0.10);
+  color: #fff;
+  text-decoration: none;
+}
+.navigation a.active {
+  background-color: var(--color-accent);
+  color: #fff;
 }
 
-/* General navigation styles */
-nav {
-  display: flex; /* Use flexbox for layout */
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-/* Remove default list styles for navigation */
-nav ul {
-  display: flex; /* Display list items in a horizontal line */
-  list-style: none; /* Remove bullet points */
-}
-
-/* Spacing for navigation list items */
-nav li {
-  margin-left: 1rem; /* Space between navigation items */
-}
-
-/* Styles for links within the navigation */
-nav a {
-  text-decoration: none; /* Remove underline from links */
-  color: #333; /* Link color: dark gray */
-  padding: 0.5rem; /* Padding around the links */
-  border-radius: 3px; /* Rounded corners */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
-/* Hover effect for navigation links */
-nav a:hover {
-  background-color: #333; /* Background color on hover */
-  color: #fff; /* Text color on hover */
-}
-
-/* Main content padding */
+/* ---------- Layout ---------- */
 main {
-  padding: 1rem; /* Padding around main content */
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 24px 60px;
 }
 
-/* Section styles for spacing */
 section {
-  margin-bottom: 2rem; /* Space below each section */
+  margin-bottom: 56px;
+  scroll-margin-top: calc(var(--header-height) + 16px);
 }
 
-/* Heading styles */
 h2 {
-  font-size: 2rem; /* Font size for headings */
-  margin-bottom: 1rem; /* Space below each heading */
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-border);
 }
 
-/* Unordered list styles */
-ul {
-  list-style: disc; /* Bullet points style */
-  margin-left: 2rem; /* Indent list items */
-  margin-bottom: 1rem; /* Space below each list */
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 24px 0 10px;
 }
 
-/* List item styles */
-li {
-  margin-bottom: 0.5rem; /* Space below each list item */
+p {
+  margin-bottom: 1em;
 }
 
-/* Form styles */
-form {
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack form elements vertically */
-  max-width: 500px; /* Limit width of the form */
+.placeholder {
+  color: var(--color-muted);
+  font-style: italic;
 }
 
-/* Label spacing */
-label {
-  margin-bottom: 0.5rem; /* Space below each label */
+/* ---------- About ---------- */
+.about-section p {
+  margin-bottom: 1.4em;
+  color: var(--color-muted);
 }
 
-/* Input and textarea styles */
-input,
-textarea {
-  padding: 0.5rem; /* Padding inside the input and textarea */
-  margin-bottom: 1rem; /* Space below each input and textarea */
-  border: 1px solid #ccc; /* Light gray border */
-  border-radius: 3px; /* Rounded corners */
+#anjani-photo {
+  float: left;
+  width: 210px;
+  height: auto;
+  margin: 4px 28px 12px 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  transform: scaleX(-1);
 }
 
-/* Styles for submit button */
-button[type="submit"] {
-  background-color: #333; /* Button background color */
-  color: #fff; /* Button text color */
-  padding: 0.5rem; /* Padding inside the button */
-  border: none; /* Remove default border */
-  border-radius: 3px; /* Rounded corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+.social-links,
+.profile-links {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 40px;
+  padding-top: 24px;
 }
 
-/* Hover effect for submit button */
-button[type="submit"]:hover {
-  background-color: #fff; /* Change background color on hover */
-  color: #333; /* Change text color on hover */
+.social-links img {
+  height: 46px;
+  width: auto;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: grayscale(20%);
+}
+.social-links a:hover img {
+  transform: translateY(-3px);
+  filter: grayscale(0%);
 }
 
-/* Tooltip styles */
-.tooltip {
-  position: absolute; /* Position relative to its nearest positioned ancestor */
-  bottom: 0; /* Align to the bottom */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center the tooltip */
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-  color: #fff; /* Text color: white */
-  padding: 0.5rem; /* Padding inside the tooltip */
-  font-size: 0.8rem; /* Smaller font size */
-  border-radius: 0.2rem; /* Slightly rounded corners */
+.profile-links {
+  gap: 40px;
+  margin: 0 0 28px;
+  padding: 0;
+  justify-content: flex-start;
+}
+.profile-links img {
+  height: 40px;
+  width: auto;
 }
 
-/* Styles for fixed panels */
-.panel {
-  position: fixed; /* Fixed position on the screen */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Center the panel */
-  background-color: #fff; /* Panel background color: white */
-  padding: 1rem; /* Padding inside the panel */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow around the panel */
-  width: 90%; /* Width relative to viewport */
-  max-width: 500px; /* Maximum width for the panel */
+/* ---------- Publications & Conferences ---------- */
+.pub-list,
+.conf-list {
+  list-style: none;
+  counter-reset: item;
 }
 
-/* Styles for headings within the panel */
-.panel h3 {
-  font-size: 1.5rem; /* Font size for panel headings */
-  margin-bottom: 1rem; /* Space below the heading */
+.pub-list > li,
+.conf-list > li {
+  position: relative;
+  counter-increment: item;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 18px 22px 18px 56px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.pub-list > li:hover,
+.conf-list > li:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
-/* Centered list styles within the panel */
-.panel ul {
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center list items horizontally */
-  align-items: center; /* Center list items vertically */
-  list-style: none; /* Remove bullet points */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+.pub-list > li::before,
+.conf-list > li::before {
+  content: counter(item);
+  position: absolute;
+  left: 16px;
+  top: 18px;
+  width: 28px;
+  height: 28px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Spacing for list items within the panel */
-.panel li {
-  margin: 0 10px; /* Horizontal space between list items */
+.pub-list p,
+.conf-list p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
 }
 
-/* Styles for links within the panel */
-.panel a {
-  text-decoration: none; /* Remove underline from links */
-  color: #333; /* Link color: dark gray */
-  transition: color 0.3s ease; /* Smooth transition for color change */
+.pub-list b,
+.conf-list b {
+  color: var(--color-accent);
 }
 
-/* Hover effect for links within the panel */
-.panel a:hover {
-  color: #666; /* Change color on hover */
+.pub-figure {
+  text-align: center;
+  margin-top: 14px;
+}
+.pub-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
 }
 
-
-
-
-
- /* Gallery grid styles */
-.gallery {
-  display: grid; /* Use CSS Grid for layout */
-  grid-template-columns: repeat(2, 1fr); /* Two columns for gallery items */
-  gap: 30px; /* Space between grid items */
+/* ---------- Resources ---------- */
+#resources ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+#resources li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  color: var(--color-muted);
+}
+#resources li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 12px;
+  width: 7px;
+  height: 7px;
+  background: var(--color-accent);
+  border-radius: 50%;
 }
 
-/* Styles for each gallery item */
-.gallery .beamtime {
-  text-align: center; /* Center text horizontally */
-  position: relative; /* Position relative for caption positioning */
+/* ---------- Beamtimes gallery ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
 }
 
-/* Styles for figures in the gallery */
-.gallery figure {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  position: relative; /* Position relative for caption positioning */
-  overflow: hidden; /* Hide overflow for image display */
+.beamtime {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+.beamtime h3 {
+  margin-top: 0;
+}
+.beamtime p {
+  color: var(--color-muted);
+  font-style: italic;
+  margin: 0;
 }
 
-/* Image styles within the gallery */
-.gallery img {
-  width: 80%; /* Ensure images fill their container */
-  height: block; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
-  display: block; /* Remove any default inline spacing */
+.beamtime figure {
+  margin: 0;
 }
 
-/* Caption styles within the gallery */
-.gallery figcaption {
-  font-style: normal; /* Use normal font style */
-  color: #333; /* Dark gray text color for better readability */
-  position: absolute; /* Absolute positioning to place caption on top */
-  top: 0px; /* Space from the top of the image */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center horizontally */
-  background-color: rgba(208, 228, 240, 0.8); /* Light blue background with opacity */
-  padding: 5px; /* Add padding to the caption */
-  border-radius: 0px; /* Optional: rounded corners */
-  font-size: 0.9em; /* Smaller font size for the caption */
-  width: 100%; /* Fit the caption width within the image container */
-  text-align: center; /* Center text horizontally */
-}
-
-/* Styles for sliding container */
 .slide-container {
-  position: relative; /* Position relative for sliding effect */
-  width: 100%; /* Full width of the container */
-  overflow: hidden; /* Hide overflow for sliding effect */
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
 }
-
 .slide-wrapper {
-  display: flex; /* Flexbox for horizontal sliding */
-  transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+  display: flex;
+  transition: transform 0.6s ease-in-out;
 }
-
 .slide-wrapper img {
-  width: 100%; /* Full width for sliding images */
-  flex-shrink: 0; /* Prevent images from shrinking */
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  display: block;
+}
+.beamtime figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--color-muted);
 }
 
-
-
-
-
-
-
-
-
-
-/* Contact section styles */
-#contact {
-  width: 80%; /* Set width relative to parent container */
-  margin: 0 auto; /* Center horizontally */
-  text-align: center; /* Center text */
-  background-color: #f2f2f2; /* Light gray background color */
-  padding: 20px; /* Padding around the contact section */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); /* Box shadow for subtle 3D effect */
+/* ---------- CV & Contact cards ---------- */
+.cv-card,
+.contact-card {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
 }
 
-
-
-
-
-/* Contact section heading styles */
-#contact h2 {
-  font-size: 32px; /* Font size for contact heading */
+.cv-card h2,
+.contact-card h2 {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-/* Contact section paragraph styles */
-#contact p {
-  font-size: 20px; /* Font size for contact paragraph */
-  margin: 10px 0; /* Vertical margin for spacing */
+.contact-card p {
+  margin: 6px 0;
+  color: var(--color-muted);
 }
 
-/* Link styles in the contact section */
-#contact a {
-  color: #007bff; /* Link color: blue */
-  text-decoration: none; /* Remove underline from links */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 20px;
+  font-size: 1.6rem;
+}
+.contact-icons a {
+  color: var(--color-muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.contact-icons a:hover {
+  color: var(--color-accent);
+  transform: translateY(-2px);
 }
 
-/* CV section styles */
-#cv {
-  text-align: center; /* Center text */
-  margin: auto; /* Center horizontally */
-  width: 50%; /* Width relative to parent container */
-  background-color: #f8f8f8; /* Light gray background color */
-  padding: 20px; /* Padding around the CV section */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75); /* Box shadow for subtle 3D effect */
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  padding: 28px 24px;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--color-border);
 }
 
-/* Heading styles in the CV section */
-#cv h2 {
-  font-size: 36px; /* Font size for CV heading */
-  margin-bottom: 20px; /* Space below heading */
-}
-
-/* Paragraph styles in the CV section */
-#cv p {
-  font-size: 24px; /* Font size for CV paragraph */
-  margin-bottom: 0; /* Remove default margin */
-}
-
-/* Link styles in the CV section */
-#cv a {
-  color: #333; /* Link color: dark gray */
-  text-decoration: none; /* Remove underline from links */
-}
-
-/* Hover effect for links in the CV section */
-#cv a:hover {
-  text-decoration: underline; /* Underline links on hover */
-}
-
-
-  <style>
-  .about-section p {
-    margin-bottom: 2.5em; /* adjust: 2em–3em usually feels right */
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
   }
-</style>
+  .navigation {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    width: min(260px, 80vw);
+    background: var(--color-header);
+    height: calc(100vh - var(--header-height));
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding: 16px;
+  }
+  .navigation.open {
+    transform: translateX(0);
+  }
+  .navigation ul {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .navigation a {
+    padding: 12px;
+    font-size: 1.05rem;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  #anjani-photo {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+    width: 180px;
+  }
+  .social-links {
+    gap: 28px;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  main {
+    padding: 28px 18px 48px;
+  }
+}
