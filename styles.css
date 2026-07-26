@@ -274,6 +274,9 @@ button:focus-visible {
 @keyframes picStack   { 0%, 100% { transform: translateY(0)    scale(1); }
                         50%      { transform: translateY(-4px) scale(1.08); } }
 @keyframes picOrbit   { to { transform: rotate(360deg); } }
+@keyframes logoFloat  { 0%, 100% { transform: translateY(0); }
+                        50%      { transform: translateY(-5px); } }
+@keyframes logoPop    { to { transform: translateY(-7px) scale(1.05); } }
 @keyframes picPulse   { 0%, 100% { transform: scale(1); }
                         50%      { transform: scale(1.20); } }
 
@@ -366,6 +369,7 @@ button:focus-visible {
   h2::after { animation: none; }
   .research-icon i, .reason-icon i { animation: none !important; }
   .hero-links a i { animation: none !important; }
+  .social-links img, .profile-links img { animation: none !important; }
   .hero-links a::after { display: none; }
   .lad-bar, .lad-txt { animation: none; }
 }
@@ -565,11 +569,20 @@ p {
   height: 56px;
   width: auto;
   filter: grayscale(30%);
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition: filter 0.25s var(--ease);
+  animation: logoFloat 2.2s ease-in-out infinite;
 }
+/* Staggered so the four marks never rise and fall together */
+.social-links a:nth-child(1) img { animation-delay: 0s; }
+.social-links a:nth-child(2) img { animation-delay: 0.28s; }
+.social-links a:nth-child(3) img { animation-delay: 0.56s; }
+.social-links a:nth-child(4) img { animation-delay: 0.84s; }
+
+/* Hover replaces the animation (a running animation outranks a plain
+   transform declaration, so this has to be an animation too). */
 .social-links a:hover img {
-  transform: translateY(-3px);
-  filter: grayscale(0%);
+  animation: logoPop 0.3s var(--ease) forwards;
+  filter: grayscale(0%) drop-shadow(0 6px 12px rgba(46, 45, 41, 0.22));
 }
 /* Optical balance: these four logos differ from 1:1 up to 5.95:1, so a single
    height makes the wordmarks tower over the square marks. Sized per aspect. */
@@ -968,11 +981,14 @@ h3.subhead {
   height: 44px;
   width: auto;
   filter: grayscale(25%);
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition: filter 0.25s var(--ease);
+  animation: logoFloat 2.4s ease-in-out infinite;
 }
+.profile-links a:nth-child(1) img { animation-delay: 0s; }
+.profile-links a:nth-child(2) img { animation-delay: 0.4s; }
 .profile-links a:hover img {
-  transform: translateY(-2px);
-  filter: grayscale(0%);
+  animation: logoPop 0.3s var(--ease) forwards;
+  filter: grayscale(0%) drop-shadow(0 6px 12px rgba(46, 45, 41, 0.22));
 }
 .profile-links img[alt="Google Scholar"] { height: 36px; }
 .profile-links img[alt="ResearchGate"]   { height: 64px; }
