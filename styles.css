@@ -142,7 +142,7 @@ button:focus-visible {
 
 .logo {
   font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 600;
   letter-spacing: 0.2px;
   color: var(--slate-900);
@@ -160,15 +160,15 @@ button:focus-visible {
 .navigation ul {
   display: flex;
   list-style: none;
-  gap: 2px;
+  gap: 1px;
 }
 
 .navigation a {
   display: block;
   color: var(--slate-700);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 500;
-  padding: 8px 12px;
+  padding: 8px 9px;
   border-radius: 8px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -201,6 +201,11 @@ button:focus-visible {
   background: var(--slate-800);
   border-radius: 2px;
   transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Mid-width screens: trim the page gutters so the nav fits beside the name */
+@media (min-width: 1121px) and (max-width: 1420px) {
+  :root { --content-pad: 32px; }
 }
 
 /* ---------- Motion: scroll progress ---------- */
@@ -556,7 +561,7 @@ p {
   border-top: 1px solid var(--color-border);
 }
 .social-links img {
-  height: 72px;
+  height: 56px;
   width: auto;
   filter: grayscale(30%);
   transition: transform 0.2s ease, filter 0.2s ease;
@@ -565,6 +570,12 @@ p {
   transform: translateY(-3px);
   filter: grayscale(0%);
 }
+/* Optical balance: these four logos differ from 1:1 up to 5.95:1, so a single
+   height makes the wordmarks tower over the square marks. Sized per aspect. */
+.social-links img[alt="LinkedIn"],
+.social-links img[alt="ORCID iD"]      { height: 58px; }
+.social-links img[alt="Google Scholar"] { height: 32px; }
+.social-links img[alt="ResearchGate"]   { height: 42px; }
 
 /* ---------- Shared section helpers ---------- */
 .section-intro {
@@ -953,7 +964,7 @@ h3.subhead {
   margin: 0 0 32px;
 }
 .profile-links img {
-  height: 60px;
+  height: 44px;
   width: auto;
   filter: grayscale(25%);
   transition: transform 0.2s ease, filter 0.2s ease;
@@ -962,6 +973,8 @@ h3.subhead {
   transform: translateY(-2px);
   filter: grayscale(0%);
 }
+.profile-links img[alt="Google Scholar"] { height: 36px; }
+.profile-links img[alt="ResearchGate"]   { height: 48px; }
 
 /* ---------- Publications & Conferences ---------- */
 .pub-list,
@@ -1566,7 +1579,7 @@ main section {
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 1260px) {
+@media (max-width: 1120px) {
   :root { --content-pad: 20px; }
 
   .nav-toggle { display: flex; }
@@ -1629,6 +1642,6 @@ main section {
   .pub-body { padding-right: 30px; }
 }
 
-@media (min-width: 1261px) and (max-width: 1440px) {
+@media (min-width: 1121px) and (max-width: 1400px) {
   .pub-layout { grid-template-columns: 200px 1fr; gap: 20px; }
 }
