@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
      Cards fade and lift in as they enter the viewport, staggered within
      each group. Tagging is done here so the markup stays clean.        */
   const REVEAL_SELECTOR = [
-    '.pub-card', '.conf-list > li', '.research-card', '.schematic',
+    '.pub-card', '.conf-item', '.research-card', '.schematic',
     '.tl-item', '.award', '.metric', '.beamtime', '.skill-group',
     '.reason-list > li', '.facility-tags span', '.service-list > li',
     '.res-card'
