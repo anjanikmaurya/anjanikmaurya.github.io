@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.pub-card', '.conf-list > li', '.research-card', '.schematic',
     '.tl-item', '.award', '.metric', '.beamtime', '.skill-group',
     '.reason-list > li', '.facility-tags span', '.service-list > li',
-    '#resources ul > li'
+    '.res-card'
     // .contact-card is position:sticky; animating transform on it fights
     // the sticky behaviour, so it is deliberately left out.
   ].join(', ');
