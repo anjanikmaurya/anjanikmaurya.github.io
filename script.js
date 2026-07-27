@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
      each group. Tagging is done here so the markup stays clean.        */
   const REVEAL_SELECTOR = [
     '.pub-card', '.conf-item', '.research-card', '.schematic',
-    '.tl-item', '.award', '.metric', '.bt-card', '.skill-group',
+    '.tl-item', '.award', '.metric', '.bt-card', '.skill-group', '.now-card',
     '.reason-list > li', '.facility-tags span', '.service-list > li',
     '.res-card'
     // .contact-card is position:sticky; animating transform on it fights
