@@ -955,23 +955,6 @@ h3.subhead {
 }
 .service-list strong { color: var(--cardinal-800, var(--cardinal-900)); }
 
-/* ---------- Conference tags ---------- */
-.conf-tag {
-  position: absolute;
-  top: 16px;
-  right: 18px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--cardinal-900);
-  background: var(--cardinal-50);
-  border: 1px solid var(--cardinal-400);
-  padding: 4px 10px;
-  border-radius: 999px;
-}
-.conf-list > li { padding-right: 120px; }
-
 /* ---------- Live metrics ---------- */
 .metrics {
   display: flex;
@@ -1049,9 +1032,8 @@ h3.subhead {
   list-style: none;
 }
 
-/* --- Shared card shell --- */
-.pub-list > li,
-.conf-list > li {
+/* --- Shared card shell (publications only; conferences use .conf-card) --- */
+.pub-list > li {
   position: relative;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -1060,40 +1042,145 @@ h3.subhead {
   box-shadow: var(--shadow-sm);
   transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
 }
-.pub-list > li:hover,
-.conf-list > li:hover {
+.pub-list > li:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-3px);
   border-color: var(--cardinal-400);
 }
 
-/* --- Conferences: numbered list --- */
-.conf-list > li {
-  padding: 20px 24px 20px 62px;
+/* --- Conferences: year-grouped timeline --- */
+.conf-list {
+  position: relative;
+  list-style: none;
+  padding-left: 34px;
 }
-.conf-list > li::before {
-  content: counter(list-item);
+/* the spine */
+.conf-list::before {
+  content: "";
   position: absolute;
-  left: 16px;
-  top: 20px;
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(135deg, var(--cardinal-600), var(--cardinal-900));
-  color: #fff;
-  font-size: 0.85rem;
+  left: 9px;
+  top: 14px;
+  bottom: 14px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--cardinal-500), var(--slate-200));
+}
+
+.conf-year {
+  position: relative;
+  margin: 26px 0 14px;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
   font-weight: 600;
+  color: var(--cardinal-800);
+}
+.conf-year:first-child { margin-top: 0; }
+.conf-year::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
+  background: var(--cardinal-700);
+  box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 6px var(--cardinal-100);
+}
+
+.conf-item { position: relative; }
+.conf-item::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 26px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2.5px solid var(--cardinal-400);
+  z-index: 1;
+}
+
+.conf-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease),
+              border-color 0.2s var(--ease);
+}
+.conf-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--cardinal-400);
+}
+
+.conf-top {
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 8px rgba(140, 21, 21, 0.32);
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 9px;
 }
-.conf-list p {
-  margin: 0;
-  font-size: 0.98rem;
+.conf-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 11px;
+  border-radius: 999px;
+}
+.conf-talk   { background: var(--cardinal-50);  color: var(--cardinal-800); border: 1px solid var(--cardinal-400); }
+.conf-poster { background: var(--slate-100);    color: var(--slate-700);    border: 1px solid var(--slate-200); }
+.conf-award  { background: var(--amber-50);     color: var(--amber-700);    border: 1px solid var(--amber); }
+
+.conf-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--slate-600);
+}
+.conf-date i { color: var(--cardinal-700); font-size: 0.8rem; }
+
+.conf-title {
+  font-size: 1.04rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--slate-900);
+  margin: 0 0 6px;
+}
+.conf-venue {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--cardinal-700);
+  margin: 0 0 4px;
+}
+.conf-place {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.88rem;
+  color: var(--slate-600);
+  margin: 0 0 10px;
+}
+.conf-place i { color: var(--slate-400); font-size: 0.82rem; }
+.conf-authors {
+  font-size: 0.86rem;
   line-height: 1.6;
-  color: var(--slate-700);
+  color: var(--slate-500);
+  margin: 0;
+  padding-top: 9px;
+  border-top: 1px solid var(--color-border);
 }
+.conf-authors b { color: var(--cardinal-700); font-weight: 600; }
 
 /* --- Publications: figure-forward cards --- */
 .pub-card {
@@ -1763,9 +1850,13 @@ main section {
   .pub-thumb { aspect-ratio: 16 / 9; }
   .pub-thumb.is-cover { aspect-ratio: 3 / 4; max-width: 170px; }
 
-  .conf-list > li { padding-right: 24px; padding-top: 44px; }
-  .conf-tag { top: 14px; left: 62px; right: auto; }
   .timeline { padding-left: 26px; }
+  .conf-list { padding-left: 26px; }
+  .conf-list::before { left: 6px; }
+  .conf-year::before { left: -26px; width: 16px; height: 16px; }
+  .conf-item::before { left: -24px; }
+  .conf-top { gap: 8px; }
+  .conf-date { margin-left: 0; }
   .research-grid, .skill-groups, .award-grid, .res-grid { grid-template-columns: 1fr; }
   .schematic { padding: 18px 16px 14px; border-radius: var(--radius-sm); }
   .schematic figcaption { font-size: 0.85rem; }
