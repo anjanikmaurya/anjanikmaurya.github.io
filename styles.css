@@ -1318,27 +1318,90 @@ h3.subhead {
 }
 
 /* ---------- Resources ---------- */
-#resources ul {
-  list-style: none;
-  margin-bottom: 20px;
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 16px;
+  margin-bottom: 8px;
 }
-#resources li {
+
+.res-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-sm);
+  color: inherit;
   position: relative;
-  padding-left: 24px;
-  margin-bottom: 10px;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease),
+              border-color 0.2s var(--ease);
+}
+a.res-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--cardinal-400);
+  text-decoration: none;
+}
+
+.res-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--cardinal-50);
+  color: var(--cardinal-700);
+  font-size: 1.08rem;
+  transition: background 0.2s var(--ease);
+}
+a.res-card:hover .res-icon { background: var(--cardinal-100); }
+
+.res-card h4 {
+  font-size: 1.03rem;
+  font-weight: 600;
+  color: var(--slate-900);
+  margin: 1px 0 4px;
+  padding-right: 22px;
+}
+.res-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--slate-600);
+}
+
+/* Small outbound marker, so links are distinguishable from plain cards */
+.res-out {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.72rem;
+  color: var(--slate-400);
+  transition: color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+a.res-card:hover .res-out {
+  color: var(--cardinal-700);
+  transform: translate(2px, -2px);
+}
+
+.res-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 30px;
+  padding: 18px 22px;
+  background: var(--amber-50);
+  border-left: 3px solid var(--amber);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.94rem;
   color: var(--slate-700);
 }
-#resources li::before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 12px;
-  width: 8px;
-  height: 8px;
-  background: var(--cardinal-500);
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px var(--cardinal-50);
-}
+.res-note i { color: var(--amber-700); margin-top: 4px; }
 
 /* ---------- Beamtimes gallery ---------- */
 .gallery-grid {
@@ -1703,7 +1766,7 @@ main section {
   .conf-list > li { padding-right: 24px; padding-top: 44px; }
   .conf-tag { top: 14px; left: 62px; right: auto; }
   .timeline { padding-left: 26px; }
-  .research-grid, .skill-groups, .award-grid { grid-template-columns: 1fr; }
+  .research-grid, .skill-groups, .award-grid, .res-grid { grid-template-columns: 1fr; }
   .schematic { padding: 18px 16px 14px; border-radius: var(--radius-sm); }
   .schematic figcaption { font-size: 0.85rem; }
   .pub-body { padding-right: 30px; }

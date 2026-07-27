@@ -923,41 +923,217 @@
     <!-- ============ RESOURCES ============ -->
     <section id="resources">
       <h2>X-ray Scattering Resources</h2>
-      <p>
-        This section shares practical resources based on my experience with <strong>SAXS</strong> and <strong>WAXS</strong>. I aim to highlight useful tools, common challenges, and open questions in the field. Feel free to reach out if you would like to discuss data, methods, or analysis. I am always happy to connect when time allows.
+      <p class="section-intro">
+        Practical resources gathered from working with <strong>SAXS</strong> and <strong>WAXS</strong>:
+        the tools I reach for, the references worth reading, and the communities that maintain the
+        standards. If you would like to talk through data, methods or analysis, please do get in touch.
       </p>
 
-      <h3>Recommended Readings</h3>
-      <ul>
-        <li><em>Elementary Scattering Theory: For X-ray and Neutron Users</em> by Dr. D. S. Sivia – A fundamental resource for understanding scattering techniques.</li>
-      </ul>
+      <h3 class="subhead">Recommended reading</h3>
+        <div class="res-grid">
+          <div class="res-card">
+            <span class="res-icon"><i class="fas fa-book"></i></span>
+            <div>
+              <h4>Elementary Scattering Theory</h4>
+              <p>D. S. Sivia. The clearest starting point for X-ray and neutron users: builds the theory from first principles without hiding behind formalism.</p>
+            </div>
+          </div>
+        </div>
 
-      <h3>Useful Links</h3>
-      <ul>
-        <li><a href="https://sastutorials.org/index.html" target="_blank" rel="noopener">SAS Tutorials</a> – Educational material for SAXS/SANS, suitable for both beginners and advanced users.</li>
-        <li><a href="https://www.diamond.ac.uk/Instruments/Soft-Condensed-Matter/small-angle/SAXS-Software.html" target="_blank" rel="noopener">Diamond Light Source SAXS Software List</a> – A curated overview of commonly used SAXS software and processing tools.</li>
-        <li><a href="https://xraydb.xrayabsorption.org/" target="_blank" rel="noopener">X-ray Absorption Database</a> – A comprehensive resource for X-ray absorption data.</li>
-        <li><a href="https://pypi.org/project/periodictable/" target="_blank" rel="noopener">Periodic Table Python Package</a> – A Python package for easy access to periodic table data.</li>
-      </ul>
+      <h3 class="subhead">Learning and reference</h3>
+        <div class="res-grid">
+          <a class="res-card" href="https://sastutorials.org/index.html" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-chalkboard-user"></i></span>
+            <div>
+              <h4>SAS Tutorials</h4>
+              <p>Structured lessons in SAXS and SANS, from first concepts through to advanced modelling.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+          <a class="res-card" href="https://www.diamond.ac.uk/Instruments/Soft-Condensed-Matter/small-angle/SAXS-Software.html" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-screwdriver-wrench"></i></span>
+            <div>
+              <h4>Diamond SAXS software list</h4>
+              <p>A curated survey of the software people actually use for reduction and analysis.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+          <a class="res-card" href="https://xraydb.xrayabsorption.org/" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-atom"></i></span>
+            <div>
+              <h4>X-ray absorption database</h4>
+              <p>Edge energies, cross-sections and attenuation lengths for planning an experiment.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+          <a class="res-card" href="https://pypi.org/project/periodictable/" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-cube"></i></span>
+            <div>
+              <h4>periodictable (Python)</h4>
+              <p>Scattering lengths, densities and element data, scriptable for contrast calculations.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+        </div>
 
-      <h3>Community &amp; Standards</h3>
-      <ul>
-        <li><a href="https://www.cansas.org/" target="_blank" rel="noopener">canSAS (Collective Action for Nominal Small-Angle Scattering)</a> – A community-driven initiative focused on SAXS standards and interoperability.</li>
-        <li><a href="https://lightsources.org/history/" target="_blank" rel="noopener">lightsources.org</a> – A historical archive and directory of synchrotron and FEL facilities worldwide.</li>
-        <li><a href="https://smallangle.org/" target="_blank" rel="noopener">smallangle.org</a> – A central hub for the global small-angle scattering community.</li>
-      </ul>
+      <h3 class="subhead">Software and analysis</h3>
+        <div class="res-grid">
+          <a class="res-card" href="https://pyfai.readthedocs.io/en/stable/" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-circle-nodes"></i></span>
+            <div>
+              <h4>pyFAI</h4>
+              <p>Azimuthal integration in Python: the workhorse for turning 2D detector images into I(q).</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+          <a class="res-card" href="https://www.silx.org/doc/fabio/latest/getting_started.html" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-file-image"></i></span>
+            <div>
+              <h4>FabIO</h4>
+              <p>Reads and writes the many detector image formats you meet at beamlines.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+          <a class="res-card" href="https://www.sasview.org/" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-chart-line"></i></span>
+            <div>
+              <h4>SasView</h4>
+              <p>Model fitting with a large library of form and structure factors.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+          <a class="res-card" href="https://www.embl-hamburg.de/biosaxs/software.html" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-dna"></i></span>
+            <div>
+              <h4>ATSAS</h4>
+              <p>The established suite for biological small-angle scattering.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+          <a class="res-card" href="https://bioxtas-raw.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-flask-vial"></i></span>
+            <div>
+              <h4>BioXTAS RAW</h4>
+              <p>Reduction and analysis built around bioSAXS workflows.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+          <a class="res-card" href="https://tdgrant.com/" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-cubes-stacked"></i></span>
+            <div>
+              <h4>DENSS</h4>
+              <p>Reconstructs 3D electron density directly from a 1D SAXS curve.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+          <a class="res-card" href="https://somo.chem.utk.edu/shape2sas/" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-shapes"></i></span>
+            <div>
+              <h4>Shape2SAS</h4>
+              <p>Simulates scattering profiles from particle shapes you define.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+        </div>
 
-      <h3>Specialized Tools &amp; Software</h3>
-      <ul>
-        <li><a href="https://somo.chem.utk.edu/shape2sas/" target="_blank" rel="noopener">Shape2SAS (part of SOMO)</a> – A modeling tool to simulate SAXS profiles based on particle shape.</li>
-        <li><a href="https://pyfai.readthedocs.io/en/stable/" target="_blank" rel="noopener">pyFAI</a> – A Python library for azimuthal integration, designed for SAXS/WAXS data processing.</li>
-        <li><a href="https://www.silx.org/doc/fabio/latest/getting_started.html" target="_blank" rel="noopener">FabIO</a> – A Python library to read and write various formats of X-ray scattering images.</li>
-        <li><a href="https://www.embl-hamburg.de/biosaxs/software.html" target="_blank" rel="noopener">ATSAS</a> – A comprehensive software suite for (bio) small-angle scattering data analysis.</li>
-        <li><a href="https://bioxtas-raw.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">BioXTAS RAW</a> – Software tailored for bioSAXS.</li>
-        <li><a href="https://tdgrant.com/" target="_blank" rel="noopener">DENSS</a> – A tool for calculating 3D particle electron densities from 1D SAXS data.</li>
-      </ul>
+      <figure class="schematic schematic-wide">
+        <svg viewBox="0 0 920 210" role="img" aria-labelledby="pipe-t pipe-d">
+          <title id="pipe-t">From detector image to structure</title>
+          <desc id="pipe-d">Three stages of scattering analysis. First, a two-dimensional detector image of concentric rings around a central beamstop. Second, azimuthal integration converts it to a one-dimensional curve of intensity against q. Third, fitting a model to that curve yields real-space structure such as a lamellar repeat distance d.</desc>
 
-      <p><em>This list of software and tools for SAXS is far from complete, a flaw that keeps things exciting and chaotic, particularly for beginners.</em></p>
+          <defs>
+            <marker id="pipe-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="var(--cardinal-600)"/>
+            </marker>
+          </defs>
+
+          <!-- stage 1: 2D detector image -->
+          <rect x="30" y="34" width="150" height="126" rx="8" fill="var(--slate-100)" stroke="var(--slate-200)"/>
+          <g fill="none" stroke="var(--cardinal-700)">
+            <circle cx="105" cy="97" r="14" stroke-width="2.4" opacity="0.85"/>
+            <circle cx="105" cy="97" r="27" stroke-width="1.8" opacity="0.6"/>
+            <circle cx="105" cy="97" r="40" stroke-width="1.3" opacity="0.35"/>
+          </g>
+          <circle cx="105" cy="97" r="6" fill="var(--slate-900)"/>
+          <text x="105" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="var(--slate-700)">2D detector image</text>
+
+          <path d="M196 97 H262" stroke="var(--cardinal-600)" stroke-width="2.2" marker-end="url(#pipe-arrow)"/>
+          <text x="229" y="74" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="var(--slate-600)">azimuthal</text>
+          <text x="229" y="88" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="var(--slate-600)">integration</text>
+
+          <!-- stage 2: 1D curve -->
+          <rect x="278" y="34" width="200" height="126" rx="8" fill="var(--slate-100)" stroke="var(--slate-200)"/>
+          <g stroke="var(--slate-400)" stroke-width="1.4">
+            <line x1="300" y1="144" x2="460" y2="144"/>
+            <line x1="300" y1="50" x2="300" y2="144"/>
+          </g>
+          <path d="M302 56 C330 58 344 74 356 96 C368 118 372 128 382 132 C392 136 398 120 406 116 C416 112 428 128 440 136 L458 141"
+                fill="none" stroke="var(--cardinal-700)" stroke-width="2.4"/>
+          <text x="378" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="var(--slate-700)">I(q) profile</text>
+
+          <path d="M494 97 H560" stroke="var(--cardinal-600)" stroke-width="2.2" marker-end="url(#pipe-arrow)"/>
+          <text x="527" y="74" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="var(--slate-600)">model</text>
+          <text x="527" y="88" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="var(--slate-600)">fitting</text>
+
+          <!-- stage 3: real-space structure -->
+          <rect x="576" y="34" width="200" height="126" rx="8" fill="var(--slate-100)" stroke="var(--slate-200)"/>
+          <g stroke="var(--cardinal-700)" stroke-width="7" stroke-linecap="round">
+            <line x1="606" y1="56" x2="746" y2="56"/>
+            <line x1="606" y1="80" x2="746" y2="80"/>
+            <line x1="606" y1="104" x2="746" y2="104"/>
+            <line x1="606" y1="128" x2="746" y2="128"/>
+          </g>
+          <g stroke="var(--amber-700)" stroke-width="1.6">
+            <line x1="592" y1="56" x2="592" y2="80"/>
+            <line x1="586" y1="56" x2="598" y2="56"/>
+            <line x1="586" y1="80" x2="598" y2="80"/>
+          </g>
+          <text x="570" y="72" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-style="italic" fill="var(--amber-700)">d</text>
+          <text x="676" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="var(--slate-700)">real-space structure</text>
+
+          <text x="800" y="90" font-family="Inter, sans-serif" font-size="13" fill="var(--slate-600)">d = 2&#960;/q*</text>
+          <text x="800" y="110" font-family="Inter, sans-serif" font-size="12" fill="var(--slate-500)">reciprocal to</text>
+          <text x="800" y="126" font-family="Inter, sans-serif" font-size="12" fill="var(--slate-500)">real space</text>
+        </svg>
+        <figcaption>
+          The reduction path most SAXS software follows: a detector image becomes a curve,
+          and a fitted model turns that curve into structure.
+        </figcaption>
+      </figure>
+
+      <h3 class="subhead">Community and standards</h3>
+        <div class="res-grid">
+          <a class="res-card" href="https://www.cansas.org/" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-users"></i></span>
+            <div>
+              <h4>canSAS</h4>
+              <p>The community effort behind small-angle scattering data standards and interoperability.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+          <a class="res-card" href="https://lightsources.org/history/" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-landmark"></i></span>
+            <div>
+              <h4>lightsources.org</h4>
+              <p>A directory and history of synchrotron and free-electron laser facilities worldwide.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+          <a class="res-card" href="http://smallangle.org/" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-globe"></i></span>
+            <div>
+              <h4>smallangle.org</h4>
+              <p>The central hub for the global small-angle scattering community.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      <p class="res-note">
+        <i class="fas fa-circle-info" aria-hidden="true"></i>
+        This list is far from complete, which is part of what keeps the field lively, and
+        occasionally bewildering for newcomers. Suggestions are welcome.
+      </p>
     </section>
 
     <!-- ============ BEAMTIMES / GALLERY ============ -->
