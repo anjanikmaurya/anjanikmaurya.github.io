@@ -599,9 +599,116 @@ p {
 }
 
 /* ---------- About ---------- */
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.95fr);
+  gap: 36px;
+  align-items: start;
+}
 .about-section p {
   margin-bottom: 1.3em;
   color: var(--slate-700);
+}
+
+/* Quick-reference panel beside the prose */
+.about-facts {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--cardinal-700);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+}
+.about-facts h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cardinal-900);
+  margin: 0 0 16px;
+}
+.about-facts dl { margin: 0; }
+.about-facts dl > div {
+  padding: 11px 0;
+  border-top: 1px solid var(--color-border);
+}
+.about-facts dl > div:first-child { border-top: none; padding-top: 0; }
+.about-facts dt {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--slate-500);
+  margin-bottom: 4px;
+}
+.about-facts dt i { color: var(--cardinal-700); font-size: 0.82rem; }
+.about-facts dd {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--slate-800);
+}
+
+/* "What I am working on now" */
+.now-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.now-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease),
+              border-color 0.2s var(--ease);
+}
+.now-card::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cardinal-700), var(--cardinal-400));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.3s var(--ease);
+}
+.now-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--cardinal-400);
+}
+.now-card:hover::after { transform: scaleX(1); }
+.now-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: var(--cardinal-50);
+  color: var(--cardinal-700);
+  font-size: 1.15rem;
+  margin-bottom: 13px;
+}
+.now-card h4 {
+  font-size: 1.06rem;
+  font-weight: 600;
+  color: var(--slate-900);
+  margin: 0 0 6px;
+}
+.now-card p {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.62;
+  color: var(--slate-600);
 }
 
 .social-links {
@@ -844,12 +951,12 @@ h3.subhead {
 /* ---------- Timeline ---------- */
 .timeline {
   position: relative;
-  padding-left: 30px;
+  padding-left: 44px;
 }
 .timeline::before {
   content: "";
   position: absolute;
-  left: 7px;
+  left: 14px;
   top: 6px;
   bottom: 6px;
   width: 2px;
@@ -860,16 +967,29 @@ h3.subhead {
   position: relative;
   margin-bottom: 26px;
 }
-.tl-item::before {
-  content: "";
+.tl-icon {
   position: absolute;
-  left: -30px;
-  top: 7px;
-  width: 16px;
-  height: 16px;
+  left: -41px;
+  top: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: #fff;
-  border: 3px solid var(--cardinal-600);
+  border: 2px solid var(--cardinal-400);
+  color: var(--cardinal-700);
+  font-size: 0.76rem;
+  box-shadow: 0 0 0 4px var(--color-bg);
+  z-index: 1;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease),
+              border-color 0.2s var(--ease);
+}
+.tl-item:hover .tl-icon {
+  background: var(--cardinal-700);
+  border-color: var(--cardinal-700);
+  color: #fff;
 }
 .tl-date {
   display: inline-block;
@@ -2004,7 +2124,10 @@ main section {
   .pub-thumb { aspect-ratio: 16 / 9; }
   .pub-thumb.is-cover { aspect-ratio: 3 / 4; max-width: 170px; }
 
-  .timeline { padding-left: 26px; }
+  .timeline { padding-left: 40px; }
+  .about-layout { grid-template-columns: 1fr; }
+  .about-facts { position: static; }
+  .now-grid { grid-template-columns: 1fr; }
   .conf-list { padding-left: 26px; }
   .conf-list::before { left: 6px; }
   .conf-year::before { left: -26px; width: 16px; height: 16px; }
