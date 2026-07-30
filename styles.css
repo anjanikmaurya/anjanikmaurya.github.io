@@ -2051,14 +2051,6 @@ main section {
 }
 
 /* ---------- Footer ---------- */
-.footer-disclaimer {
-  max-width: 80ch;
-  margin: 10px auto 0;
-  font-size: 0.8rem;
-  line-height: 1.6;
-  color: var(--slate-600);
-}
-
 .site-footer {
   text-align: center;
   padding: 30px 24px;
