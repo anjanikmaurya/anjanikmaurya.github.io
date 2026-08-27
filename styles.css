@@ -1742,6 +1742,22 @@ a.res-card:hover .res-out {
 .bt-feature .bt-desc { font-size: 0.97rem; }
 .bt-feature .bt-id { font-size: 1.55rem; }
 
+/* Spotlight: the two experiments most worth stopping for */
+.bt-spot {
+  border: 1px solid var(--cardinal-400);
+  box-shadow: 0 6px 18px rgba(140, 21, 21, 0.10), var(--shadow-md);
+  position: relative;
+}
+.bt-spot::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cardinal-700), var(--cardinal-400));
+  z-index: 2;
+}
+.bt-spot .bt-id { color: var(--cardinal-900); }
+
 .bt-new {
   display: inline-flex;
   align-items: center;
