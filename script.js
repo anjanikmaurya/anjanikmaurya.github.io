@@ -73,7 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // Reset scroll to top of content area
     window.scrollTo({ top: 0, behavior: 'auto' });
-    replayReveals(document.getElementById(id));
+
+    // Lazy images inside a display:none section are skipped by the browser and
+    // are not reliably retried once the section is shown, so nudge them here.
+    const shown = document.getElementById(id);
+    if (shown) {
+      shown.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+        img.loading = 'eager';
+        if (!img.complete || img.naturalWidth === 0) {
+          const src = img.getAttribute('src');
+          if (src) img.setAttribute('src', src);   // re-kick the request
+        }
+      });
+    }
+    replayReveals(shown);
   }
 
   // Default to the first section (About), or a hash target if present.
