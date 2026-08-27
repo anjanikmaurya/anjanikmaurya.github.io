@@ -1711,6 +1711,65 @@ a.res-card:hover .res-out {
 .bt-v3 { background: linear-gradient(140deg, var(--cardinal-800), var(--slate-700)); }
 .bt-v4 { background: linear-gradient(140deg, var(--slate-700), var(--cardinal-800)); }
 
+/* Featured beamline: spans the grid, media beside the text */
+.bt-feature {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  border-color: var(--cardinal-400);
+  box-shadow: var(--shadow-md);
+}
+.bt-feature .bt-media { aspect-ratio: auto; height: 100%; min-height: 320px; }
+.bt-feature .bt-desc { font-size: 0.97rem; }
+.bt-feature .bt-id { font-size: 1.55rem; }
+
+.bt-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--cardinal-700);
+  padding: 4px 11px;
+  border-radius: 999px;
+}
+
+/* The closed loop, as four numbered steps */
+.bt-loop {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+.bt-loop li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--slate-700);
+  background: var(--cardinal-50);
+  border: 1px solid var(--cardinal-100);
+  padding: 6px 12px 6px 6px;
+  border-radius: 999px;
+}
+.bt-loop li span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--cardinal-700);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
 .bt-body {
   padding: 18px 20px 20px;
   display: flex;
@@ -2098,6 +2157,8 @@ main section {
   .hero-tagline { margin-left: auto; margin-right: auto; }
 
   .bt-grid { grid-template-columns: 1fr; }
+  .bt-feature { grid-template-columns: 1fr; }
+  .bt-feature .bt-media { min-height: 0; aspect-ratio: 16 / 10; }
   .bt-cta { flex-direction: column; align-items: flex-start; }
   .social-links { gap: 40px; row-gap: 26px; }
   .profile-links { gap: 24px; justify-content: center; }
