@@ -1428,15 +1428,15 @@
       </p>
 
       <div class="bt-stats">
-        <div class="bt-stat"><span class="bt-stat-n">5</span><span class="bt-stat-l">facilities</span></div>
+        <div class="bt-stat"><span class="bt-stat-n">6</span><span class="bt-stat-l">facilities</span></div>
         <div class="bt-stat"><span class="bt-stat-n">11</span><span class="bt-stat-l">beamlines</span></div>
-        <div class="bt-stat"><span class="bt-stat-n">3</span><span class="bt-stat-l">setups built</span></div>
+        <div class="bt-stat"><span class="bt-stat-n">4</span><span class="bt-stat-l">setups built</span></div>
         <div class="bt-stat"><span class="bt-stat-n">6</span><span class="bt-stat-l">techniques</span></div>
       </div>
 
       <h3 class="subhead">SSRL &#183; Stanford Synchrotron Radiation Lightsource</h3>
       <div class="bt-grid">
-        <article class="bt-card bt-feature">
+        <article class="bt-card bt-feature bt-spot">
           <div class="bt-media">
             <div class="slide-container">
               <div class="slide-wrapper">
@@ -1451,19 +1451,14 @@
               <span class="bt-fac">SSRL</span>
               <span class="bt-new"><i class="fas fa-robot" aria-hidden="true"></i> Autonomous</span>
             </div>
-            <p class="bt-desc">A closed-loop platform that synthesises a material and measures it in the
-               beam without a person in the loop. Precursors are pumped through a heated flow reactor
-               sitting in the X-ray beam, SAXS is collected on every condition, and an optimiser reads
-               the result and proposes the next recipe.</p>
+            <p class="bt-desc">A closed-loop platform that synthesises a material and measures it in the beam without a person in the loop. Precursors are pumped through a heated flow reactor sitting in the X-ray beam, SAXS is collected on every condition, and an optimiser reads the result and proposes the next recipe.</p>
             <ol class="bt-loop">
               <li><span>1</span> Propose a condition</li>
               <li><span>2</span> Synthesise in flow</li>
               <li><span>3</span> Measure SAXS</li>
               <li><span>4</span> Learn, repeat</li>
             </ol>
-            <p class="bt-note"><i class="fas fa-wrench" aria-hidden="true"></i> Built the platform: reactor
-               integration, live flow, pressure and beamline monitoring, automated SPEC acquisition, and a
-               pump-ceiling interlock that trips an emergency stop.</p>
+            <p class="bt-note"><i class="fas fa-wrench" aria-hidden="true"></i> Built the platform: reactor integration, live flow, pressure and beamline monitoring, automated SPEC acquisition, and a pump-ceiling interlock that trips an emergency stop.</p>
             <div class="bt-tags"><span>autonomous</span><span>SAXS</span><span>flow synthesis</span><span>AI / ML loop</span><span>self-driving experiment</span></div>
           </div>
         </article>
@@ -1472,7 +1467,7 @@
             <div class="slide-container">
               <div class="slide-wrapper">
                 <img src="BL/HT_HP.jpeg" alt="High-temperature, high-pressure setup at SSRL beamline 1-5" loading="lazy">
-                <img src="BL/BL_15_HT_HP_02.jpeg" alt="High-temperature, high-pressure setup at SSRL beamline 1-5" loading="lazy">
+                <img src="BL/BL_15_HT_HP_02.jpeg" alt="High-temperature, high-pressure capillary cell at SSRL beamline 1-5" loading="lazy">
               </div>
             </div>
           </div>
@@ -1491,7 +1486,7 @@
             <div class="slide-container">
               <div class="slide-wrapper">
                 <img src="BL/BL17-2_01.jpg" alt="Beamline 17-2 at SSRL" loading="lazy">
-                <img src="BL/BL17-2_02.jpg" alt="Beamline 17-2 at SSRL" loading="lazy">
+                <img src="BL/BL17-2_02.jpg" alt="Tensile stage mounted at SSRL beamline 17-2" loading="lazy">
               </div>
             </div>
           </div>
@@ -1559,9 +1554,32 @@
         </article>
       </div>
 
-      <h3 class="subhead">Other facilities</h3>
+      <h3 class="subhead">LCLS &#183; Linac Coherent Light Source</h3>
       <div class="bt-grid">
-        <article class="bt-card">
+        <article class="bt-card bt-feature bt-spot">
+          <div class="bt-media">
+            <div class="slide-container">
+              <div class="slide-wrapper">
+                <img src="BL/LCLS_XPP_01.jpg" alt="Robotic sample manipulator and vacuum chamber in the XPP hutch at LCLS" loading="lazy">
+                <img src="BL/LCLS_XPP_02.jpg" alt="View along the XPP instrument at LCLS, showing vacuum vessels and control racks" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="bt-body">
+            <div class="bt-head">
+              <span class="bt-id">XPP</span>
+              <span class="bt-fac">LCLS</span>
+              <span class="bt-new"><i class="fas fa-bolt" aria-hidden="true"></i> Femtosecond</span>
+            </div>
+            <p class="bt-desc">Ultrafast pump&ndash;probe at the free-electron laser. An optical laser pulse excites the sample and the X-ray pulse probes it a controlled delay later, with SAXS and WAXS recorded simultaneously, so nanoscale structure and atomic packing are followed together from femtoseconds to picoseconds. Used to resolve transient melting and structural dynamics in metal films.</p>
+            <div class="bt-tags"><span>ultrafast</span><span>laser pump&ndash;probe</span><span>simultaneous SAXS + WAXS</span><span>FEL</span><span>femtosecond</span></div>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="subhead">APS &#183; Advanced Photon Source</h3>
+      <div class="bt-grid">
+        <article class="bt-card bt-feature">
           <div class="bt-media">
             <div class="slide-container">
               <div class="slide-wrapper">
@@ -1576,44 +1594,39 @@
               <span class="bt-id">12-ID-B</span>
               <span class="bt-fac">APS</span>
             </div>
-            <p class="bt-desc">RheoSWAXS: simultaneous small- and wide-angle scattering while a sample is
-               sheared, so flow-induced structure, orientation and crystalline packing are followed
-               together as the rheology develops.</p>
+            <p class="bt-desc">RheoSWAXS: simultaneous small- and wide-angle scattering while a sample is sheared, so flow-induced structure, orientation and crystalline packing are followed together as the rheology develops.</p>
             <div class="bt-tags"><span>RheoSWAXS</span><span>simultaneous SAXS + WAXS</span><span>in situ shear</span><span>rheology</span></div>
           </div>
         </article>
-        <article class="bt-card">
+      </div>
+
+      <h3 class="subhead">DESY &#183; PETRA III, EMBL Hamburg</h3>
+      <div class="bt-grid">
+        <article class="bt-card bt-feature">
           <div class="bt-media">
             <div class="slide-container">
               <div class="slide-wrapper">
-                <img src="BL/LCLS_XPP_01.jpg" alt="Robotic sample manipulator and vacuum chamber in the XPP hutch at LCLS" loading="lazy">
-                <img src="BL/LCLS_XPP_02.jpg" alt="View along the XPP instrument at LCLS, showing vacuum vessels and control racks" loading="lazy">
+                <img src="BL/DESY_P12_01.jpg" alt="Microfluidic flow cell mounted in the beam at DESY beamline P12, with reagent reservoirs and tubing" loading="lazy">
+                <img src="BL/DESY_P12_02.jpg" alt="Close-up of the microfluidic mixing cell in the X-ray beam path at DESY P12" loading="lazy">
+                <img src="BL/DESY_P12_03.jpg" alt="Wider view of the P12 hutch at DESY, with liquid-chromatography stack, SAXS vessel and the microfluidic bench" loading="lazy">
               </div>
             </div>
-          </div>
-          <div class="bt-body">
-            <div class="bt-head">
-              <span class="bt-id">XPP</span>
-              <span class="bt-fac">LCLS</span>
-            </div>
-            <p class="bt-desc">Ultrafast X-ray pump and probe at the free-electron laser: transient melting and structural dynamics resolved on femtosecond to picosecond timescales.</p>
-            <div class="bt-tags"><span>ultrafast</span><span>pump&ndash;probe</span><span>FEL</span></div>
-          </div>
-        </article>
-        <article class="bt-card">
-          <div class="bt-media bt-tile bt-v3">
-            <span class="bt-tile-id">P12</span>
           </div>
           <div class="bt-body">
             <div class="bt-head">
               <span class="bt-id">P12</span>
               <span class="bt-fac">DESY</span>
             </div>
-            <p class="bt-desc">High-throughput biological small-angle scattering at EMBL Hamburg, for solution structure and stability of protein systems.</p>
-            <div class="bt-tags"><span>bioSAXS</span><span>solution</span></div>
+            <p class="bt-desc">Catching particles as they are born. Reagents are mixed in a microfluidic cell sitting in the beam, so SAXS follows nucleation and the earliest stages of nanoparticle growth from solution, millisecond by millisecond down the channel.</p>
+            <p class="bt-note"><i class="fas fa-wrench" aria-hidden="true"></i> Built the microfluidic mixing setup and integrated it into the beamline for in situ nucleation and growth studies.</p>
+            <div class="bt-tags"><span>microfluidics</span><span>SAXS</span><span>nucleation &amp; growth</span><span>in situ mixing</span></div>
           </div>
         </article>
-        <article class="bt-card">
+      </div>
+
+      <h3 class="subhead">PSI &#183; Swiss Light Source</h3>
+      <div class="bt-grid">
+        <article class="bt-card bt-feature">
           <div class="bt-media bt-tile bt-v1">
             <span class="bt-tile-id">X04SA</span>
           </div>
@@ -1626,7 +1639,11 @@
             <div class="bt-tags"><span>powder diffraction</span></div>
           </div>
         </article>
-        <article class="bt-card">
+      </div>
+
+      <h3 class="subhead">Diamond Light Source</h3>
+      <div class="bt-grid">
+        <article class="bt-card bt-feature">
           <div class="bt-media bt-tile bt-v4">
             <span class="bt-tile-id">I15-1</span>
           </div>
