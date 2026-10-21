@@ -1910,6 +1910,8 @@ a.res-card:hover .res-out {
   text-decoration: none;
 }
 
+.cv-download { margin: 0 0 28px; }
+
 /* ---------- Contact ---------- */
 .contact-layout {
   display: grid;
