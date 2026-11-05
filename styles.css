@@ -1258,6 +1258,8 @@ h3.subhead {
 }
 .conf-talk   { background: var(--cardinal-50);  color: var(--cardinal-800); border: 1px solid var(--cardinal-400); }
 .conf-poster { background: var(--slate-100);    color: var(--slate-700);    border: 1px solid var(--slate-200); }
+.conf-invited { background: var(--cardinal-50); color: var(--cardinal-900); border: 1px solid var(--cardinal-400); }
+.conf-note { font-style: italic; color: var(--slate-700); }
 .conf-award  { background: var(--amber-50);     color: var(--amber-700);    border: 1px solid var(--amber); }
 
 .conf-date {
@@ -1487,6 +1489,11 @@ h3.subhead {
   background: var(--slate-100);
   color: var(--slate-700);
   border: 1px solid var(--color-border);
+}
+.pub-badge-award {
+  background: var(--amber-50);
+  color: var(--amber-700);
+  border: 1px solid var(--amber);
 }
 .pub-badge-prep {
   background: var(--amber-50);
