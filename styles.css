@@ -211,7 +211,7 @@ button:focus-visible {
 
 .navigation a {
   display: block;
-  color: var(--slate-700);
+  color: var(--slate-900);
   font-size: 1rem;
   font-weight: 500;
   padding: 8px 8px;
@@ -465,7 +465,7 @@ h3 {
   font-size: 1.22rem;
   font-weight: 600;
   letter-spacing: -0.01em;
-  color: var(--slate-800);
+  color: var(--slate-900);
   margin: 26px 0 10px;
 }
 
@@ -556,7 +556,7 @@ p {
 }
 .hero-tagline {
   font-size: 1.02rem;
-  color: var(--slate-600);
+  color: var(--slate-900);
   margin-bottom: 24px;
 }
 
@@ -571,7 +571,7 @@ p {
   gap: 8px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--slate-700);
+  color: var(--slate-900);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   padding: 10px 16px;
@@ -607,7 +607,7 @@ p {
 }
 .about-section p {
   margin-bottom: 1.3em;
-  color: var(--slate-700);
+  color: var(--slate-900);
 }
 
 /* Quick-reference panel beside the prose */
@@ -642,7 +642,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--slate-500);
+  color: var(--slate-900);
   margin-bottom: 4px;
 }
 .about-facts dt i { color: var(--cardinal-700); font-size: 0.82rem; }
@@ -650,7 +650,7 @@ p {
   margin: 0;
   font-size: 0.94rem;
   line-height: 1.55;
-  color: var(--slate-800);
+  color: var(--slate-900);
 }
 
 /* "What I am working on now" */
@@ -708,7 +708,7 @@ p {
   margin: 0;
   font-size: 0.93rem;
   line-height: 1.62;
-  color: var(--slate-600);
+  color: var(--slate-900);
 }
 
 .social-links {
@@ -751,7 +751,7 @@ p {
 /* ---------- Shared section helpers ---------- */
 .section-intro {
   font-size: 1.08rem;
-  color: var(--slate-600);
+  color: var(--slate-900);
   margin-bottom: 30px;
 }
 
@@ -859,7 +859,7 @@ h3.subhead {
   border-top: 1px solid var(--color-border);
   font-size: 0.89rem;
   line-height: 1.6;
-  color: var(--slate-600);
+  color: var(--slate-900);
   text-align: center;
 }
 .schematic-wide { padding-bottom: 18px; }
@@ -905,7 +905,7 @@ h3.subhead {
 .research-card p {
   margin: 0;
   font-size: 0.95rem;
-  color: var(--slate-600);
+  color: var(--slate-900);
 }
 
 /* ---------- Skills ---------- */
@@ -930,7 +930,7 @@ h3.subhead {
 .skill-group p {
   margin: 0;
   font-size: 0.92rem;
-  color: var(--slate-600);
+  color: var(--slate-900);
 }
 
 .facility-tags {
@@ -1018,7 +1018,7 @@ h3.subhead {
 .tl-item p:last-child {
   margin: 0;
   font-size: 0.94rem;
-  color: var(--slate-600);
+  color: var(--slate-900);
 }
 
 /* ---------- Awards & service ---------- */
@@ -1048,7 +1048,7 @@ h3.subhead {
 .award p {
   margin: 0;
   font-size: 0.93rem;
-  color: var(--slate-700);
+  color: var(--slate-900);
 }
 
 .service-list {
@@ -1060,7 +1060,7 @@ h3.subhead {
   padding-left: 24px;
   margin-bottom: 10px;
   font-size: 0.95rem;
-  color: var(--slate-700);
+  color: var(--slate-900);
 }
 .service-list li::before {
   content: "";
@@ -1113,11 +1113,11 @@ h3.subhead {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: var(--slate-900);
 }
 .metrics-note {
   font-size: 0.85rem;
-  color: var(--color-muted);
+  color: var(--slate-900);
   text-align: right;
   margin-bottom: 26px;
 }
@@ -1257,9 +1257,9 @@ h3.subhead {
   border-radius: 999px;
 }
 .conf-talk   { background: var(--cardinal-50);  color: var(--cardinal-800); border: 1px solid var(--cardinal-400); }
-.conf-poster { background: var(--slate-100);    color: var(--slate-700);    border: 1px solid var(--slate-200); }
+.conf-poster { background: var(--slate-100);    color: var(--slate-900);    border: 1px solid var(--slate-200); }
 .conf-invited { background: var(--cardinal-50); color: var(--cardinal-900); border: 1px solid var(--cardinal-400); }
-.conf-note { font-style: italic; color: var(--slate-700); }
+.conf-note { font-style: italic; color: var(--slate-900); }
 .conf-award  { background: var(--amber-50);     color: var(--amber-700);    border: 1px solid var(--amber); }
 
 .conf-date {
@@ -1268,7 +1268,7 @@ h3.subhead {
   gap: 7px;
   margin-left: auto;
   font-size: 0.85rem;
-  color: var(--slate-600);
+  color: var(--slate-900);
 }
 .conf-date i { color: var(--cardinal-700); font-size: 0.8rem; }
 
@@ -1290,14 +1290,14 @@ h3.subhead {
   align-items: center;
   gap: 7px;
   font-size: 0.88rem;
-  color: var(--slate-600);
+  color: var(--slate-900);
   margin: 0 0 10px;
 }
-.conf-place i { color: var(--slate-400); font-size: 0.82rem; }
+.conf-place i { color: var(--slate-900); font-size: 0.82rem; }
 .conf-authors {
   font-size: 0.86rem;
   line-height: 1.6;
-  color: var(--slate-500);
+  color: var(--slate-900);
   margin: 0;
   padding-top: 9px;
   border-top: 1px solid var(--color-border);
@@ -1455,7 +1455,7 @@ h3.subhead {
   width: 30px;
   height: 30px;
   background: var(--slate-100);
-  color: var(--slate-600);
+  color: var(--slate-900);
   font-size: 0.8rem;
   font-weight: 600;
   border-radius: 50%;
@@ -1487,7 +1487,7 @@ h3.subhead {
 }
 .pub-year {
   background: var(--slate-100);
-  color: var(--slate-700);
+  color: var(--slate-900);
   border: 1px solid var(--color-border);
 }
 .pub-badge-award {
@@ -1505,7 +1505,7 @@ h3.subhead {
   margin: 2px 0 14px;
   font-size: 0.95rem;
   line-height: 1.62;
-  color: var(--slate-700);
+  color: var(--slate-900);
 }
 .pub-cite b {
   color: var(--cardinal-700);
@@ -1586,7 +1586,7 @@ a.res-card:hover .res-icon { background: var(--cardinal-100); }
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.6;
-  color: var(--slate-600);
+  color: var(--slate-900);
 }
 
 /* Small outbound marker, so links are distinguishable from plain cards */
@@ -1595,7 +1595,7 @@ a.res-card:hover .res-icon { background: var(--cardinal-100); }
   top: 20px;
   right: 20px;
   font-size: 0.72rem;
-  color: var(--slate-400);
+  color: var(--slate-900);
   transition: color 0.2s var(--ease), transform 0.2s var(--ease);
 }
 a.res-card:hover .res-out {
@@ -1613,7 +1613,7 @@ a.res-card:hover .res-out {
   border-left: 3px solid var(--amber);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   font-size: 0.94rem;
-  color: var(--slate-700);
+  color: var(--slate-900);
 }
 .res-note i { color: var(--amber-700); margin-top: 4px; }
 
@@ -1649,7 +1649,7 @@ a.res-card:hover .res-out {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--slate-600);
+  color: var(--slate-900);
 }
 
 .bt-grid {
@@ -1793,7 +1793,7 @@ a.res-card:hover .res-out {
   gap: 8px;
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--slate-700);
+  color: var(--slate-900);
   background: var(--cardinal-50);
   border: 1px solid var(--cardinal-100);
   padding: 6px 12px 6px 6px;
@@ -1844,7 +1844,7 @@ a.res-card:hover .res-out {
 .bt-desc {
   font-size: 0.92rem;
   line-height: 1.6;
-  color: var(--slate-600);
+  color: var(--slate-900);
   margin: 0 0 10px;
 }
 .bt-note {
@@ -1870,7 +1870,7 @@ a.res-card:hover .res-out {
 .bt-tags span {
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--slate-700);
+  color: var(--slate-900);
   background: var(--slate-100);
   border: 1px solid var(--color-border);
   padding: 4px 10px;
@@ -1896,7 +1896,7 @@ a.res-card:hover .res-out {
   color: var(--cardinal-900);
   margin: 0 0 4px;
 }
-.bt-cta p { margin: 0; font-size: 0.94rem; color: var(--slate-700); max-width: 62ch; }
+.bt-cta p { margin: 0; font-size: 0.94rem; color: var(--slate-900); max-width: 62ch; }
 .bt-cta-btn {
   display: inline-flex;
   align-items: center;
@@ -1957,7 +1957,7 @@ a.res-card:hover .res-out {
 .reason-list p {
   margin: 0;
   font-size: 0.94rem;
-  color: var(--slate-600);
+  color: var(--slate-900);
 }
 
 .contact-card {
@@ -1983,7 +1983,7 @@ a.res-card:hover .res-out {
 }
 .contact-org {
   font-size: 0.94rem;
-  color: var(--slate-600);
+  color: var(--slate-900);
   margin-bottom: 20px;
 }
 
@@ -2019,7 +2019,7 @@ a.res-card:hover .res-out {
   align-items: center;
   gap: 12px;
   font-size: 0.93rem;
-  color: var(--slate-700);
+  color: var(--slate-900);
   padding: 8px 0;
 }
 .contact-row i {
@@ -2033,7 +2033,7 @@ a.res-card:hover .res-out {
   margin-left: auto;
   background: var(--slate-100);
   border: 1px solid var(--color-border);
-  color: var(--slate-600);
+  color: var(--slate-900);
   width: 30px;
   height: 30px;
   border-radius: 8px;
@@ -2058,7 +2058,7 @@ a.res-card:hover .res-out {
   font-size: 2.2rem;
 }
 .contact-icons a {
-  color: var(--slate-600);
+  color: var(--slate-900);
   transition: color 0.2s ease, transform 0.2s ease;
 }
 .contact-icons a:hover {
@@ -2157,7 +2157,7 @@ main section {
 .site-footer {
   text-align: center;
   padding: 30px 24px;
-  color: var(--color-muted);
+  color: var(--slate-900);
   font-size: 0.9rem;
   border-top: 1px solid var(--color-border);
   background: var(--slate-100);
