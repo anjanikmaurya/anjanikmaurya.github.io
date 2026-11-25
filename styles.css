@@ -1699,7 +1699,11 @@ a.res-card:hover .res-out {
   .res-toc a { font-size: 0.86rem; padding: 6px 11px; }
 }
 
+.res-card:has(.res-type) { padding-bottom: 50px; }
 .res-type {
+  position: absolute;
+  left: 22px;
+  bottom: 16px;
   display: inline-block;
   font-size: 0.7rem;
   font-weight: 600;
@@ -1707,7 +1711,7 @@ a.res-card:hover .res-out {
   text-transform: uppercase;
   border-radius: 999px;
   padding: 2px 9px;
-  margin: 0 0 6px;
+  margin: 0;
   border: 1px solid transparent;
 }
 .res-type-book     { background: #FDF4E7; color: #7A4508; border-color: #F2C98F; }
