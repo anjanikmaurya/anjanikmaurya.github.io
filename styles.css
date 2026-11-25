@@ -1702,7 +1702,7 @@ a.res-card:hover .res-out {
 .res-grid .res-card { padding-bottom: 50px; }
 .res-type {
   position: absolute;
-  left: 22px;
+  right: 20px;
   bottom: 16px;
   display: inline-block;
   font-size: 0.7rem;
