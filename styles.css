@@ -1699,6 +1699,25 @@ a.res-card:hover .res-out {
   .res-toc a { font-size: 0.86rem; padding: 6px 11px; }
 }
 
+.res-type {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 2px 9px;
+  margin: 0 0 6px;
+  border: 1px solid transparent;
+}
+.res-type-book     { background: #FDF4E7; color: #7A4508; border-color: #F2C98F; }
+.res-type-paper    { background: #EEF3FB; color: #1F3F73; border-color: #B9CBEA; }
+.res-type-software { background: #EEF7F1; color: #1E5A35; border-color: #B5DCC2; }
+.res-type-data     { background: #F3EFFA; color: #4B2E83; border-color: #CFC0EA; }
+.res-type-standard { background: #FDF4F4; color: #5E0F0F; border-color: #DE8080; }
+.res-type-learn    { background: #EFF8F9; color: #155E66; border-color: #ADDCE1; }
+.res-type-org      { background: var(--slate-100); color: var(--slate-900); border-color: var(--slate-200); }
+
 .res-note {
   display: flex;
   align-items: flex-start;
