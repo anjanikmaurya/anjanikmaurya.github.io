@@ -1699,7 +1699,7 @@ a.res-card:hover .res-out {
   .res-toc a { font-size: 0.86rem; padding: 6px 11px; }
 }
 
-.res-card:has(.res-type) { padding-bottom: 50px; }
+.res-grid .res-card { padding-bottom: 50px; }
 .res-type {
   position: absolute;
   left: 22px;
