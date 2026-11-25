@@ -325,6 +325,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ---------- Resources: topic filter ----------
+     Shows only cards tagged with the chosen topic; empty subsections,
+     categories and contents buttons are hidden, counts are updated. */
+  const resFilter = document.querySelector('.res-filter');
+  if (resFilter) {
+    const section = document.getElementById('resources');
+    const cards = Array.from(section.querySelectorAll('.res-card[data-topics]'));
+    const countEl = resFilter.querySelector('.res-filter-count');
+    const applyTopic = (topic) => {
+      let shown = 0;
+      cards.forEach((card) => {
+        const tags = card.dataset.topics.split(' ');
+        const isNow = tags.includes('reading');
+        const show = topic === 'all' || (topic === 'reading' ? isNow : tags.includes(topic) && !isNow);
+        card.hidden = !show;
+        if (show) { shown += 1; card.classList.add('in'); }
+      });
+      section.querySelectorAll('.res-grid').forEach((grid) => {
+        const any = grid.querySelector('.res-card:not([hidden])');
+        grid.hidden = !any;
+        const head = grid.previousElementSibling;
+        if (head && head.classList.contains('res-sub')) head.hidden = !any;
+      });
+      section.querySelectorAll('.res-cat').forEach((cat) => {
+        const n = cat.querySelectorAll('.res-card:not([hidden])').length;
+        cat.hidden = n === 0;
+        const link = section.querySelector('.res-toc a[href="#' + cat.id + '"]');
+        if (link) {
+          link.hidden = n === 0;
+          const c = link.querySelector('.res-toc-count');
+          if (c) c.textContent = n;
+        }
+      });
+      if (countEl) countEl.textContent = topic === 'all' ? '' : shown + ' shown';
+    };
+    resFilter.addEventListener('click', (e) => {
+      const btn = e.target.closest('.res-filter-btn');
+      if (!btn) return;
+      resFilter.querySelectorAll('.res-filter-btn').forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      applyTopic(btn.dataset.topic);
+    });
+  }
+
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

@@ -1722,6 +1722,38 @@ a.res-card:hover .res-out {
 .res-type-learn    { background: #EFF8F9; color: #155E66; border-color: #ADDCE1; }
 .res-type-org      { background: var(--slate-100); color: var(--slate-900); border-color: var(--slate-200); }
 
+/* ---------- Resources: topic filter ---------- */
+.res-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+.res-filter-label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--slate-900);
+  margin-right: 2px;
+}
+.res-filter-btn {
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--cardinal-800);
+  background: var(--color-surface);
+  border: 1px solid var(--cardinal-400);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+.res-filter-btn:hover { background: var(--cardinal-50); }
+.res-filter-btn.is-active { background: var(--cardinal-700); border-color: var(--cardinal-700); color: #fff; }
+.res-filter-btn:focus-visible { outline: 2px solid var(--cardinal-700); outline-offset: 2px; }
+.res-filter-count { font-size: 0.84rem; color: var(--slate-900); margin-left: 4px; }
+.res-card[hidden], .res-grid[hidden], .res-sub[hidden], .res-cat[hidden], .res-toc a[hidden] { display: none !important; }
+
 .res-note {
   display: flex;
   align-items: flex-start;

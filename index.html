@@ -1294,10 +1294,22 @@
         standards. If you would like to talk through data, methods or analysis, please do get in touch.
       </p>
 
+      <div class="res-filter" role="group" aria-label="Filter resources by topic">
+        <span class="res-filter-label">Topic:</span>
+        <button type="button" class="res-filter-btn is-active" data-topic="all" aria-pressed="true">All</button>
+        <button type="button" class="res-filter-btn" data-topic="xray" aria-pressed="false">X-ray science</button>
+        <button type="button" class="res-filter-btn" data-topic="polymer" aria-pressed="false">Polymer physics</button>
+        <button type="button" class="res-filter-btn" data-topic="saxs" aria-pressed="false">SAXS / SANS</button>
+        <button type="button" class="res-filter-btn" data-topic="waxs" aria-pressed="false">WAXS / XRD</button>
+        <button type="button" class="res-filter-btn" data-topic="xas" aria-pressed="false">XAS</button>
+        <button type="button" class="res-filter-btn" data-topic="auto" aria-pressed="false">Autonomous lab</button>
+        <button type="button" class="res-filter-btn" data-topic="reading" aria-pressed="false">Currently reading</button>
+        <span class="res-filter-count" aria-live="polite"></span>
+      </div>
       <nav class="res-toc" id="res-toc" aria-label="Resource categories">
-        <a href="#res-learn"><span class="res-toc-num">1</span>Readings<span class="res-toc-count">15</span></a>
+        <a href="#res-learn"><span class="res-toc-num">1</span>Readings<span class="res-toc-count">16</span></a>
         <a href="#res-data"><span class="res-toc-num">2</span>Databases &amp; calculators<span class="res-toc-count">10</span></a>
-        <a href="#res-software"><span class="res-toc-num">3</span>Software<span class="res-toc-count">26</span></a>
+        <a href="#res-software"><span class="res-toc-num">3</span>Software<span class="res-toc-count">27</span></a>
         <a href="#res-community"><span class="res-toc-num">4</span>Community<span class="res-toc-count">6</span></a>
         <a href="#res-reading-now"><span class="res-toc-num">5</span>My current reading list<span class="res-toc-count">10</span></a>
       </nav>
@@ -1307,7 +1319,7 @@
           <a class="res-top" href="#res-toc"><i class="fas fa-arrow-up" aria-hidden="true"></i> Contents</a></h3>
         <h4 class="res-sub"><span class="res-sub-num">1.1</span> X-ray science fundamentals</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://academic.oup.com/book/7397" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="xray saxs" href="https://academic.oup.com/book/7397" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">1.1.1</span> Elementary Scattering Theory</h5>
@@ -1316,7 +1328,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781119998365" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="xray" href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781119998365" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">1.1.2</span> Elements of Modern X-ray Physics</h5>
@@ -1328,7 +1340,7 @@
         </div>
         <h4 class="res-sub"><span class="res-sub-num">1.2</span> SAXS / SANS methods</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781119768364" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781119768364" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">1.2.1</span> Small-Angle Scattering</h5>
@@ -1337,7 +1349,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://doi.org/10.1088/0953-8984/25/38/383201" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://doi.org/10.1088/0953-8984/25/38/383201" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-file-lines" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">1.2.2</span> Everything SAXS</h5>
@@ -1346,7 +1358,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://search.worldcat.org/title/9044069" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://search.worldcat.org/title/9044069" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">1.2.3</span> Small Angle X-ray Scattering</h5>
@@ -1358,7 +1370,7 @@
         </div>
         <h4 class="res-sub"><span class="res-sub-num">1.3</span> WAXS &amp; diffraction</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://www.pearson.com/en-us/subject-catalog/p/elements-of-x-ray-diffraction/P200000003272/9780201610918" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="waxs" href="https://www.pearson.com/en-us/subject-catalog/p/elements-of-x-ray-diffraction/P200000003272/9780201610918" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">1.3.1</span> Elements of X-Ray Diffraction</h5>
@@ -1368,93 +1380,105 @@
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
         </div>
-        <h4 class="res-sub"><span class="res-sub-num">1.4</span> Polymer physics</h4>
+        <h4 class="res-sub"><span class="res-sub-num">1.4</span> X-ray absorption spectroscopy (XAS)</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://link.springer.com/book/10.1007/978-3-540-68411-4" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="xas" href="https://www.cambridge.org/core/books/introduction-to-xafs/6E531930239BF1846FDB19748323DC6C" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">1.4.1</span> The Physics of Polymers</h5>
+              <h5><span class="res-idx">1.4.1</span> Introduction to XAFS</h5>
+              <span class="res-type res-type-book">Book</span>
+              <p>G. Bunker, Cambridge, 2010. A practical guide to X-ray absorption fine structure: experiment, theory and data analysis, not tied to any one program.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+        </div>
+        <h4 class="res-sub"><span class="res-sub-num">1.5</span> Polymer physics</h4>
+        <div class="res-grid">
+          <a class="res-card" data-topics="polymer" href="https://link.springer.com/book/10.1007/978-3-540-68411-4" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-book" aria-hidden="true"></i></span>
+            <div>
+              <h5><span class="res-idx">1.5.1</span> The Physics of Polymers</h5>
               <span class="res-type res-type-book">Book</span>
               <p>G. Strobl, Springer, 3rd ed. The core concepts of polymer structure and behavior (mixtures, block copolymers, semicrystalline order, crystallization and mechanics), with scattering throughout.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://global.oup.com/academic/product/methods-of-x-ray-and-neutron-scattering-in-polymer-science-9780195113211" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="polymer saxs waxs" href="https://global.oup.com/academic/product/methods-of-x-ray-and-neutron-scattering-in-polymer-science-9780195113211" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">1.4.2</span> Methods of X-ray and Neutron Scattering in Polymer Science</h5>
+              <h5><span class="res-idx">1.5.2</span> Methods of X-ray and Neutron Scattering in Polymer Science</h5>
               <span class="res-type res-type-book">Book</span>
               <p>R.-J. Roe, Oxford, 2000. The graduate text for polymers: crystalline and amorphous order, blends, small-angle scattering and reflectivity, with X-rays and neutrons treated together.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://books.google.com/books/about/X_ray_Scattering_of_Synthetic_Polymers.html?id=FBvwAAAAMAAJ" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="polymer saxs waxs" href="https://books.google.com/books/about/X_ray_Scattering_of_Synthetic_Polymers.html?id=FBvwAAAAMAAJ" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">1.4.3</span> X-ray Scattering of Synthetic Polymers</h5>
+              <h5><span class="res-idx">1.5.3</span> X-ray Scattering of Synthetic Polymers</h5>
               <span class="res-type res-type-book">Book</span>
               <p>F. J. Baltá-Calleja &amp; C. G. Vonk, Elsevier, 1989. The classic reference for lattice parameters, crystallinity, orientation and SAXS of lamellar morphology in solid polymers (out of print; catalog record linked).</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://doi.org/10.1021/cr9900376" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="polymer saxs" href="https://doi.org/10.1021/cr9900376" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-file-lines" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">1.4.4</span> Small-Angle X-ray Scattering of Polymers</h5>
+              <h5><span class="res-idx">1.5.4</span> Small-Angle X-ray Scattering of Polymers</h5>
               <span class="res-type res-type-paper">Review paper</span>
               <p>B. Chu &amp; B. S. Hsiao, <i>Chem. Rev.</i> 101, 1727 (2001). The classic review of synchrotron SAXS on polymers, including in situ deformation, fiber spinning and simultaneous SAXS/WAXD.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
         </div>
-        <h4 class="res-sub"><span class="res-sub-num">1.5</span> AI/ML &amp; autonomous experiments</h4>
+        <h4 class="res-sub"><span class="res-sub-num">1.6</span> AI/ML &amp; autonomous experiments</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://www.nature.com/articles/s42254-021-00345-y" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="auto" href="https://www.nature.com/articles/s42254-021-00345-y" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-file-lines" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">1.5.1</span> Gaussian processes for autonomous data acquisition</h5>
+              <h5><span class="res-idx">1.6.1</span> Gaussian processes for autonomous data acquisition</h5>
               <span class="res-type res-type-paper">Review paper</span>
               <p>M. M. Noack <i>et al.</i>, <i>Nat. Rev. Phys.</i> 3, 685 (2021). How Gaussian processes steer autonomous measurements at synchrotron and neutron facilities, with case studies (free on eScholarship).</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://doi.org/10.1021/acs.chemrev.4c00055" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="auto" href="https://doi.org/10.1021/acs.chemrev.4c00055" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-file-lines" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">1.5.2</span> Self-Driving Laboratories for Chemistry and Materials Science</h5>
+              <h5><span class="res-idx">1.6.2</span> Self-Driving Laboratories for Chemistry and Materials Science</h5>
               <span class="res-type res-type-paper">Review paper</span>
               <p>G. Tom <i>et al.</i>, <i>Chem. Rev.</i> (2024). A comprehensive review of self-driving labs: hardware, software, AI decision-making and applications.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
         </div>
-        <h4 class="res-sub"><span class="res-sub-num">1.6</span> Online tutorials &amp; wikis</h4>
+        <h4 class="res-sub"><span class="res-sub-num">1.7</span> Online tutorials &amp; wikis</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://sastutorials.org/index.html" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://sastutorials.org/index.html" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-chalkboard-user" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">1.6.1</span> SAS Tutorials</h5>
+              <h5><span class="res-idx">1.7.1</span> SAS Tutorials</h5>
               <span class="res-type res-type-learn">Tutorials</span>
               <p>Free, community-developed lessons in SAXS and SANS analysis, from first concepts to advanced modeling (<i>J. Appl. Cryst.</i> 2025).</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://gisaxs.com/index.php/Main_Page" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs waxs" href="https://gisaxs.com/index.php/Main_Page" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">1.6.2</span> GISAXS wiki</h5>
+              <h5><span class="res-idx">1.7.2</span> GISAXS wiki</h5>
               <span class="res-type res-type-learn">Wiki</span>
               <p>A community reference for grazing-incidence scattering (GISAXS and GIWAXS): concepts, sample requirements and software.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
         </div>
-        <h4 class="res-sub"><span class="res-sub-num">1.7</span> Best practice</h4>
+        <h4 class="res-sub"><span class="res-sub-num">1.8</span> Best practice</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://journals.iucr.org/d/issues/2017/09/00/jc5010/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://journals.iucr.org/d/issues/2017/09/00/jc5010/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-list-check" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">1.7.1</span> SAS publication guidelines (2017)</h5>
+              <h5><span class="res-idx">1.8.1</span> SAS publication guidelines (2017)</h5>
               <span class="res-type res-type-paper">Guidelines paper</span>
               <p>J. Trewhella <i>et al.</i>, <i>Acta Cryst. D</i> 73, 710 (2017). Written for biomolecules, but its reporting checklist (sample details, data reduction, absolute calibration, model validation and data deposition) is a template the materials and polymer community could adopt to make SAXS results more comparable and reproducible.</p>
             </div>
@@ -1468,7 +1492,7 @@
           <a class="res-top" href="#res-toc"><i class="fas fa-arrow-up" aria-hidden="true"></i> Contents</a></h3>
         <h4 class="res-sub"><span class="res-sub-num">2.1</span> Calculators</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://henke.lbl.gov/optical_constants/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="xray xas" href="https://henke.lbl.gov/optical_constants/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-calculator" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">2.1.1</span> CXRO X-ray Interactions with Matter</h5>
@@ -1477,7 +1501,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://xraydb.xrayabsorption.org/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="xray xas" href="https://xraydb.xrayabsorption.org/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-atom" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">2.1.2</span> XrayDB</h5>
@@ -1486,7 +1510,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://www.ncnr.nist.gov/resources/activation/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://www.ncnr.nist.gov/resources/activation/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-vial" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">2.1.3</span> NIST scattering calculator</h5>
@@ -1495,7 +1519,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://pypi.org/project/periodictable/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://pypi.org/project/periodictable/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-cube" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">2.1.4</span> periodictable (Python)</h5>
@@ -1507,7 +1531,7 @@
         </div>
         <h4 class="res-sub"><span class="res-sub-num">2.2</span> Databases</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://www.crystallography.net/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="waxs" href="https://www.crystallography.net/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-gem" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">2.2.1</span> Crystallography Open Database</h5>
@@ -1516,7 +1540,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://polymer.nims.go.jp/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="polymer" href="https://polymer.nims.go.jp/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-database" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">2.2.2</span> PoLyInfo</h5>
@@ -1525,7 +1549,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://www.sasbdb.org/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://www.sasbdb.org/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-database" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">2.2.3</span> SASBDB</h5>
@@ -1537,7 +1561,7 @@
         </div>
         <h4 class="res-sub"><span class="res-sub-num">2.3</span> Calibration standards</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://www.nist.gov/publications/nist-standard-reference-material-3600-absolute-intensity-calibration-standard-small" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://www.nist.gov/publications/nist-standard-reference-material-3600-absolute-intensity-calibration-standard-small" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-scale-balanced" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">2.3.1</span> NIST SRM 3600</h5>
@@ -1546,7 +1570,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://doi.org/10.1107/S0021889892009762" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://doi.org/10.1107/S0021889892009762" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-ruler" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">2.3.2</span> Silver behenate</h5>
@@ -1555,7 +1579,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://www.nist.gov/publications/certification-standard-reference-materialr-640g-line-position-and-line-shape-standard" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="waxs" href="https://www.nist.gov/publications/certification-standard-reference-materialr-640g-line-position-and-line-shape-standard" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-ruler-combined" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">2.3.3</span> NIST SRM 640g</h5>
@@ -1572,7 +1596,7 @@
           <a class="res-top" href="#res-toc"><i class="fas fa-arrow-up" aria-hidden="true"></i> Contents</a></h3>
         <h4 class="res-sub"><span class="res-sub-num">3.1</span> Data reduction (2D &rarr; 1D)</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://www.silx.org/doc/fabio/latest/getting_started.html" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs waxs" href="https://www.silx.org/doc/fabio/latest/getting_started.html" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-file-image" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.1.1</span> FabIO</h5>
@@ -1581,7 +1605,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://pyfai.readthedocs.io/en/stable/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs waxs" href="https://pyfai.readthedocs.io/en/stable/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-circle-nodes" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.1.2</span> pyFAI</h5>
@@ -1590,7 +1614,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://github.com/dioptas/dioptas" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="waxs" href="https://github.com/dioptas/dioptas" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-bullseye" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.1.3</span> Dioptas</h5>
@@ -1599,7 +1623,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://confluence.desy.de/pages/viewpage.action?pageId=118284208" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs waxs" href="https://confluence.desy.de/pages/viewpage.action?pageId=118284208" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.1.4</span> DPDAK</h5>
@@ -1608,7 +1632,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://dawnsci.org/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs waxs" href="https://dawnsci.org/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-diagram-project" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.1.5</span> DAWN</h5>
@@ -1617,7 +1641,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://github.com/xi-cam/xi-cam" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs waxs" href="https://github.com/xi-cam/xi-cam" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-display" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.1.6</span> Xi-CAM</h5>
@@ -1626,7 +1650,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://github.com/usnistgov/PyHyperScattering" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs polymer" href="https://github.com/usnistgov/PyHyperScattering" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-rainbow" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.1.7</span> PyHyperScattering</h5>
@@ -1638,7 +1662,7 @@
         </div>
         <h4 class="res-sub"><span class="res-sub-num">3.2</span> SAXS / SANS modeling</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://www.sasview.org/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs polymer" href="https://www.sasview.org/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.2.1</span> SasView</h5>
@@ -1647,7 +1671,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://github.com/SasView/sasmodels" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://github.com/SasView/sasmodels" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-microchip" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.2.2</span> sasmodels</h5>
@@ -1656,7 +1680,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://sasfit.org/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://sasfit.org/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.2.3</span> SASfit</h5>
@@ -1665,7 +1689,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://github.com/BAMresearch/McSAS3" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://github.com/BAMresearch/McSAS3" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-chart-column" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.2.4</span> McSAS3</h5>
@@ -1674,7 +1698,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://jscatter.readthedocs.io/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://jscatter.readthedocs.io/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-code" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.2.5</span> Jscatter</h5>
@@ -1686,7 +1710,7 @@
         </div>
         <h4 class="res-sub"><span class="res-sub-num">3.3</span> WAXS &amp; diffraction</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://advancedphotonsource.github.io/GSAS-II-tutorials/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="waxs" href="https://advancedphotonsource.github.io/GSAS-II-tutorials/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-gem" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">3.3.1</span> GSAS-II</h5>
@@ -1696,126 +1720,138 @@
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
         </div>
-        <h4 class="res-sub"><span class="res-sub-num">3.4</span> Grazing incidence (GISAXS / GIWAXS)</h4>
+        <h4 class="res-sub"><span class="res-sub-num">3.4</span> XAS analysis</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://github.com/tgdane/pygix" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="xas" href="https://github.com/xraypy/xraylarch" target="_blank" rel="noopener">
+            <span class="res-icon"><i class="fas fa-wave-square" aria-hidden="true"></i></span>
+            <div>
+              <h5><span class="res-idx">3.4.1</span> Larch</h5>
+              <span class="res-type res-type-software">Python library + GUI</span>
+              <p>Open-source XAS/XAFS analysis (XANES, EXAFS, XRF) from the University of Chicago; the successor to Ifeffit.</p>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
+          </a>
+        </div>
+        <h4 class="res-sub"><span class="res-sub-num">3.5</span> Grazing incidence (GISAXS / GIWAXS)</h4>
+        <div class="res-grid">
+          <a class="res-card" data-topics="saxs waxs" href="https://github.com/tgdane/pygix" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-table-cells-large" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.4.1</span> pygix</h5>
+              <h5><span class="res-idx">3.5.1</span> pygix</h5>
               <span class="res-type res-type-software">Python library</span>
               <p>A Python library built on pyFAI for reducing grazing-incidence (GISAXS/GIWAXS) and fiber diffraction images into reciprocal-space maps and line profiles.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://www.aps.anl.gov/Sector-8/8-ID/Operations-and-Schedules/Useful-Links/Sector-8-GIXSGUI" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs waxs" href="https://www.aps.anl.gov/Sector-8/8-ID/Operations-and-Schedules/Useful-Links/Sector-8-GIXSGUI" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-border-all" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.4.2</span> GIXSGUI</h5>
+              <h5><span class="res-idx">3.5.2</span> GIXSGUI</h5>
               <span class="res-type res-type-software">Software (MATLAB)</span>
               <p>Argonne APS toolbox for visualizing and reducing GISAXS/GIWAXS data, reciprocal-space conversion and indexing of buried 3D nanostructures (<i>J. Appl. Cryst.</i> 2015).</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://www.bornagainproject.org/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://www.bornagainproject.org/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.4.3</span> BornAgain</h5>
+              <h5><span class="res-idx">3.5.3</span> BornAgain</h5>
               <span class="res-type res-type-software">Software</span>
               <p>Simulation and fitting of GISAXS, GISANS and reflectometry from thin films.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
         </div>
-        <h4 class="res-sub"><span class="res-sub-num">3.5</span> Biological SAXS</h4>
+        <h4 class="res-sub"><span class="res-sub-num">3.6</span> Biological SAXS</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://bioxtas-raw.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://bioxtas-raw.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-flask-vial" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.5.1</span> BioXTAS RAW</h5>
+              <h5><span class="res-idx">3.6.1</span> BioXTAS RAW</h5>
               <span class="res-type res-type-software">Software (GUI)</span>
               <p>Free, open-source reduction and analysis for biological SAXS, including SEC-SAXS deconvolution.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://biosaxs-com.github.io/atsas/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://biosaxs-com.github.io/atsas/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-dna" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.5.2</span> ATSAS</h5>
+              <h5><span class="res-idx">3.6.2</span> ATSAS</h5>
               <span class="res-type res-type-software">Software suite</span>
               <p>The established suite for biological small-angle scattering, developed at EMBL Hamburg and now distributed by BIOSAXS GmbH; free for academic users with a licence file.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://bl1231.als.lbl.gov/scatter/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://bl1231.als.lbl.gov/scatter/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-chart-area" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.5.3</span> Sc&Aring;tter</h5>
+              <h5><span class="res-idx">3.6.3</span> Sc&Aring;tter</h5>
               <span class="res-type res-type-software">Software (GUI)</span>
               <p>R. P. Rambo&rsquo;s Java program for bioSAXS processing and analysis, used at Diamond B21 and the ALS SIBYLS beamline.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://tdgrant.com/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://tdgrant.com/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-cubes-stacked" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.5.4</span> DENSS</h5>
+              <h5><span class="res-idx">3.6.4</span> DENSS</h5>
               <span class="res-type res-type-software">Software + web server</span>
               <p>Reconstructs 3D electron density directly from a 1D SAXS curve (T. D. Grant, <i>Nat. Methods</i> 2018); also available as a web server.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://somo.chem.utk.edu/shape2sas/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://somo.chem.utk.edu/shape2sas/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-shapes" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.5.5</span> Shape2SAS</h5>
+              <h5><span class="res-idx">3.6.5</span> Shape2SAS</h5>
               <span class="res-type res-type-software">Web app</span>
               <p>A free in-browser tool that simulates scattering curves and pair-distance distributions from shapes you build; ideal for teaching.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
         </div>
-        <h4 class="res-sub"><span class="res-sub-num">3.6</span> AI/ML &amp; autonomous experiments</h4>
+        <h4 class="res-sub"><span class="res-sub-num">3.7</span> AI/ML &amp; autonomous experiments</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://blueskyproject.io/bluesky/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="auto" href="https://blueskyproject.io/bluesky/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-sliders" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.6.1</span> Bluesky</h5>
+              <h5><span class="res-idx">3.7.1</span> Bluesky</h5>
               <span class="res-type res-type-software">Python framework</span>
               <p>An open-source Python framework for beamline experiment control and data collection.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://blueskyproject.io/tiled/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="auto" href="https://blueskyproject.io/tiled/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-table-cells" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.6.2</span> Tiled</h5>
+              <h5><span class="res-idx">3.7.2</span> Tiled</h5>
               <span class="res-type res-type-software">Data service</span>
               <p>A Bluesky data-access service for searching, slicing and streaming beamline data over HTTP, including live data.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://gpcam.lbl.gov/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="auto" href="https://gpcam.lbl.gov/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-robot" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.6.3</span> gpCAM</h5>
+              <h5><span class="res-idx">3.7.3</span> gpCAM</h5>
               <span class="res-type res-type-software">Python library</span>
               <p>Gaussian-process tools that choose the next measurement in autonomous, closed-loop experiments.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://github.com/xopt-org/Xopt" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="auto" href="https://github.com/xopt-org/Xopt" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-bullseye" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.6.4</span> Xopt</h5>
+              <h5><span class="res-idx">3.7.4</span> Xopt</h5>
               <span class="res-type res-type-software">Python library</span>
               <p>A SLAC-developed Python framework for Bayesian and multi-objective optimization of experiments and instruments.</p>
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://www.nist.gov/programs-projects/autonomous-formulation-lab" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="auto" href="https://www.nist.gov/programs-projects/autonomous-formulation-lab" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-flask-vial" aria-hidden="true"></i></span>
             <div>
-              <h5><span class="res-idx">3.6.5</span> NIST Autonomous Formulation Lab</h5>
+              <h5><span class="res-idx">3.7.5</span> NIST Autonomous Formulation Lab</h5>
               <span class="res-type res-type-org">Open platform</span>
               <p>An open-source robotic platform that prepares samples, measures SAXS/SANS and lets AI choose the next composition.</p>
             </div>
@@ -1829,7 +1865,7 @@
           <a class="res-top" href="#res-toc"><i class="fas fa-arrow-up" aria-hidden="true"></i> Contents</a></h3>
         <h4 class="res-sub"><span class="res-sub-num">4.1</span> Societies &amp; standards</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://www.iucr.org/resources/commissions/small-angle-scattering" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://www.iucr.org/resources/commissions/small-angle-scattering" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-award" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">4.1.1</span> IUCr Commission on SAS</h5>
@@ -1838,7 +1874,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://www.cansas.org/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://www.cansas.org/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-users" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">4.1.2</span> canSAS</h5>
@@ -1850,7 +1886,7 @@
         </div>
         <h4 class="res-sub"><span class="res-sub-num">4.2</span> Portals &amp; learning networks</h4>
         <div class="res-grid">
-          <a class="res-card" href="http://smallangle.org/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="http://smallangle.org/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-globe" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">4.2.1</span> smallangle.org</h5>
@@ -1859,7 +1895,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://small-angle.aps.anl.gov/useful-links" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="saxs" href="https://small-angle.aps.anl.gov/useful-links" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-people-group" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">4.2.2</span> APS Small-Angle Scattering SIG</h5>
@@ -1868,7 +1904,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://neutrons.ornl.gov/nxs" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="xray" href="https://neutrons.ornl.gov/nxs" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">4.2.3</span> National School on Neutron and X-ray Scattering</h5>
@@ -1880,7 +1916,7 @@
         </div>
         <h4 class="res-sub"><span class="res-sub-num">4.3</span> Light sources</h4>
         <div class="res-grid">
-          <a class="res-card" href="https://lightsources.org/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="xray" href="https://lightsources.org/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-landmark" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">4.3.1</span> lightsources.org</h5>
@@ -1892,11 +1928,11 @@
         </div>
       </div>
 
-      <div class="res-cat" id="res-reading-now">
+      <div class="res-cat res-cat-now" id="res-reading-now">
         <h3 class="subhead res-cat-title"><span><span class="res-num">5</span> My current reading list</span>
           <a class="res-top" href="#res-toc"><i class="fas fa-arrow-up" aria-hidden="true"></i> Contents</a></h3>
         <div class="res-grid">
-          <a class="res-card" href="https://searchworks.stanford.edu/view/4330235" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="reading polymer saxs waxs" href="https://searchworks.stanford.edu/view/4330235" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book-open-reader" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">5.1</span> Methods of X-ray and Neutron Scattering in Polymer Science</h5>
@@ -1905,7 +1941,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://searchworks.stanford.edu/view/13361374" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="reading saxs waxs polymer" href="https://searchworks.stanford.edu/view/13361374" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book-open-reader" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">5.2</span> X-Ray Scattering of Soft Matter</h5>
@@ -1914,7 +1950,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://bayesoptbook.com/" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="reading auto" href="https://bayesoptbook.com/" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book-open-reader" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">5.3</span> Bayesian Optimization</h5>
@@ -1923,7 +1959,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://searchworks.stanford.edu/view/in00000194816" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="reading polymer" href="https://searchworks.stanford.edu/view/in00000194816" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book-open-reader" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">5.4</span> Polymer Physics</h5>
@@ -1932,7 +1968,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://searchworks.stanford.edu/view/6810619" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="reading polymer" href="https://searchworks.stanford.edu/view/6810619" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book-open-reader" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">5.5</span> The Physics of Polymers</h5>
@@ -1941,7 +1977,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://searchworks.stanford.edu/view/4004217" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="reading polymer" href="https://searchworks.stanford.edu/view/4004217" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book-open-reader" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">5.6</span> The Structure and Rheology of Complex Fluids</h5>
@@ -1950,7 +1986,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://searchworks.stanford.edu/view/in00000195204" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="reading auto" href="https://searchworks.stanford.edu/view/in00000195204" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book-open-reader" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">5.7</span> Data Analysis: A Bayesian Tutorial</h5>
@@ -1959,7 +1995,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://searchworks.stanford.edu/view/9518701" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="reading polymer" href="https://searchworks.stanford.edu/view/9518701" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book-open-reader" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">5.8</span> Intermolecular and Surface Forces</h5>
@@ -1968,7 +2004,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://searchworks.stanford.edu/view/in00000071759" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="reading polymer" href="https://searchworks.stanford.edu/view/in00000071759" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book-open-reader" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">5.9</span> Membrane Technology and Applications</h5>
@@ -1977,7 +2013,7 @@
             </div>
             <i class="fas fa-arrow-up-right-from-square res-out" aria-hidden="true"></i>
           </a>
-          <a class="res-card" href="https://searchworks.stanford.edu/view/9332023" target="_blank" rel="noopener">
+          <a class="res-card" data-topics="reading xray" href="https://searchworks.stanford.edu/view/9332023" target="_blank" rel="noopener">
             <span class="res-icon"><i class="fas fa-book-open-reader" aria-hidden="true"></i></span>
             <div>
               <h5><span class="res-idx">5.10</span> Elements of Modern X-ray Physics</h5>
